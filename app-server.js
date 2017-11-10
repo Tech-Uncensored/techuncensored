@@ -1,47 +1,77 @@
-const path = require('path')
-const express = require('express')
-// const nodemailer = require('nodemailer')
-const bodyParser = require ('body-parser')
-const React = require ('react')
-// require('dotenv').config()
-// const ContactFormFactory = React.createFactory(require('./src/container/Contact/ContactForm.js'))
-const BUILD_DIR = path.join(__dirname, "dist"),
-    PORT = process.env.PORT || 8081,
-    app = express()
+var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
+var fs = require('fs');
 
-app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.setHeader('Access-Control-Allow-Credentials', 'true')
-    res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE')
-    res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers')
-    
-    next()
-})
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({
-    extended: true
-}))
-app.use(bodyParser.json())
+// Start Express
+var app = express();
+var staging = express();
 
-app.use(express.static(BUILD_DIR))
+
+/* ************************************
+            STAGING SETTINGS
+ ************************************/
+
+// Middleware
+// staging.use(express.static(path.join(__dirname, "../staging")));
+// staging.use('/.well-known', express.static(path.join(__dirname, "../staging/.well-known"))); //LetsEncrypt
+// staging.use(bodyParser.json());
+
+// // CORS
+// staging.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
+
+// // Routes
+// staging.get('/', function(req, res) {
+//     res.sendFile(path.join(__dirname, "../staging/index.html"));
+// });
+
+// // Default to index for react-router
+// staging.use( function(req, res) {
+//     var reqPath = req.url;
+//     if(fs.existsSync(path.join(__dirname, "../staging/"+reqPath)))
+//         res.sendFile(path.join(__dirname, "../staging/"+reqPath));
+//     else {
+//         res.status(404).send("File Not Found");
+//     }
+// });
+
+// // Start Server
+// staging.listen(process.env.PORT, process.env.IP, function() {
+//     console.log("Started listening on port", 8091);
+// });
+
+
+/* ************************************
+           PRODUCTION SETTINGS
+   ************************************/
+
+// Middleware
+app.use(express.static(path.join(__dirname, "./dist")));
+app.use('/.well-known', express.static(path.join(__dirname, "./dist"))); //LetsEncrypt
+app.use(bodyParser.json());
+
+// CORS
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
 // Routes
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, "dist/index.html"));
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, "./dist/index.html"));
 });
 
 // Default to index for react-router
-app.use(function (req, res) {
-    res.sendFile(path.join(__dirname, "dist/index.html"));
+app.use( function(req, res) {
+    res.sendFile(path.join(__dirname, "./dist/index.html"));
 });
 
-app.use((req, res, next) => {
-    const err = new Error("Not Found")
-    err.status = 404
-    next(err)
-})
-
-
-
-app.listen(PORT)
-console.log('server started');
+// Start Server
+app.listen(process.env.PORT, process.env.IP, function() {
+    console.log("Started listening on port", 8090);
+});

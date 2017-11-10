@@ -1,0 +1,50 @@
+header {
+  background: url("../../../public/images/header-bg.jpg") #0C1117;
+  color: #FFF;
+  display: block;
+  height: 80px;
+  position: relative; }
+  header #logo {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    float: left;
+    color: #DCD0C0 !important;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px; }
+    header #logo:before {
+      background: url("../../../public/images/tech_uncensored_logo_bg.png") bottom/cover;
+      content: " ";
+      display: inline-block;
+      height: 50px;
+      position: relative;
+      vertical-align: text-bottom;
+      width: 50px; }
+  header #live-status {
+    display: block;
+    left: calc(50% - 75px);
+    top: 25px;
+    background: #0C1117;
+    border: 1px solid #FFF;
+    position: absolute;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight: lighter;
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 150px; }
+  header .phone {
+    color: #DCD0C0; }
+  header .navigation {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 15px);
+    line-height: 30px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 30px; }
+
+/*# sourceMappingURL=Header.css.map */

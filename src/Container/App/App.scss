@@ -1,0 +1,44 @@
+$primary: #0C1117;
+$secondary: #777777;
+$background: #fffcea;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  max-height: 150px;
+  overflow: hidden;
+}
+
+// Clearfix
+.clearfix {
+  clear: both;
+  content: " ";
+  height: 1%;
+  overflow: hidden;
+  position: relative;
+}
+
+// END Clearfix
+.btn {
+  border-radius: 10px;
+  background: $primary;
+  color: #FFF;
+  text-align: center;
+  &.large {
+    width: 180px;
+    padding: 5px 20px;
+  }
+}
