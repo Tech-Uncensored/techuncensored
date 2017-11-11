@@ -12,7 +12,7 @@ constructor(props) {
       
 }
  speak(el, num) {
-        var speaks = ["Project Management","Programming","Software Design","Results","Success","Training","Consulting","Pair Programming","Tutorials","Internet of Things","Frameworks","Aliens","SEO"];
+        let speaks = ["Project Management","Programming","Software Design","Results","Success","Training","Consulting","Pair Programming","Tutorials","Internet of Things","Frameworks","Aliens","SEO"];
         if(num >= speaks.length)
             this.count = 0;
         el.innerHTML = speaks[this.count];

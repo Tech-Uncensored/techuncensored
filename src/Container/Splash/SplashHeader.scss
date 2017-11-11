@@ -4,27 +4,27 @@ $background: #fffcea;
 
 
 header {
-  background: url('../../../public/images/header-bg.jpg') $primary;
+  background: url('../../public/images/header-bg.jpg') $primary;
   color: #FFF;
   display: block;
   height: 80px;
   position: relative;
   
   #logo {
-    display: inline-block;
+    display: flex;
     text-transform: uppercase;
     padding: 15px 50px;
     float: left;
     color: #DCD0C0 !important;
     
     font: {
-      family: 'Roboto Slab', serif;
+      family: 'Ubuntu', serif;
       weight: bold;
-      size: 30px;
+      size: 1em;
     }
     line-height: 30px;
     &:before {
-      background: url('../../../public/images/tech_uncensored_logo_bg.png') bottom/cover;
+      background: url('../../public/images/tech_uncensored_logo_bg.png') bottom/cover;
       content: " ";
       display: inline-block;
       height: 50px;
@@ -33,37 +33,69 @@ header {
       width: 50px;
       
     }
+ul>li {
+  font: {
+    size:1.5rem;
+  };
+  display: inline-block;
+  margin: {
+    top:0;
+    right:30px;
+    bottom:0;
+    left:2px;
+  }
+  line-height:50px;
+}
+a {
+  color: #FFF;
+  text-decoration:none;
+  cursor: pointer;
+}
   }
   
-  #live-status {
-    display:block;
-    left: calc(50% - 75px);
-    top: 25px;
-    background: $primary;
-    border: 1px solid #FFF;
-    position:absolute;
-    text-align:center;
-    font: {
-      family: 'Roboto Slab', serif;
-      weight: lighter;
-      size: 18px;
-    }
-    padding: 5px 10px;
-    width: 150px;
-  }
+
   .phone {
     color: #DCD0C0;
   }
   .navigation {
-    display: block;
+    display: flex;
     position: absolute;
     right: 30px;
     top: calc(50% - 15px);
     line-height: 30px;
     font: {
-      family: 'Roboto Slab', serif;
+      family: 'Ubuntu', serif;
       weight: bold;
-      size: 30px;
+      size: 1.6em;
+    }
+  #social-nav {
+    display: flex;
+     list-style-type:none;
+     margin-right:15px;
+    li a {
+      cursor: pointer;
+      .fa-instagram {
+        color: purple;
+      }
+        .fa-facebook {
+        color: lightblue;
+      }
+        .fa-snapchat {
+        color: yellow;
+      }
+      font: {
+        size: .8em;
+      };
+      margin: {
+    top:0;
+    right:20px;
+    bottom:0;
+    left:10px;
+        }
+      
+      }
+     
+      
     }
   }
 }

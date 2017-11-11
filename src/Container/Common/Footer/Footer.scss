@@ -107,3 +107,19 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     }
   }
 }
+
+@media screen and (max-width: 600px){
+   footer {
+    
+    #social-wrapper {
+  
+      ul {
+        padding: 0;       
+     
+      }
+    }
+    .desc {
+      padding: 3px;
+    }
+  }
+}

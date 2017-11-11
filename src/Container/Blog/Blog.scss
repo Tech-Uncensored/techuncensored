@@ -1,0 +1,50 @@
+#articles {
+    padding:20px 0;
+    width:1200px;
+    margin: 0 auto;
+
+    .article {
+        
+        margin:20px 0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        
+        .content {
+            
+            padding: 0 20px;
+            width:70%;
+            
+            .title {
+                font-weight:bold;
+                font-size:3.0rem;
+                
+                a {
+                    color: white;
+                }
+            }
+            
+            .createdat {
+                color:rgba(255, 255, 255, 0.6);
+            }
+            
+            .excerpt {
+                font-size:1.6rem;
+            }
+            
+            .video {
+                
+            }
+        }
+        
+        .image {
+            display:flex;
+            width:30%;
+            
+            img {
+                max-height: 200px;
+            }
+        }
+    }
+    
+}

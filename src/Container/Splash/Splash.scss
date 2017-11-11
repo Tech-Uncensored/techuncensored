@@ -1,0 +1,43 @@
+
+h1 {
+    font-weight:bold;    
+}
+
+#headerDesc {
+    color: hsla(0,0%,100%,.6)
+}
+
+.center {
+    text-align:center;
+}
+
+.centerContent {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #2f3136;
+    border-radius: 3px;
+    color:#f6f6f7;
+    cursor: pointer;
+    font-size:15px;
+    font-weight:500;
+    height:48px;
+    text-align:center;
+    width:212px;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+
+    &.btn-white {
+        background-color: #FFFFFF;
+        color: #2f3136;
+    }
+    
+}
+
+#footer {
+    position:relative;
+    padding: 80px 160px 48px;
+}

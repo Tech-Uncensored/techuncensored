@@ -47,4 +47,28 @@ header {
     font-weight: bold;
     font-size: 30px; }
 
+@media screen and (max-width: 800px) {
+  header {
+    height: auto;
+    padding: 20px;
+    text-align: center; }
+    header #logo {
+      display: inline;
+      float: none;
+      margin: 0 auto;
+      font-size: 4.0vw; }
+    header #live-status {
+      position: relative;
+      width: 150px;
+      margin: 0 auto;
+      left: 0;
+      top: auto; }
+    header .navigation {
+      display: block;
+      float: none;
+      margin: 2px 0;
+      font-size: 14px;
+      right: auto;
+      position: relative; } }
+
 /*# sourceMappingURL=Header.css.map */

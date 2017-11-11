@@ -86,4 +86,10 @@ footer {
       font-family: 'Roboto Slab', serif;
       font-size: 16px; }
 
+@media screen and (max-width: 600px) {
+  footer #social-wrapper ul {
+    padding: 0; }
+  footer .desc {
+    padding: 3px; } }
+
 /*# sourceMappingURL=Footer.css.map */

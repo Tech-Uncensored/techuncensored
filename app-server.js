@@ -1,11 +1,11 @@
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
-var fs = require('fs');
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+const fs = require('fs');
 
 // Start Express
-var app = express();
-var staging = express();
+const app = express();
+const staging = express();
 
 
 /* ************************************

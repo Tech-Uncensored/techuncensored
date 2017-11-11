@@ -5,7 +5,7 @@ import App from './Container/App/App'
 
 render(
     <Router>
-    <App/>
+    <App />
     </Router>,
     document.getElementById('root')
     )

@@ -159,3 +159,107 @@ $background: #fffcea;
     }
   }
 }
+@media screen and (max-width:800px){
+   #homepage-banner {
+    display: none;
+  }
+  #main-content {
+    font: {
+      size: 20px;
+      weight: normal;
+    }
+    padding: 20px;
+  }
+  .cards {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    .card {
+      margin: 0 2.5%;
+      width: 28.33%;
+      float: left;
+      position: relative;
+      background-color: #FFF;
+      transition: box-shadow .25s;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      .card-image {
+        position: relative;
+        cursor: default;
+        vertical-align: middle;
+        z-index: 1;
+        will-change: opacity, transform;
+        transition: all .3s ease-out;
+      }
+      .card-content {
+        padding: 2px;
+        border-radius: 0 0 2px 2px;
+        box-sizing: inherit;
+        display: block;
+        .card-title {
+          line-height: 75%;
+          font-size: 24px;
+          font-weight: lighter;
+          color: #212121;
+        }
+      }
+      .card-action {
+        cursor: pointer;
+        position: relative;
+        background-color: inherit;
+        border-top: 1px solid rgba(160, 160, 160, 0.2);
+        padding: 20px;
+        font {
+          size: 75%;
+        }
+        a {
+          color: #FFAB40;
+          margin-right: 20px;
+          transition: color .3s ease;
+          text-transform: uppercase;
+          text-decoration: none;
+          -webkit-tap-highlight-color: transparent;
+          &:hover {
+            color: #2C3E50;
+          }
+        }
+        .postDate {
+          color: #FFAB40;
+          float: right;
+          text-align: center;
+          font: {
+            weight: lighter;
+            size: 75%;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    cursor: pointer;
+  }
+  #highlights {
+    display: none;
+  }
+  .callout {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cards .card {
+  float:none;
+  width:auto;
+  margin:5px;
+  
+  .card-title {
+    text-align:center;
+    display:block;
+    line-height: 30px;
+  }
+  .card-content {
+    padding: 5px 10px; 
+  }
+  
+  }
+}

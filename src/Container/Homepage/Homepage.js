@@ -45,7 +45,7 @@ export default class Homepage extends Component {
                 }).bind(null, this));
         */
         Array.prototype.getIndexBy = function (name, value) {
-            for (var i = 0; i < this.length; i++) {
+            for (let i = 0; i < this.length; i++) {
                 if (this[i][name] == value) {
                     return this[i];
                 }
@@ -80,17 +80,19 @@ export default class Homepage extends Component {
         if (!array.length)
             return [];
 
-        var master = []; // master array containing arrays of objects
+        let master = []; // master array containing arrays of objects
         master.push(array.splice(0, 3));
         return master.concat(this.splitEntriesIntoArray(array));
     }
 
     render() {
-        var x = this.splitEntriesIntoArray(this.state.entries);
+        let x = this.splitEntriesIntoArray(this.state.entries);
 
-        var rows = x.map(function (collection) {
-         return collection.map(function(collections) {
-                return <PostCard title={collections.title}
+        let rows = x.map(function (collection) {
+         return collection.map(function(collections, index) {
+                return <PostCard
+                        key={index}
+                        title={collections.title}
                         date={collections.pubdata}
                         post={collections.content}
                         video={collections.video}

@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 //const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const PATHS = {
     app: path.join(__dirname, 'src'),
-    dist: path.join(__dirname, 'dist'),
+    dist: path.join(__dirname, 'build')
 };
 
 module.exports = {
@@ -16,13 +16,14 @@ module.exports = {
     },
     output: {
         path: PATHS.dist,
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: '/'
     },
     devServer: {
          open: true,
          compress: true,
          historyApiFallback: true,
-         contentBase: 'dist'
+         contentBase: 'build'
     },
     module: {
         rules: [{
