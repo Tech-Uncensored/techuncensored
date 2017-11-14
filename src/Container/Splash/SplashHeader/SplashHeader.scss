@@ -1,0 +1,110 @@
+$primary: #0C1117;
+$secondary: #777777;
+$background: #fffcea;
+
+
+header {
+  background: url('../../../public/images/header-bg.jpg') $primary;
+  color: #FFF;
+  display: block;
+  height: 80px;
+  position: relative;
+  
+  #logo {
+    display: flex;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    float: left;
+    color: #DCD0C0 !important;
+    
+    font: {
+      family: 'Ubuntu', serif;
+      weight: bold;
+      size: 1em;
+    }
+    line-height: 30px;
+    &:before {
+      background: url('../../../public/images/tech_uncensored_logo_bg.png') bottom/cover;
+      content: " ";
+      display: inline-block;
+      height: 50px;
+      position: relative;
+      vertical-align: text-bottom;
+      width: 50px;
+      
+    }
+ul>li {
+  font: {
+    size:1.5rem;
+  };
+  display: inline-block;
+  margin: {
+    top:0;
+    right:30px;
+    bottom:0;
+    left:2px;
+  }
+  line-height:50px;
+}
+a {
+  color: #FFF;
+  text-decoration:none;
+  cursor: pointer;
+}
+  }
+  
+
+  .phone {
+    color: #DCD0C0;
+  }
+  .navigation {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 15px);
+    line-height: 30px;
+    font: {
+      family: 'Ubuntu', serif;
+      weight: bold;
+      size: 1.6em;
+    }
+  #social-nav {
+    display: flex;
+     list-style-type:none;
+     margin-right:15px;
+    li a {
+      cursor: pointer;
+      .fa-instagram {
+        color: #DBD0C0;
+      }
+        .fa-facebook {
+        color: #DBD0C0;
+      }
+        .fa-snapchat {
+        color: #DBD0C0;
+      }
+      font: {
+        size: .8em;
+      };
+      margin: {
+    top:0;
+    right:5px;
+    bottom:0;
+    left:5px;
+        }
+      
+      }
+     
+      
+    }
+  }
+}
+@media screen and (max-width:800px) {
+  header {
+   #logo {
+     margin:30px;
+   }
+      }
+    
+  
+}

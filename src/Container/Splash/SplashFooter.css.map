@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAOe,2CAAS;EAChB,KAAK,EAAE,IAAI;AAEP,2CAAS;EACP,KAAK,EAAE,KAAK",
-"sources": ["SplashFooter.scss"],
-"names": [],
-"file": "SplashFooter.css"
-}

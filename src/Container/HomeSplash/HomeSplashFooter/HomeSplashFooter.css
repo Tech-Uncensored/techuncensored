@@ -1,0 +1,27 @@
+#homesplash-footer {
+  position: relative;
+  padding: 80px 160px 48px;
+  background: #0C1117;
+  margin-top: 50px;
+  position: absolute; }
+  #homesplash-footer .navigation {
+    display: flex;
+    padding-bottom: 10px; }
+    #homesplash-footer .navigation .col {
+      width: 33%; }
+      #homesplash-footer .navigation .col ul {
+        list-style: none;
+        text-align: right;
+        width: 275px;
+        margin: 0 auto; }
+  #homesplash-footer .greybar {
+    width: 100%;
+    height: 2px;
+    background: #777777;
+    opacity: 0.1; }
+  #homesplash-footer .ctaFooter {
+    text-align: center;
+    padding: 20px 0;
+    color: #DBD0C0; }
+
+/*# sourceMappingURL=HomeSplashFooter.css.map */

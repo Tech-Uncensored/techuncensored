@@ -47,35 +47,7 @@ img {
 }
 
 @media (max-width: 800px) {
-  header {
-    height: auto;
-    padding: 20px;
-    text-align:center;
-    #logo {
-      display: inline;
-      float:none;
-      margin: 0 auto;
-      font-size:4.0vw;
-    }
-    #live-status {
-      position:relative;
-      width: 150px;
-      margin: 0 auto;
-      left: 0;
-      top: auto;
-    }
-    .navigation {
-      display:block;
-      float:none;
-      margin: 2px 0;
-      font:{
-        size: 14px;
-      }
-      right: auto;
-      position:relative;
-    }
-    /*end nav*/
-  }
+
   /*end header*/
   #homepage-banner {
     display: none;

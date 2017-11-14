@@ -4,7 +4,7 @@ $background: #fffcea;
 
 
 header {
-  background: url('../../public/images/header-bg.jpg') $primary;
+  background: url('../../../public/images/header-bg.jpg') $primary;
   color: #FFF;
   display: block;
   height: 80px;
@@ -24,7 +24,7 @@ header {
     }
     line-height: 30px;
     &:before {
-      background: url('../../public/images/tech_uncensored_logo_bg.png') bottom/cover;
+      background: url('../../../public/images/tech_uncensored_logo_bg.png') bottom/cover;
       content: " ";
       display: inline-block;
       height: 50px;
@@ -75,22 +75,22 @@ a {
     li a {
       cursor: pointer;
       .fa-instagram {
-        color: purple;
+        color: #DBD0C0;
       }
         .fa-facebook {
-        color: lightblue;
+        color: #DBD0C0;
       }
         .fa-snapchat {
-        color: yellow;
+        color: #DBD0C0;
       }
       font: {
         size: .8em;
       };
       margin: {
     top:0;
-    right:20px;
+    right:5px;
     bottom:0;
-    left:10px;
+    left:5px;
         }
       
       }
@@ -99,34 +99,12 @@ a {
     }
   }
 }
-
 @media screen and (max-width:800px) {
-    header {
-    height: auto;
-    padding: 20px;
-    text-align:center;
-    #logo {
-      display: inline;
-      float:none;
-      margin: 0 auto;
-      font-size:4.0vw;
-    }
-    #live-status {
-      position:relative;
-      width: 150px;
-      margin: 0 auto;
-      left: 0;
-      top: auto;
-    }
-    .navigation {
-      display:block;
-      float:none;
-      margin: 2px 0;
-      font:{
-        size: 14px;
+  header {
+   #logo {
+     margin:30px;
+   }
       }
-      right: auto;
-      position:relative;
-    }
-}
+    
+  
 }

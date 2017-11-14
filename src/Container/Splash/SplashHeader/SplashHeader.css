@@ -1,0 +1,70 @@
+header {
+  background: url("../../../public/images/header-bg.jpg") #0C1117;
+  color: #FFF;
+  display: block;
+  height: 80px;
+  position: relative; }
+  header #logo {
+    display: flex;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    float: left;
+    color: #DCD0C0 !important;
+    font-family: 'Ubuntu', serif;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 30px; }
+    header #logo:before {
+      background: url("../../../public/images/tech_uncensored_logo_bg.png") bottom/cover;
+      content: " ";
+      display: inline-block;
+      height: 50px;
+      position: relative;
+      vertical-align: text-bottom;
+      width: 50px; }
+    header #logo ul > li {
+      font-size: 1.5rem;
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 30px;
+      margin-bottom: 0;
+      margin-left: 2px;
+      line-height: 50px; }
+    header #logo a {
+      color: #FFF;
+      text-decoration: none;
+      cursor: pointer; }
+  header .phone {
+    color: #DCD0C0; }
+  header .navigation {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: calc(50% - 15px);
+    line-height: 30px;
+    font-family: 'Ubuntu', serif;
+    font-weight: bold;
+    font-size: 1.6em; }
+    header .navigation #social-nav {
+      display: flex;
+      list-style-type: none;
+      margin-right: 15px; }
+      header .navigation #social-nav li a {
+        cursor: pointer;
+        font-size: .8em;
+        margin-top: 0;
+        margin-right: 5px;
+        margin-bottom: 0;
+        margin-left: 5px; }
+        header .navigation #social-nav li a .fa-instagram {
+          color: #DBD0C0; }
+        header .navigation #social-nav li a .fa-facebook {
+          color: #DBD0C0; }
+        header .navigation #social-nav li a .fa-snapchat {
+          color: #DBD0C0; }
+
+@media screen and (max-width: 800px) {
+  header #logo {
+    margin: 30px; } }
+
+/*# sourceMappingURL=SplashHeader.css.map */

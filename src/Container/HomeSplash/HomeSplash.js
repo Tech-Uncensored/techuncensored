@@ -1,12 +1,12 @@
 import React, {Component} from 'react'
 import {Col, Row} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom'
-import SplashHeader from './SplashHeader/SplashHeader'
-import SplashFooter from './SplashFooter/SplashFooter'
+import SplashHeader from './HomeSplashHeader/HomeSplashHeader'
+import SplashFooter from './HomeSplashFooter/HomeSplashFooter'
 
-import './Splash.scss'
+import './HomeSplash.scss'
 
-export default class Splash extends Component {
+export default class HomeSplash extends Component {
     
     render() {
         return(
@@ -24,7 +24,7 @@ export default class Splash extends Component {
                     </div>
                     
                     <div className="splashImage-wrap">
-                        <img className="splashImage" src={require('../../public/images/iot_banner2.png')}/>
+                        <img className="splashImage" src={require('../../public/images/rwd4png.png')}/>
                         
                     </div>
                     

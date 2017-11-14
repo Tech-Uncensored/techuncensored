@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 import {Col, Row} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom'
-import './SplashHeader.scss'
+import './HomeSplashHeader.scss'
 
-export default class SplashHeader extends Component {
+export default class HomeSplashHeader extends Component {
     
     render() {
         return(
@@ -17,9 +17,9 @@ export default class SplashHeader extends Component {
         </div>
         <div className="navigation">
         <ul id="social-nav">
-        <li><a><i className="fa fa-instagram"></i></a></li>
-        <li><a><i className="fa fa-facebook"></i></a></li>
-        <li><a><i className="fa fa-snapchat"></i></a></li>
+        <li><a href="https://www.instagram.com/tech_uncensored/" target="_blank"><i className="fa fa-instagram"></i></a></li>
+        <li><a href="https://www.facebook.com/techuncensored/" target="_blank"><i className="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.snapchat.com/add/techuncensored/" target="_blank"><i className="fa fa-snapchat"></i></a></li>
         </ul>
             <div className="phone">215.515.8324</div>
             <div className="menu"></div>

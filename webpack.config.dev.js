@@ -102,8 +102,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src/public', 'index.html')
-          //  favicon: 'src/public/assets/favicon.png'
+            template: path.resolve(__dirname, 'src/public', 'index.html'),
+            favicon: 'src/public/images/fav.png'
         }),
 
         new ExtractTextPlugin({
