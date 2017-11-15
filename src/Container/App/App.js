@@ -8,20 +8,21 @@ import Splash from '../Splash/Splash'
 import Blog from '../Blog/Blog'
 import Article from '../Article/Article'
 import HomeSplash from '../HomeSplash/HomeSplash'
+import IotWorks from '../Splash/IotWorks/IotWorks'
+import WebSolution from '../HomeSplash/WebSolution/WebSolution'
 
 import './App.scss'
 
 
 const App = () => (
     <div>
+    <Route exact path='/' component={Splash} />
         <Switch>
             <Route path='/homepage' component={Homepage} />
             <Route path='/splash' component={Splash} />
             <Route path='/blog/:permalink' component={Article} />
             <Route path='/blog' component={Blog} />
             <Route path='/homesplash' component={HomeSplash} />
-            
-            
         </Switch>
     </div>
     )

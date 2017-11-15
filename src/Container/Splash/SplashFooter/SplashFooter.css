@@ -1,18 +1,28 @@
 #splash-footer {
+  width: 100%;
   position: relative;
   padding: 80px 160px 48px;
   background: #0C1117;
-  margin-top: 50px; }
+  margin-top: 50px;
+  font-size: 16px; }
+  #splash-footer .col {
+    width: 49%; }
   #splash-footer .navigation {
     display: flex;
     padding-bottom: 10px; }
-    #splash-footer .navigation .col {
-      width: 33%; }
-      #splash-footer .navigation .col ul {
-        list-style: none;
-        text-align: right;
-        width: 275px;
-        margin: 0 auto; }
+    #splash-footer .navigation ul {
+      list-style: none;
+      text-align: left;
+      margin: 0 auto;
+      padding: 0; }
+    #splash-footer .navigation .contact {
+      text-align: right;
+      display: inline; }
+    #splash-footer .navigation .socials {
+      text-align: right; }
+      #splash-footer .navigation .socials li {
+        display: inline-block;
+        margin: 1em; }
   #splash-footer .greybar {
     width: 100%;
     height: 2px;
@@ -22,5 +32,68 @@
     text-align: center;
     padding: 20px 0;
     color: #DBD0C0; }
+
+@media screen and (max-width: 800px) {
+  #splash-footer {
+    width: 100%;
+    position: relative;
+    padding: 80px 160px 48px;
+    background: #0C1117;
+    margin-top: 50px;
+    font-size: 1.8em; }
+    #splash-footer .col {
+      width: 49%; }
+    #splash-footer .navigation {
+      display: flex;
+      padding-bottom: 10px; }
+      #splash-footer .navigation ul {
+        list-style: none;
+        text-align: left;
+        margin: 0 auto;
+        padding: 0; }
+      #splash-footer .navigation .links li {
+        font-size: .7em; }
+      #splash-footer .navigation .contact div {
+        font-size: .7em; }
+        #splash-footer .navigation .contact div .fa {
+          font-size: .8em;
+          margin-right: .5em;
+          margin-top: .5em; }
+      #splash-footer .navigation .socials, #splash-footer .navigation .fa {
+        color: #FFF;
+        font-size: .8em; }
+        #splash-footer .navigation .socials li, #splash-footer .navigation .fa li {
+          display: inline-block;
+          margin: 1em;
+          font-size: 1em; }
+    #splash-footer .greybar {
+      width: 100%;
+      height: 2px;
+      background: #777777;
+      opacity: 0.1; }
+    #splash-footer .ctaFooter {
+      text-align: center;
+      padding: 20px 0;
+      color: #DBD0C0; } }
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  #splash-footer {
+    font-size: 1.5rem;
+    padding: 10px; }
+    #splash-footer .col {
+      width: 100%; }
+    #splash-footer .navigation {
+      display: block; }
+      #splash-footer .navigation .links, #splash-footer .navigation .contact, #splash-footer .navigation .socials {
+        text-align: center;
+        font-size: 2.0rem;
+        margin-bottom: 10px; }
+    #splash-footer .ctaFooter {
+      width: 100%; } }
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  #splash-footer {
+    font-size: 1.5rem;
+    padding: 10px; }
+    #splash-footer .ctaFooter {
+      width: 100%; } }
 
 /*# sourceMappingURL=SplashFooter.css.map */

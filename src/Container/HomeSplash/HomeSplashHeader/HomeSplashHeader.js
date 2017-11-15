@@ -10,9 +10,7 @@ export default class HomeSplashHeader extends Component {
      <header>
           <div id="logo">
             <ul id="topNav">
-                <li><a>Escape Rooms</a></li>
-                <li><a>How It Works</a></li>
-                <li><a>Blog</a></li>
+                <li><NavLink to="/blog">Blog</NavLink></li>
             </ul>
         </div>
         <div className="navigation">

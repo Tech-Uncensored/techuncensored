@@ -34027,10 +34027,10 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Layout_Layout__ = __webpack_require__(367);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__PostCard_PostCard__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Splash_Splash__ = __webpack_require__(370);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Blog_Blog__ = __webpack_require__(376);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Article_Article__ = __webpack_require__(378);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__HomeSplash_HomeSplash__ = __webpack_require__(380);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__App_scss__ = __webpack_require__(386);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Blog_Blog__ = __webpack_require__(377);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Article_Article__ = __webpack_require__(379);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__HomeSplash_HomeSplash__ = __webpack_require__(381);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__App_scss__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__App_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__App_scss__);
 
 
@@ -67386,7 +67386,7 @@ class Splash extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'splashImage-wrap' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'splashImage', src: "/assets/iot_banner2.png" })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'splashImage', src: __webpack_require__(376) })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -67593,7 +67593,7 @@ class SplashFooter extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { id: 'footer' },
+            { id: 'splash-footer' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'footerContent' },
@@ -67715,6 +67715,12 @@ class SplashFooter extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 /***/ }),
 /* 376 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/iot_banner2.png";
+
+/***/ }),
+/* 377 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67724,7 +67730,7 @@ class SplashFooter extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cosmicjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_cosmicjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Common_Footer_Footer__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Common_Header_Header__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Blog_scss__ = __webpack_require__(377);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Blog_scss__ = __webpack_require__(378);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Blog_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Blog_scss__);
 
 
@@ -67826,13 +67832,13 @@ class Blog extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 
 /***/ }),
-/* 377 */
+/* 378 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 378 */
+/* 379 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67842,7 +67848,7 @@ class Blog extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_cosmicjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_cosmicjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Common_Footer_Footer__ = __webpack_require__(98);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Common_Header_Header__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Article_scss__ = __webpack_require__(379);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Article_scss__ = __webpack_require__(380);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Article_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__Article_scss__);
 
 
@@ -67910,13 +67916,13 @@ class Article extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 
 /***/ }),
-/* 379 */
+/* 380 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 380 */
+/* 381 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67924,9 +67930,9 @@ class Article extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__HomeSplashHeader_HomeSplashHeader__ = __webpack_require__(381);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__HomeSplashFooter_HomeSplashFooter__ = __webpack_require__(383);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__HomeSplash_scss__ = __webpack_require__(385);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__HomeSplashHeader_HomeSplashHeader__ = __webpack_require__(382);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__HomeSplashFooter_HomeSplashFooter__ = __webpack_require__(384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__HomeSplash_scss__ = __webpack_require__(386);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__HomeSplash_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__HomeSplash_scss__);
 
 
@@ -67976,7 +67982,7 @@ class HomeSplash extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'splashImage-wrap' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'splashImage', src: "../../public/images/rwd3.png" })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: 'splashImage', src: __webpack_require__(387) })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -68055,7 +68061,7 @@ class HomeSplash extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 
 /***/ }),
-/* 381 */
+/* 382 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -68063,7 +68069,7 @@ class HomeSplash extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_router_dom__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__HomeSplashHeader_scss__ = __webpack_require__(382);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__HomeSplashHeader_scss__ = __webpack_require__(383);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__HomeSplashHeader_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__HomeSplashHeader_scss__);
 
 
@@ -68160,20 +68166,20 @@ class HomeSplashHeader extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] 
 
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__HomeSplashFooter_scss__ = __webpack_require__(384);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__HomeSplashFooter_scss__ = __webpack_require__(385);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__HomeSplashFooter_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__HomeSplashFooter_scss__);
 
 
@@ -68184,7 +68190,7 @@ class HomeSplashFooter extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] 
     render() {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { id: 'footer' },
+            { id: 'homesplash-footer' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'footerContent' },
@@ -68293,12 +68299,6 @@ class HomeSplashFooter extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] 
 
 
 /***/ }),
-/* 384 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 385 */
 /***/ (function(module, exports) {
 
@@ -68306,6 +68306,18 @@ class HomeSplashFooter extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] 
 
 /***/ }),
 /* 386 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 387 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "assets/rwd4png.png";
+
+/***/ }),
+/* 388 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

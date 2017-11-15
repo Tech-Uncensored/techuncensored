@@ -29,25 +29,36 @@ export default class HomeSplash extends Component {
                     </div>
                     
                     <div className="container">
-                        <h2 className="centerContent">Build A Generation III Escape Room</h2>
-                        <p>Third generation escape rooms bring a dynamic experience to players far beyond possible in previous generations. 
-                        These modern Escape Rooms can run fully automated once started, advancing the game, delivering clues, and engaging players 
-                        all without a dedicated game master. Players have come to expect the highest quality experience that requires interactive props, 
-                        real-time feedback, with total emersion.</p>
-                        <p>Our professional engineers develop custom third generation escape room props perfect for any room and to fit any theme. 
-                        Get started today building your third-generation escape room experience with IoT automation! </p>
+                        <h2 className="centerContent">Building Modern Responsive Software Solutions and Web Applications</h2>
+                        <p>
+                        Modern Technologies such as progressive web applications have been introduced into the industry even though 
+                        few companies are utilizing what is soon to be standardized practice. Tech_Uncensored stays ahead of the curve 
+                        by creating experiences that tackle the future.
+                        <ul>
+                        <li>Native Mobile Apps</li>
+                        <li>Responsive Web Design with PWA</li>
+                        <li>Integrated API's</li>
+                        <li>Top Tier Performance testing</li>
+                        </ul>
+                        
+                        </p>
+                        <p>
+                        Leading with future technologies is never enough if you can't find your audience. Using social media while embedding analytics 
+                        will let you know all the data your team needs to project how to approach your future. Tech_Uncensored creates and maintains 
+                        the platform needed for any custom solution.
+                        </p>
                         
                         <h2 className="centerContent">How It Works</h2>
-                        <p>IoT automation utilizes programmable microcomputers to control or automate props based upon one or multiple inputs. This allows rooms to run from start to finish autonomously, progressing the game forward at will. Rooms may be fully automated or partially automated, requiring limited input from the game master or limited analog props. </p>
-                        <p>In fully automated rooms, software and sensors placed throughout the room enable the room to run itself from start to finish. This also allows a higher quality, more engaging experience for players. Swap shackle locks out for RFID or Bluetooth enabled locks, utilize audio or vibration sensors to activate clues, create interactive experiences through prop cell phones, tablets, or computers.</p>
-                        <p>Never miss a player ask for a clue or struggle with a combination lock again!</p>
-                        <p>There are a variety of ways we can help you deliver an exceptional experience for your players. </p>
+                        <p>There is no "sale's" team here to feed you buzz words about tech they've never touched. You will be welcomed by our top engineers to explain your situation so we can draw out a plan that suits you and your companies needs.</p>
+                        <p> Every situation is different, but all solutions will be built with fast performing UI's using customized ReactJS components. </p>
+                        <p> Database technology has improved tremendously, and we intend to use it! Your solution will dictate how we proceed with integrating your data for the fastest performance.</p>
+                        <p>We handle all ranges of Software Development:</p>
                         <ul>
-                            <li>Escape Room Prop Consulting</li>
-                            <li>Custom Escape Room Prop Development</li>
+                            <li>Creative Consulting for current solutions to update</li>
+                            <li>Unique </li>
                             <li>Custom Software Development</li>
                         </ul>
-                        <p>Contact us and tell us a little about your project! We are looking forward to working with you to build your high-tech generation III Escape Room!</p>
+                        <p>Contact us and tell us a little about your project! We are looking forward to working with you to build your Custom Solution!</p>
                         
                     </div>
                     

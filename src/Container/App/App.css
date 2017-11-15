@@ -3,7 +3,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #18191C;
+  /* background: #18191C; */
+  background: #0c1117;
+  background: -moz-linear-gradient(top, #0c1117 0%, #0c1117 36%, #18191c 74%, #18191c 100%);
+  background: -webkit-linear-gradient(top, #0c1117 0%, #0c1117 36%, #18191c 74%, #18191c 100%);
+  background: linear-gradient(to bottom, #0c1117 0%, #0c1117 36%, #18191c 74%, #18191c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c1117', endColorstr='#18191c',GradientType=0 );
   color: #FFFFFF;
   font-family: 'Ubuntu'; }
 

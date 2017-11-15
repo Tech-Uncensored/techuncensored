@@ -25,7 +25,7 @@ export default class Blog extends Component {
         }
     }
     
-    componentDidMount() {
+    componentWillMount() {
         const bucket = { slug: 'tech-uncensoredtech', read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd' };
         Cosmic.getObjects({ bucket }, (function(err, res) {
             

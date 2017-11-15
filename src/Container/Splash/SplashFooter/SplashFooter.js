@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Button} from 'react-bootstrap'
+import {NavLink} from 'react-router-dom'
 import './SplashFooter.scss'
 export default class SplashFooter extends Component {
     
@@ -10,29 +11,26 @@ export default class SplashFooter extends Component {
                  <div className="footerContent">
                     <div className="navigation">
                         <div className="col">
-                            <ul>
-                                <li>Tech Uncensored Blog</li>                            
+                            <ul className="links">
+                                <li><NavLink to="/blog">Tech Uncensored Blog</NavLink></li>                            
                                 <li>Custom IoT Development</li>
                                 <li>Custom Software Engineering</li>
                                 <li>Education / Speaking Opportunities</li>
                             </ul>
                         </div>
                         <div className="col">
-                            <ul>
-                                <li>Twitter</li>
-                                <li>Snapchat</li>
-                                <li>Facebook</li>
-                                <li>Instagram</li>
-                            </ul>
+                            <div className="contact">
+                                <div><i className="fa fa-phone"></i> 215.515.8324</div>
+                                <div><i className="fa fa-envelope"></i> staff@uncensored.tech</div>
+                                <ul className="socials">
+                                    <li><a href="https://www.twitter.com/tech_uncensored" target="_blank"><i className="fa fa-twitter"></i></a></li>
+                                    <li><a href="https://www.facebook.com/techuncensored" target="_blank"><i className="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://www.instagram.com/tech_uncensored" target="_blank"><i className="fa fa-instagram"></i></a></li>
+                                    <li><a href="https://www.snapchat.com/add/tech_uncensored" target="_blank"><i className="fa fa-snapchat"></i></a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className="col">
-                            <ul>
-                                <li>Twitter</li>
-                                <li>Snapchat</li>
-                                <li>Facebook</li>
-                                <li>Instagram</li>
-                            </ul>
-                        </div>
+                      
                     </div>
                     <div className="greybar"></div> 
                     <div className="ctaFooter">

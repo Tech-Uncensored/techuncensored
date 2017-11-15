@@ -1,13 +1,19 @@
 #splash-wrapper {
   width: 100%;
   min-height: 100%; }
+  #splash-wrapper .logo-image {
+    width: 5em;
+    height: 5em;
+    margin: 2em; }
   #splash-wrapper .center {
     text-align: center;
     padding: 60px 0 20px 0; }
     #splash-wrapper .center h1 {
-      font-weight: bold; }
+      font-weight: bold;
+      font-size: 40px; }
     #splash-wrapper .center #headerDesc {
-      color: rgba(255, 255, 255, 0.6); }
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 18px; }
   #splash-wrapper #ctaButtons, #splash-wrapper .centerContent {
     padding: 20px 0; }
     #splash-wrapper #ctaButtons .btn, #splash-wrapper .centerContent .btn {
@@ -23,6 +29,9 @@
       align-items: center;
       display: flex;
       justify-content: center; }
+      #splash-wrapper #ctaButtons .btn.callnow a, #splash-wrapper .centerContent .btn.callnow a {
+        text-decoration: none;
+        color: #2f3136; }
       #splash-wrapper #ctaButtons .btn.btn-white, #splash-wrapper .centerContent .btn.btn-white {
         margin-right: 5px;
         background-color: #FFFFFF;
@@ -31,12 +40,42 @@
     width: 100%;
     padding: 20px 0;
     margin: 0 auto;
-    height: 680px; }
+    height: 600px; }
     #splash-wrapper .splashImage-wrap .splashImage {
       width: 100%;
       min-height: 100%; }
   #splash-wrapper .centerContent {
     display: flex;
     justify-content: center; }
+
+@media screen and (max-width: 800px) {
+  #splash-wrapper {
+    margin-top: 2em; }
+    #splash-wrapper .logo-image {
+      display: block;
+      margin: 0 auto; }
+    #splash-wrapper .center {
+      text-align: center;
+      padding: 0; }
+      #splash-wrapper .center h1 {
+        font-size: 2.5em; } }
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  #splash-wrapper {
+    margin-top: 2em; }
+    #splash-wrapper .logo-image {
+      display: block;
+      margin: 0 auto; }
+    #splash-wrapper .center {
+      text-align: center;
+      padding: 0; }
+      #splash-wrapper .center h1 {
+        font-size: 1.7em; }
+    #splash-wrapper .splashImage-wrap {
+      height: 250px; } }
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  #splash-wrapper .splashImage-wrap {
+    height: 200px; }
+  #splash-wrapper h1 {
+    text-align: center; } }
 
 /*# sourceMappingURL=Splash.css.map */

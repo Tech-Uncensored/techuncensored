@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Col, Row} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom'
-import SplashHeader from './SplashHeader/SplashHeader'
+// import SplashHeader from './SplashHeader/SplashHeader'
 import SplashFooter from './SplashFooter/SplashFooter'
 
 import './Splash.scss'
@@ -11,16 +11,16 @@ export default class Splash extends Component {
     render() {
         return(
             <div id="splash-wrapper">
-                    <SplashHeader />
-                    
+                    { /* <SplashHeader /> */ }
+                  <img className="logo-image" src={require('../../public/images/tech_uncensored_logo_bg.png')} />
                     <div className="center">
                         <h1>It's time to rethink your Escape Room.</h1>
                         <p id="headerDesc">All-in-one Solution for IoT Automation to ease your efforts. <br />Stop lettting other companies upsale bull$hit. Simplify your life.</p>
                     </div>
                     
                     <div id="ctaButtons" className="centerContent">
-                        <div className="btn btn-white">Click For Consult</div>
-                        <div className="btn">Open chat to speak with us</div>
+                        <div className="btn btn-white callnow"><a href="tel:+12155158324">Call 215.515.8324</a></div>
+                        <div className="btn" onClick={  () => { Tawk_API.maximize(); } }>Get Started Now</div>
                     </div>
                     
                     <div className="splashImage-wrap">
