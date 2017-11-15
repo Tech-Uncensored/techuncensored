@@ -3,7 +3,8 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-//const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+
 const PATHS = {
     app: path.join(__dirname, 'src'),
     dist: path.join(__dirname, 'dist'),
@@ -103,15 +104,37 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/public', 'index.html'),
-            favicon: 'src/public/images/fav.png'
+            favicon: 'src/public/images/fav.png',
+            minify: {
+              collapseWhitespace: true,
+              collapseInlineTagWhitespace: true,
+              removeComments: true,
+              removeRedundantAttributes: true
+            }
         }),
-
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        }),
         new ExtractTextPlugin({
             filename: '[name].css',
             disable: false,
             allChunks: true
         }),
-        // new UglifyJSPlugin(),
+        new UglifyJSPlugin({
+            uglifyOptions: {
+              ie8: false,
+              ecma: 8,
+              compress: {
+                warnings: false,
+                drop_console: true
+              },
+              output: {
+                  comments: false,
+                  beautify: false
+              },
+              warnings: false
+            }
+        }),
         new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks 
         new CompressionPlugin({
             asset: "[path].gz[query]",
