@@ -29,8 +29,9 @@
            text-align: right;
            display:inline;
         }
-      .socials 
+      .socials , .fa
       {
+          color: #FFF;
           text-align: right;
           li {
              display:inline-block;
@@ -118,8 +119,30 @@
 }
       
   }
-@media screen and (min-width: 700px) {
-    
+@media screen and (max-width: 756px) {
+      #splash-footer {
+          font-size: 1.5rem;
+          padding:10px;
+          
+          .col {
+              width: 100%;
+          }
+          
+          .navigation {
+              display:block;
+              
+              .links, .contact, .socials {
+                  text-align:center;
+                  font-size: 2.0rem;
+                  margin-bottom: 10px;
+              }
+          }
+
+          .ctaFooter {
+              width:100%;
+          }
+      }
+  
 }
    @media screen and (max-width:640px) and (orientation: portrait) {
       #splash-footer {
@@ -150,6 +173,10 @@
       #splash-footer {
           font-size: 1.5rem;
           padding:10px;
+          
+          .navigation {
+               font-size: 2.0rem;
+          }
           
           .ctaFooter {
               width:100%;

@@ -18,9 +18,10 @@
     #splash-footer .navigation .contact {
       text-align: right;
       display: inline; }
-    #splash-footer .navigation .socials {
+    #splash-footer .navigation .socials, #splash-footer .navigation .fa {
+      color: #FFF;
       text-align: right; }
-      #splash-footer .navigation .socials li {
+      #splash-footer .navigation .socials li, #splash-footer .navigation .fa li {
         display: inline-block;
         margin: 1em; }
   #splash-footer .greybar {
@@ -75,6 +76,20 @@
       text-align: center;
       padding: 20px 0;
       color: #DBD0C0; } }
+@media screen and (max-width: 756px) {
+  #splash-footer {
+    font-size: 1.5rem;
+    padding: 10px; }
+    #splash-footer .col {
+      width: 100%; }
+    #splash-footer .navigation {
+      display: block; }
+      #splash-footer .navigation .links, #splash-footer .navigation .contact, #splash-footer .navigation .socials {
+        text-align: center;
+        font-size: 2.0rem;
+        margin-bottom: 10px; }
+    #splash-footer .ctaFooter {
+      width: 100%; } }
 @media screen and (max-width: 640px) and (orientation: portrait) {
   #splash-footer {
     font-size: 1.5rem;
@@ -93,6 +108,8 @@
   #splash-footer {
     font-size: 1.5rem;
     padding: 10px; }
+    #splash-footer .navigation {
+      font-size: 2.0rem; }
     #splash-footer .ctaFooter {
       width: 100%; } }
 
