@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>Tech Uncensored</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/app.css" rel="stylesheet" />
+        
+        <style>
+            header {
+              background: url("../img/header-bg.jpg") #0C1117;
+              color: #FFF;
+              display: block;
+              height: 80px;
+              position: relative; }
+              header .mobile-t {
+                display: none; }
+              header #logo {
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 15px 50px;
+                float: left;
+                color: #DCD0C0 !important;
+                font-family: 'Roboto Slab', serif;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 30px; }
+                header #logo:before {
+                  background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+                  content: " ";
+                  display: inline-block;
+                  height: 50px;
+                  position: relative;
+                  vertical-align: text-bottom;
+                  width: 50px; }
+              header #live-status {
+                display: block;
+                left: calc(50% - 75px);
+                top: 25px;
+                background: #0C1117;
+                border: 1px solid #FFF;
+                position: absolute;
+                text-align: center;
+                font-family: 'Roboto Slab', serif;
+                font-weight: lighter;
+                font-size: 18px;
+                padding: 5px 10px;
+                width: 200px; }
+                header #live-status a {
+                  text-decoration: none;
+                  color: inherit;
+                  text-transform: uppercase; }
+              header .phone {
+                color: #DCD0C0; }
+              header .navigation {
+                display: block;
+                position: absolute;
+                right: 30px;
+                top: calc(50% - 15px);
+                line-height: 30px;
+                font-family: 'Roboto Slab', serif;
+                font-weight: bold;
+                font-size: 30px; }
+            #homepage-banner {
+              height: 600px;
+              position: relative;
+              overflow: hidden;
+              background: url("/images/banner-mockup.jpg") no-repeat center/cover; }
+              #homepage-banner video {
+                width: 100%; }
+              #homepage-banner #banner-cta {
+                color: #C0B283;
+                font-size: 80px;
+                font-weight: bold;
+                font-family: 'Roboto Slab', sans-serif;
+                position: absolute;
+                text-align: center;
+                text-transform: uppercase;
+                top: 50%;
+                margin-top: -40px;
+                width: 100%; }
+            
+            .service {
+                
+            }
+            .service-title {
+                display:flex;
+                vertical-align: center;
+                justify-content: center;
+                font-size:36px;
+                font-weight:bold;
+                padding:20px 0;
+            }
+            
+            .service-description {
+                display:flex;
+                justify-content: center;
+                padding:20px 0;
+            }
+                
+        </style>
+    </head>
+    
+    <body>
+        
+        <header>
+            <div id="logo"></div>
+        </header>
+        
+        <div id="homepage-banner">
+            <video playsinline autoplay muted loop poster="" id="bgvid">
+                <source src="/techuncensored.webm" type="video/webm">
+            </video>
+            <div id="banner-cta">
+                <div>Real Developers <span>No Bullshit</span></div>
+                <div>All-in-one Solution for IoT Automation to ease your efforts. <br>Stop lettting other companies upsale bull$hit. Simplify your life.</div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <!-- Row -->
+            <div class="row" style="height:450px; margin-top:25px;">
+                <div class="col-md-6" style="background:orange;">
+                    <div class="service-title">
+                        IOT
+                    </div>
+                    <div class="service-description">
+                        Do Stuff
+                    </div>
+                </div>
+                <div class="col-md-6" style="background:blue;">
+                    <div class="service-title">
+                        Software Development
+                    </div>
+                    <div class="service-description">
+                        Do other stuff
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Row -->
+            <div class="row" style="height:450px;">
+                <div class="col-md-6" style="background:pink;">
+                    <div class="service-title">
+                        Website Development
+                    </div>
+                    <div class="service-description">
+                        Do Stuff
+                    </div>
+                </div>
+                <div class="col-md-6" style="background:lightgreen;">
+                    <div class="service-title">
+                        Digital Signage
+                    </div>
+                    <div class="service-description">
+                        Do other stuff
+                    </div>
+                </div>
+            </div>            
+        </div>
+        
+        
+    
+        
+    </body>
+</html>

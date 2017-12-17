@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const PATHS = {
     app: path.join(__dirname, 'src'),
@@ -142,6 +143,9 @@ module.exports = {
             test: /\.js$|\.css$|\.html$/,
             threshold: 10240,
             minRatio: 0.8
-        })
+        }),
+       new CopyWebpackPlugin([
+            {from:PATHS.app+'/public/static',to:PATHS.dist} // Copy everything from src/public/static to dist folder
+        ])
     ],
 };
