@@ -52,7 +52,7 @@ const workboxSW = new self.WorkboxSW({
     "clientsClaim": true
 });
 
-workboxSW.precache(fileManifest);
+
 workboxSW.precache([]);
 
 // Register png files e.g. https://localhost:3000/images/1.png
