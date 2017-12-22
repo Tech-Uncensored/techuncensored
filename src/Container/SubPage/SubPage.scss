@@ -1,0 +1,168 @@
+
+@media screen and (min-width: 950px) {
+    #subpage {
+
+        background: url('../../public/images/backdrop1.jpg') center / cover no-repeat;
+        font-size: 100%;
+        opacity: 2;
+        
+        #logo {
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 15px 50px;
+                float: left;
+                color: #DCD0C0 !important;
+                font-family: 'Roboto Slab', serif;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 30px; 
+            
+            &:before {
+                background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+                content: " ";
+                display: inline-block;
+                height: 50px;
+                position: relative;
+                vertical-align: text-bottom;
+                width: 50px;
+            }
+        }        
+
+        nav {
+            display: block;
+            position: absolute;
+            right: calc(20%);
+            top: calc(50% - 15px);
+            line-height: 30px;
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
+            font-size: 30px; 
+            
+            > div {
+              display: inline-block;
+              padding:0 20px;
+              font-style:italic;
+              position:relative;                
+            
+                > div {
+                  background:lightblue;
+                  padding:20px;
+                  position:absolute;
+                  top:50px;
+                  left:-600px;
+                  width:1300px;
+                  box-shadow:0 1px 3px rgba(0,0,0,.2);                     
+                }
+            }
+            
+            .nav-section-title {
+                padding:10px;
+                text-transform: uppercase;
+                text-align:center;
+                background:navy;
+                color: white;
+                font-weight:lighter;
+                font-size:14px;
+                font-style:normal;
+            }
+            
+            .nav-section-list {
+                font-size:12px;
+                list-style: none;
+                padding: 0 5px;
+            }
+            .nav-section-list li {
+                padding-bottom:5px;
+                border-bottom: 1px solid black;
+            }
+            
+            .service-box {
+                padding:0 40px; 
+                text-align:justify; 
+                font-size:22px;
+                position:relative;
+                z-index:1;
+                font-family: "Roboto";
+                font-weight:lighter;
+            }
+            
+            .service-btn {
+                display:block; 
+                margin:15px auto;
+                text-align:center;
+            }
+            .service-btn a {
+                font-size:30px;
+            }
+        }
+
+        .header-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 200px;
+            margin: 0;
+            
+            background: blue;
+            .top-header {
+                text-align: center;
+            }
+        }
+
+        .whitespace {
+            margin: 10rem;
+        }
+        .row-wrapper {
+            padding: {
+                left: 150px;
+                right: 150px;
+            };
+        }
+        h1 {
+            font: {
+                size: 3.5rem;
+            };
+            text-align: center;
+        }
+        .open-text {
+            line-height: 2.5rem;
+            font: {
+                size: 1.5rem;
+                family: "Roboto";
+            }
+            text-align: left;
+        
+        }
+        .img-side {
+
+            min-height: 350px;
+            background: url('../../public/images/wire.jpg') center / contain no-repeat;
+        }
+        .mid-image {
+            
+            min-height: 350px;
+            background: url('../../public/images/wire.jpg') center / contain no-repeat;
+        }
+        .mid-text {
+            width: 100%;
+           
+            line-height: 2.5rem;
+            font: {
+                size: 1.5rem;
+                family: "Roboto";
+            }
+
+        }
+        .rd-img {
+            
+            min-height: 350px;
+            background: url('../../public/images/wire.jpg') center / contain no-repeat;
+        }
+        .rd-text {
+            font-size: 1.5rem;
+             line-height: 2.5rem;
+        }
+       
+    }
+}

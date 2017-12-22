@@ -1,0 +1,99 @@
+@media screen and (min-width: 950px) {
+  #skills {
+    font-size: 100%;
+    opacity: 2; }
+    #skills #logo {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 15px 50px;
+      float: left;
+      color: #DCD0C0 !important;
+      font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px; }
+      #skills #logo:before {
+        background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+        content: " ";
+        display: inline-block;
+        height: 50px;
+        position: relative;
+        vertical-align: text-bottom;
+        width: 50px; }
+    #skills nav {
+      display: block;
+      position: absolute;
+      right: calc(20%);
+      top: calc(50% - 15px);
+      line-height: 30px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 30px; }
+      #skills nav > div {
+        display: inline-block;
+        padding: 0 20px;
+        font-style: italic;
+        position: relative; }
+        #skills nav > div > div {
+          background: lightblue;
+          padding: 20px;
+          position: absolute;
+          top: 50px;
+          left: -600px;
+          width: 1300px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+      #skills nav .nav-section-title {
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        background: navy;
+        color: white;
+        font-weight: lighter;
+        font-size: 14px;
+        font-style: normal; }
+      #skills nav .nav-section-list {
+        font-size: 12px;
+        list-style: none;
+        padding: 0 5px; }
+      #skills nav .nav-section-list li {
+        padding-bottom: 5px;
+        border-bottom: 1px solid black; }
+      #skills nav .service-box {
+        padding: 0 40px;
+        text-align: justify;
+        font-size: 22px;
+        position: relative;
+        z-index: 1;
+        font-family: "Roboto";
+        font-weight: lighter; }
+      #skills nav .service-btn {
+        display: block;
+        margin: 15px auto;
+        text-align: center; }
+      #skills nav .service-btn a {
+        font-size: 30px; }
+    #skills .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; }
+    #skills .header-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 400px;
+      background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/web_development_tech_uncensored.jpg") center/cover;
+      z-index: 1; }
+      #skills .header-image h1 {
+        position: relative;
+        z-index: 1;
+        font-size: 50px;
+        text-transform: uppercase; }
+    #skills .skills-detail {
+      background: white;
+      padding: 100px 250px;
+      color: navy; } }
+
+/*# sourceMappingURL=Skills.css.map */

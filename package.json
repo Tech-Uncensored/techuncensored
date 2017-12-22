@@ -6,7 +6,8 @@
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack.config.js",
     "build-dev": "NODE_ENV=development webpack --config webpack.config.dev.js",
-    "dev": "webpack-dev-server --host $IP --port $PORT --public $C9_HOSTNAME",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --host $IP --port $PORT --public $C9_HOSTNAME",
+    "pwa": "webpack-dev-server --config webpack.config.js --host $IP --port $PORT --public $C9_HOSTNAME",
     "morph": "babel-node app-server.js --out-file server.js",
     "start": "webpack-dev-server --hot --inline --content-base ./dist",
     "dist": "nodemon app-server.js"
@@ -39,6 +40,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.17",
     "compression-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.3.0",
     "css-loader": "^0.28.7",
@@ -56,6 +58,7 @@
     "uglifyjs-webpack-plugin": "^1.0.1",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.4",
+    "workbox-webpack-plugin": "^2.1.2"
   }
 }

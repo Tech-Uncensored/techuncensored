@@ -5,6 +5,8 @@ const CompressionPlugin = require('compression-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const PATHS = {
     app: path.join(__dirname, 'src'),
@@ -22,10 +24,10 @@ module.exports = {
         publicPath: '/'
     },
     devServer: {
-         open: true,
-         compress: true,
-         historyApiFallback: true,
-         contentBase: 'dist'
+        open: true,
+        compress: true,
+        historyApiFallback: true,
+        contentBase: 'dist'
     },
     module: {
         rules: [{
@@ -56,7 +58,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader','sass-loader']
+                    use: ['css-loader', 'sass-loader']
                 })
             },
             {
@@ -103,16 +105,18 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/public', 'index.html'),
             favicon: 'src/public/images/fav.png',
             minify: {
-              collapseWhitespace: true,
-              collapseInlineTagWhitespace: true,
-              removeComments: true,
-              removeRedundantAttributes: true
+                collapseWhitespace: true,
+                collapseInlineTagWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true
             }
         }),
+
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
@@ -123,19 +127,23 @@ module.exports = {
         }),
         new UglifyJSPlugin({
             uglifyOptions: {
-              ie8: false,
-              ecma: 8,
-              compress: {
-                warnings: false,
-                drop_console: true
-              },
-              output: {
-                  comments: false,
-                  beautify: false
-              },
-              warnings: false
+                ie8: false,
+                ecma: 8,
+                compress: {
+                    warnings: false,
+                    drop_console: true
+                },
+                output: {
+                    comments: false,
+                    beautify: false
+                },
+                warnings: false
             }
         }),
+        //new webpack.optimize.CommonChunksPlugin({
+        //    name: 'app'
+        //}),
+
         new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks 
         new CompressionPlugin({
             asset: "[path].gz[query]",
@@ -144,8 +152,23 @@ module.exports = {
             threshold: 10240,
             minRatio: 0.8
         }),
-       new CopyWebpackPlugin([
-            {from:PATHS.app+'/public/static',to:PATHS.dist} // Copy everything from src/public/static to dist folder
-        ])
+        new CopyWebpackPlugin([
+            { from: PATHS.app + '/public/static', to: PATHS.dist } // Copy everything from src/public/static to dist folder
+        ]),
+        new WorkboxPlugin({
+              globDirectory: dist,
+              globPatterns: ['*/.{html,js}'],
+              swSrc: './src/sw.js',
+              swDest: path.join(dist, 'sw.js'),
+              clientsClaim: true,
+              skipWaiting: true,
+            //  runtimeCaching: [
+                     //     {
+                     //       urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
+                     //       handler: 'staleWhileRevalidate'
+                     //     }
+                     //   ]
+
+        })
     ],
 };

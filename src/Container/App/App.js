@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Switch} from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Contact from '../Contact/Contact'
 import Homepage from '../Homepage/Homepage'
 import Layout from '../Layout/Layout'
@@ -10,6 +10,12 @@ import Article from '../Article/Article'
 import HomeSplash from '../HomeSplash/HomeSplash'
 import IotWorks from '../Splash/IotWorks/IotWorks'
 import WebSolution from '../HomeSplash/WebSolution/WebSolution'
+//import Sample from '../Sample/Sample'
+import SubPage from '../SubPage/SubPage'
+import Skills from './Skills'
+import Home from '../Home/Home'
+//import Error from '../Error/Error'
+
 
 import './App.scss'
 
@@ -23,8 +29,14 @@ const App = () => (
             <Route path='/blog/:permalink' component={Article} />
             <Route path='/blog' component={Blog} />
             <Route path='/homesplash' component={HomeSplash} />
+            <Route path='/sample' component={SubPage} />
+            <Route path='/skills' component={Skills} />
+            <Route path='/home' component={Home} />
+            
+            
+           
         </Switch>
     </div>
-    )
-    
-    export default App
+)
+
+export default App
