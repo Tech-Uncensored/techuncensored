@@ -1,0 +1,41 @@
+@media screen and (min-width: 950px) {
+    #skills {
+        font-size: 100%;
+        opacity: 2;
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .header-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/web_development_tech_uncensored.jpg') center/cover;
+            z-index: 1;
+
+            h1 {
+                position: relative;
+                z-index: 1;
+                font: {
+                    size: 50px;
+                }
+                ;
+                text-transform:uppercase;
+            }
+        }
+
+        .skills-detail {
+            background: white;
+            padding: 100px 250px;
+            color: navy;
+        }
+
+    }
+}

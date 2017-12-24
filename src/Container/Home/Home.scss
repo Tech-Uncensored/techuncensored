@@ -1,252 +1,106 @@
-// header sass
-header {
-    height: 800px;
-    position: relative;
-    overflow: hidden;
-    background: url("/assets/banner-mockup.jpg") no-repeat center/cover; 
-              
-    video {
-        width: 100%; 
-    }
-    
-    .header {
-        position:absolute; 
-        top:0; 
-        left:0; 
-        width:100%; 
-        z-index:1;
-    }
-    
-    #logo {
-            display: inline-block;
-            text-transform: uppercase;
-            padding: 15px 50px;
-            float: left;
-            color: #DCD0C0 !important;
-            font-family: 'Roboto Slab', serif;
-            font-weight: bold;
-            font-size: 30px;
-            line-height: 30px; 
-        
-        &:before {
-            background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
-            content: " ";
-            display: inline-block;
-            height: 50px;
-            position: relative;
-            vertical-align: text-bottom;
-            width: 50px;
-        }
-    }
-     
-    nav {
-        display: block;
-        position: absolute;
-        right: calc(20%);
-        top: calc(50% - 15px);
-        line-height: 30px;
-        font-family: 'Roboto Slab', serif;
-        font-weight: bold;
-        font-size: 30px; 
-        
-        > div {
-          display: inline-block;
-          padding:0 20px;
-          font-style:italic;
-          position:relative;                
-        
-            > div {
-              background:lightblue;
-              padding:20px;
-              position:absolute;
-              top:50px;
-              left:-600px;
-              width:1300px;
-              box-shadow:0 1px 3px rgba(0,0,0,.2);
-            }
-        }
-        
-        .children {
-            display:none;
-        }
-        
-        .nav-section-title {
-            padding:10px;
-            text-transform: uppercase;
-            text-align:center;
-            background:navy;
-            color: white;
-            font-weight:lighter;
-            font-size:14px;
-            font-style:normal;
-        }
-        
-        .nav-section-list {
-            font-size:12px;
-            list-style: none;
-            padding: 0 5px;
-        }
-        .nav-section-list li {
-            padding-bottom:5px;
-            border-bottom: 1px solid black;
-        }
-        
-        .service-box {
-            padding:0 40px; 
-            text-align:justify; 
-            font-size:22px;
-            position:relative;
-            z-index:1;
-            font-family: "Roboto";
-            font-weight:lighter;
-        }
-        
-        .service-btn {
-            display:block; 
-            margin:15px auto;
-            text-align:center;
-        }
-        .service-btn a {
-            font-size:30px;
-        }
-    }
-        
-    .overlay {
-        background:rgba(0,0,0,0.5);
-        position:absolute;
-        top:0;
-        bottom:0;
-        right:0;
-        left:0;
-    }
-    
-    #banner-cta {
-        color: #C0B283;
-        font-family: 'Roboto Slab', sans-serif;
-        position: absolute;
-        text-align: left;
-        text-transform: uppercase;
-        top: 50%;
-        margin-top: -40px;
-        width: 100%; 
-        padding-left:12%;
-    
-        .title {
-            font-size: 40px;
-            font-weight: bold; 
-            
-            span {
-                display: block;
-            }
-        }
-        
-        .desc {
-            font-size: 22px;
-            margin-top: 20px;
-        }
-        
-        .btn {
-            padding:15px; 
-            text-align:center;
-            background:coral;
-            color:white;
-            margin-top:20px;
-            width:400px;
-        }
-        
-    } // #banner-cta
-} // END header
-
-// padding
 .ptb50 {
-    padding:50px 0;
+    padding: 50px 0;
 }
+
 .ptb30 {
-    padding:30px 0;
+    padding: 30px 0;
 }
-.ptb20 { 
-    padding: 20px 0; 
-    
+
+.ptb20 {
+    padding: 20px 0;
+
 }
+
 .p30 {
-    padding:30px;
+    padding: 30px;
 }
 
 // font
 .fwl {
-    font-weight:lighter;
+    font-weight: lighter;
 }
+
 .fwb {
-    font-weight:bold;
+    font-weight: bold;
 }
+
 .fs30 {
     font-size: 30px;
 }
-.ffr { 
+
+.ffr {
     font-family: "Roboto";
 }
 
 .overlay {
-    position:absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
-    background:rgba(0,0,0,0.60)    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.60)
 }
 
 // services
 .service-row {
-    height:450px;
-    
-    > div {
-        display:flex; 
-        align-items:center;
+    height: 450px;
+
+    >div {
+        display: flex;
+        align-items: center;
     }
-    
-    .bg1 { background:url('https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg') center/cover;  }
-    .bg2 { background:url('https://wallpaperscraft.com/image/glare_light_light_background_36832_2560x1600.jpg');  }
-    .bg3 { background:url('http://wlpapers.com/images/light-blue-background-1.jpg'); }
-    .bg4 { background:url('https://images.designtrends.com/wp-content/uploads/2015/11/30150156/Plain-Sky-Blue-Background11.jpg');  }
-    
+
+    .bg1 {
+        background: url('https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg') center/cover;
+    }
+    .bg2 {
+        background: url('https://wallpaperscraft.com/image/glare_light_light_background_36832_2560x1600.jpg');
+    }
+    .bg3 {
+        background: url('http://wlpapers.com/images/light-blue-background-1.jpg');
+    }
+    .bg4 {
+        background: url('https://images.designtrends.com/wp-content/uploads/2015/11/30150156/Plain-Sky-Blue-Background11.jpg');
+    }
+
     .service-box {
-        padding:0 40px; 
-        text-align:justify; 
-        font-size:22px;
-        position:relative;
-        z-index:1;
+        padding: 0 40px;
+        text-align: justify;
+        font-size: 22px;
+        position: relative;
+        z-index: 1;
         font-family: "Roboto";
-        font-weight:lighter;
-        
+        font-weight: lighter;
+
         .service-title {
-            display:flex;
+            display: flex;
             justify-content: center;
-            font-size:36px;
-            font-weight:bold;
-            padding:20px 0;
-            text-transform:uppercase;
+            font-size: 36px;
+            font-weight: bold;
+            padding: 20px 0;
+            text-transform: uppercase;
         }
-        
+
         .service-description {
-            padding:20px 0;
+            padding: 20px 0;
             text-shadow: 3px 3px 10px grey;
-            
+
             .service-btn {
-                display:block; 
-                margin:15px auto;
-                text-align:center;
-            
+                display: block;
+                margin: 15px auto;
+                text-align: center;
+
                 .btn {
                     border-radius: 10px;
                     background: #0C1117;
                     color: #FFF;
-                    text-align: center; 
-                      
-                      a {
-                          font-size:30px;
-                      }
+                    text-align: center;
+
+                    a {
+                        font-size: 30px;
+                    }
                 }
-                
+
                 .btn.large {
                     width: 180px;
                     padding: 5px 20px;
@@ -257,7 +111,7 @@ header {
 }
 
 .callout {
-    background:url('http://thepatternlibrary.com/img/h.jpg') repeat;
+    background: url('http://thepatternlibrary.com/img/h.jpg') repeat;
 }
 
 .news-entry {
@@ -265,31 +119,31 @@ header {
         height: 150px;
     }
     .content {
-        padding:5px; 
-        background:white; 
-        box-shadow:0 1px 3px rgba(0,0,0,.2);
-        border-radius:4px;
-        
+        padding: 5px;
+        background: white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+        border-radius: 4px;
+
         .title {
-            font-size:1.5vh; 
-            font-weight:bold; 
-            color:navy;
+            font-size: 1.5vh;
+            font-weight: bold;
+            color: navy;
         }
-        
+
         .desc {
-            color:grey; 
-            font-size:12px;
+            color: grey;
+            font-size: 12px;
         }
     }
 }
 
 #newsletter {
-    
+
     .cta {
         line-height: 50px;
         font-size: 1.5em;
     }
-    
+
     input {
         color: white;
         height: 50px;
@@ -299,6 +153,6 @@ header {
         outline: none;
         border: none;
         border-bottom: 2px solid white;
-        text-align: center;        
+        text-align: center;
     }
 }

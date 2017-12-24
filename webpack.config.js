@@ -105,7 +105,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin([PATHS.dist]),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src/public', 'index.html'),
             favicon: 'src/public/images/fav.png',
@@ -153,22 +153,21 @@ module.exports = {
             minRatio: 0.8
         }),
         new CopyWebpackPlugin([
-            { from: PATHS.app + '/public/static', to: PATHS.dist } // Copy everything from src/public/static to dist folder
+            { from: PATHS.app + '/public/static', to: PATHS.dist }, // Copy everything from src/public/static to dist folder
+            { from: require.resolve('workbox-sw'), to: 'workbox-sw.prod.js' }
         ]),
-        new WorkboxPlugin({
-              globDirectory: dist,
-              globPatterns: ['*/.{html,js}'],
-              swSrc: './src/sw.js',
-              swDest: path.join(dist, 'sw.js'),
-              clientsClaim: true,
-              skipWaiting: true,
-            //  runtimeCaching: [
-                     //     {
-                     //       urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
-                     //       handler: 'staleWhileRevalidate'
-                     //     }
-                     //   ]
+        //        new WorkboxPlugin({
+        //            globDirectory: './build',
+        //            globPatterns: ['**/*.{html,css,png,jpg}'],
+        //            clientsClaim: true,
+        //            skipWaiting: true,
+        //  runtimeCaching: [
+        //     {
+        //       urlPattern: new RegExp('https://hacker-news.firebaseio.com'),
+        //       handler: 'staleWhileRevalidate'
+        //     }
+        //   ]
 
-        })
+        //        })
     ],
 };

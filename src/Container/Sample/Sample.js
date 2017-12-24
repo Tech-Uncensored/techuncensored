@@ -1,51 +1,52 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button, Col, Row, PageHeader, Jumbotron } from 'react-bootstrap'
+import Cosmic from 'cosmicjs'
+import Subpage from '../SubPage/SubPage'
+import Skills from '../Skills/Skills'
+import ErrorPage from '../Error/Error'
 import './Sample.scss'
 
 export default class Sample extends Component {
-    render() {
-        return (
-            <div id="landing" className="container-fluid">
-                 <img className="logo-image" src={require('../../public/images/tech_uncensored_logo_bg.png')} />
-                    <Row>
-                        <Col md={12}>
-                            <header>
-                                <h1>It's time to rethink</h1>
-                                <h3>Web Applications and beyond</h3>
-                            </header>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={12}>
-                            <div className="cta-btns">
-                                <Button bsStyle="warning">Call 215.515.8324</Button>
-                                <Button bsStyle="warning">Call 215.515.8324</Button>
-                            </div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col md={6} sm={12}>
-                            <div className="img-one">
-                                 <img src={require('http://via.placeholder.com/350x150')} />
-                                    <h2>Lightning fast pages with Mobile-First designs</h2>
-                                        <p>
-                                            Only proven methods and performance-enhanced custom solutions are used for development, and no app is complete without Virtual Reality included, standard.
-                                        </p>
-                            </div>
-                        </Col>
-                            <Col md={6} sm={12}>
-                                <div className="img-two">
-                                    <img src={require('http://via.placeholder.com/350x150')} />
-                                        <h2>Lightning fast pages with Mobile-First designs</h2>
-                                            <p>
-                                            Only proven methods and performance-enhanced custom solutions are used for development, and no app is complete without Virtual Reality included, standard.
-                                            </p>
-                                </div>
-                            </Col>
-                        </Row> 
-                    </div>
 
-        )
+    constructor() {
+        super()
+        this.state = {
+            article: {},
+            fourohfour: undefined
+        }
+    }
+
+    componentDidMount() {
+        const bucket = { slug: 'tech-uncensoredtech', read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd' };
+        Cosmic.getObject({ bucket }, { slug: this.props.match.params.permalink }, ((err, res) => {
+            this.setState({
+                article: (res) ? res.object : this.state.article,
+                fourohfour: (err || res.error) ? true : false
+            });
+        }).bind(this));
+    }
+
+    componentWillReceiveProps(next) {
+        if (this.props.match.params.permalink !== next.match.params.permalink) {
+            const bucket = { slug: 'tech-uncensoredtech', read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd' };
+            Cosmic.getObject({ bucket }, { slug: next.match.params.permalink }, (function(err, res) {
+                this.setState({
+                    article: (res) ? res.object : this.state.article,
+                    fourohfour: (err || res.error) ? true : false
+                });
+            }).bind(this));
+        }
+    }
+
+    render() {
+        if (this.state.fourohfour)
+            return <ErrorPage />
+
+        if (Object.keys(this.state.article).length === 0)
+            return null
+
+        return (this.state.article.metadata.menu == "Services") ? <Subpage {...this.props} page={this.state.article} /> : <Skills {...this.props} page={this.state.article} />
+
     }
 }

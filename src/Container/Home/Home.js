@@ -2,96 +2,42 @@ import React, { Component } from 'react'
 import { Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './Home.scss'
+import Header from '../Common/Header/Header'
+import Footer from '../HomeSplash/HomeSplashFooter/HomeSplashFooter'
 
 export default class Home extends Component {
+
     constructor(props, state, next) {
         super(props, state, next);
+    }
 
-        state = {
+    subscribe(event) {
+        if (event.keyCode !== 13)
+            return;
 
+        // validate email
+        let email = document.getElementById("newsletter_signup");
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)) {
+            console.log('invalid email');
+            return;
         }
+
+        // push email to Drip
+        _dcq.push(["identify", {
+            email: email.value,
+            tags: ["Newsletter", "Homepage"]
+        }]);
+
+        email.value = "";
+        email.placeholder = "Subscribed. Thank You.";
+        email.blur();
     }
 
-    toggleMenu(e) {
-        var event = e || window.event;
-        var children = event.target.parentNode.getElementsByClassName('children')[0];
-        children.style.display = (children.style.display == 'none') ? 'flex' : 'none';
-
-        var myevent = function(e) {
-            var isClickInside = children.parentNode.contains(e.target);
-
-            if (!isClickInside && children.style.display != 'none') {
-                children.style.display = 'none';
-                this.removeEventListener('click', myevent);
-            }
-            return false;
-        };
-
-        document.addEventListener('click', myevent);
-        return false;
-    }
 
     render() {
 
         return (
             <div>
-                <header>
-                    <video playsInline autoPlay muted loop poster="" id="bgvid">
-                        {/* <source src="/techuncensored.webm" type="video/webm"> */}
-                    </video>
-                    
-                    <div className="header">
-                        <div id="logo"></div>
-                        <nav className="nav">
-                            <div><a href="#" onClick={this.toggleMenu}>What We Do</a>
-                            
-                                <Row className="children">
-                                    <Col md={3}>
-                                        <div className="nav-section-title">Services</div>
-                                        <ul className="nav-section-list">
-                                            <li>Automation / IOT</li>
-                                            <li>Custom Software Development</li>
-                                            <li><Link to="/sample">Website Development</Link></li>
-                                            <li>Digital Signage</li>
-                                        </ul>
-                                    </Col>
-                                    
-                                    <Col md={3}>
-                                        <div className="nav-section-title">Highlighted Skills</div>
-                                            <ul className="nav-section-list">
-                                                <li>PHP</li>
-                                                <li>More PHP</li>
-                                                <li>WordPress</li>
-                                                <li>and PHP ...</li>
-                                            </ul>
-                                    </Col>
-                                    
-                                    <Col md={6}>
-                                        <div className="row">
-                                            <div className="col-md-12"></div>
-                                            <div></div>
-                                            <div className="col-md-5"></div>
-                                            <div className="col-md-5 offset-md-2"></div>
-                                        </div>
-                                    </Col>
-                                    
-                                </Row>
-                            </div>
-                            
-                            <div className="work">Our Work</div>
-                            <div className="work-about">About Us</div>
-                            <div><Link to="/blog">Our Blog</Link></div>
-                        </nav>
-                        
-                    </div>
-                    
-                    <div id="banner-cta">
-                        <div className="title">Real Developers <span>No Bullshit</span></div>
-                        <div className="desc">All-in-one Solution for IoT Automation to ease your efforts. <br />Stop lettting other companies upsale bull$hit. Simplify your life.</div>
-                        <div className="btn">I need some text here</div>
-                    </div>            
-                </header>
-        
                     <div className="container">
                         <Row className="text-center ptb30">
                             <Col md={4}>
@@ -163,7 +109,7 @@ export default class Home extends Component {
                             <Col md={6} className="bg1">
                                 <div className="service-box">
                                     <div className="service-title">
-                                        Automation saves money
+                                        Automation saves money!
                                     </div>
                                     <div className="service-description">
                                         Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI. Computers are faster, cheaper, and more accurate than humans for these types 
@@ -269,43 +215,12 @@ export default class Home extends Component {
                                     Join our newsletter for awesome news and updates      
                                 </Col>
                                 <Col md={4} mdOffset={2} sm={12} className="text-left">
-                                    <input type="text" placeholder="email@domain.com" />
+                                    <input id="newsletter_signup" type="text" placeholder="email@domain.com" onKeyUp={this.subscribe} />
                                 </Col>
                             </Row>                
                         </div>
                     </div>
-        
-                    <footer id="splash-footer">
-                        <div className="footerContent">
-                            <div className="navigation">
-                                <Col>
-                                    <ul className="links">
-                                        <li><a aria-current="false" href="/blog">Tech Uncensored Blog</a></li>
-                                        <li>Custom IoT Development</li>
-                                        <li>Custom Software Engineering</li>
-                                        <li>Education / Speaking Opportunities</li>
-                                    </ul>
-                                </Col>
-                                <Col>
-                                    <div className="contact">
-                                        <div><i className="fa fa-phone"></i> 215.515.8324</div>
-                                        <div><i className="fa fa-envelope"></i> staff@uncensored.tech</div>
-                                        <ul className="socials">
-                                            <li><a href="https://www.twitter.com/tech_uncensored" target="_blank"><i className="fa fa-twitter"></i></a></li>
-                                            <li><a href="https://www.facebook.com/techuncensored" target="_blank"><i className="fa fa-facebook"></i></a></li>
-                                            <li><a href="https://www.instagram.com/tech_uncensored" target="_blank"><i className="fa fa-instagram"></i></a></li>
-                                            <li><a href="https://www.snapchat.com/add/tech_uncensored" target="_blank"><i className="fa fa-snapchat"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </Col>
-                            </div>
-                            <div className="greybar"></div>
-                            <div className="ctaFooter">Educating and making programming fun on our forever learning adventure. <br /> Covering all topics of programming &amp; technology. Let's build a community of talent.</div>
-                        </div>
-                    </footer>
                 </div>
-
-
         )
     }
 }

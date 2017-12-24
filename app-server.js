@@ -67,11 +67,11 @@ app.get('/', function(req, res) {
 });
 
 // Default to index for react-router
-app.use( function(req, res) {
+app.use(function(req, res) {
     res.sendFile(path.join(__dirname, "./dist/index.html"));
 });
 
 // Start Server
 app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("Started listening on port", 8090);
+    console.log("Started listening on port", process.env.PORT);
 });

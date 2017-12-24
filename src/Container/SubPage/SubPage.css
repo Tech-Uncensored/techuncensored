@@ -2,7 +2,8 @@
   #subpage {
     background: url("../../public/images/backdrop1.jpg") center/cover no-repeat;
     font-size: 100%;
-    opacity: 2; }
+    opacity: 2;
+    padding: 100px 0; }
     #subpage #logo {
       display: inline-block;
       text-transform: uppercase;

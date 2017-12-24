@@ -10,32 +10,32 @@ import Article from '../Article/Article'
 import HomeSplash from '../HomeSplash/HomeSplash'
 import IotWorks from '../Splash/IotWorks/IotWorks'
 import WebSolution from '../HomeSplash/WebSolution/WebSolution'
-//import Sample from '../Sample/Sample'
+import Sample from '../Sample/Sample'
 import SubPage from '../SubPage/SubPage'
-import Skills from './Skills'
+import Skills from '../Skills/Skills'
 import Home from '../Home/Home'
+import AboutUs from '../AboutUs/AboutUs'
+import OurWork from '../OurWork/OurWork'
+import Header from '../Common/Header/Header'
+import Footer from '../HomeSplash/HomeSplashFooter/HomeSplashFooter'
 //import Error from '../Error/Error'
-
 
 import './App.scss'
 
 
 const App = () => (
     <div>
-    <Route exact path='/' component={Splash} />
-        <Switch>
-            <Route path='/homepage' component={Homepage} />
-            <Route path='/splash' component={Splash} />
-            <Route path='/blog/:permalink' component={Article} />
-            <Route path='/blog' component={Blog} />
-            <Route path='/homesplash' component={HomeSplash} />
-            <Route path='/sample' component={SubPage} />
-            <Route path='/skills' component={Skills} />
-            <Route path='/home' component={Home} />
-            
-            
-           
-        </Switch>
+        <Header />
+        <Route exact path='/' component={Home} />
+            <Switch>
+                <Route path='/splash' component={Splash} />
+                <Route path='/blog/:permalink' component={Article} />
+                <Route path='/about' component={AboutUs} />
+                <Route path='/work' component={OurWork} />
+                <Route path='/blog' component={Blog} />
+                <Route path='/:permalink' component={Sample} />
+            </Switch>
+        <Footer />
     </div>
 )
 

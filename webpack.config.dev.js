@@ -4,9 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CompressionPlugin = require('compression-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 //const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const WorkboxPlugin = require('workbox-webpack-plugin');
+
 
 const PATHS = {
     app: path.join(__dirname, 'src'),
@@ -24,10 +23,10 @@ module.exports = {
         publicPath: '/'
     },
     devServer: {
-         open: true,
-         compress: true,
-         historyApiFallback: true,
-         contentBase: 'build'
+        open: true,
+        compress: true,
+        historyApiFallback: true,
+        contentBase: 'build'
     },
     module: {
         rules: [{
@@ -58,7 +57,7 @@ module.exports = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader','sass-loader']
+                    use: ['css-loader', 'sass-loader']
                 })
             },
             {
@@ -109,7 +108,7 @@ module.exports = {
             template: path.resolve(__dirname, 'src/public', 'index.html'),
             favicon: 'src/public/images/fav.png'
         }),
-        new CleanWebpackPlugin(['dist']),
+
         new ExtractTextPlugin({
             filename: '[name].css',
             disable: false,
@@ -124,14 +123,9 @@ module.exports = {
             threshold: 10240,
             minRatio: 0.8
         }),
-       new CopyWebpackPlugin([
-            {from:PATHS.app+'/public/static',to:PATHS.dist} // Copy everything from src/public/static to dist folder
+        new CopyWebpackPlugin([
+            { from: PATHS.app + '/public/static', to: PATHS.dist } // Copy everything from src/public/static to dist folder
         ]),
-         new WorkboxPlugin({
-             // these options encourage the ServiceWorkers to get in there fast 
-             // and not allow any straggling "old" SWs to hang around
-             clientsClaim: true,
-             skipWaiting: true
-         })
+
     ],
 };
