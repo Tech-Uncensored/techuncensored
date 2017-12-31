@@ -1,53 +1,28 @@
-@media (min-width: 700px) {
+@media (min-width: $tablet-width) {
+
     header {
         position: relative;
         overflow: hidden;
         background: url("/assets/banner-mockup.jpg") no-repeat center/cover;
+
         &.homepage {
-            height: 800px;
+            height: 600px;
 
         }
+
         &.subpage {
             height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         h1 {
-            position: relative;
-            z-index: 1;
-            font: {
-                size: 50px;
-            }
-            ;
-            text-transform:uppercase;
-            z-index:1;
+            display: none;
         }
 
         video {
             width: 100%;
-        }
-
-        #logo {
-            display: inline-block;
-            text-transform: uppercase;
-            padding: 15px 50px;
-            float: left;
-            color: #DCD0C0 !important;
-            font-family: 'Roboto Slab', serif;
-            font-weight: bold;
-            font-size: 30px;
-            line-height: 30px;
-
-            &:before {
-                background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
-                content: " ";
-                display: inline-block;
-                height: 50px;
-                position: relative;
-                vertical-align: text-bottom;
-                width: 50px;
-            }
         }
 
         .header {
@@ -57,16 +32,37 @@
             width: 100%;
             z-index: 99;
 
+            #logo {
 
-            nav {
-                display: block;
-                position: absolute;
-                right: calc(20%);
-                top: calc(50% - 15px);
-                line-height: 30px;
+                text-transform: uppercase;
+                margin: 1rem;
+                float: left;
+                color: #DCD0C0 !important;
                 font-family: 'Roboto Slab', serif;
                 font-weight: bold;
-                font-size: 30px;
+                font-size: 3rem;
+                line-height: 3rem;
+
+                &:before {
+                    background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+                    content: " ";
+
+                    width: 4rem;
+                    height: 4rem;
+                    position: relative;
+                    vertical-align: text-bottom;
+
+                }
+            } // #logo
+            nav {
+                display: flex;
+                justify-content: space-around;
+                right: calc(20%);
+                top: calc(50% - 15px);
+                line-height: 5.5rem;
+                font-family: 'Roboto Slab', serif;
+                font-weight: bold;
+                font-size: 1.5rem;
 
                 .item {
                     display: inline-block;
@@ -78,6 +74,7 @@
 
                         span {
                             display: flex;
+
                         }
 
                         i {
@@ -156,101 +153,46 @@
                 }
             }
 
-            .service-box {
-                padding: 0 40px;
-                text-align: justify;
-                font-size: 22px;
-                position: relative;
-                z-index: 1;
-                font-family: "Roboto";
-                font-weight: lighter;
-            }
-
-            .service-btn {
-                display: block;
-                margin: 15px auto;
-                text-align: center;
-            }
-            .service-btn a {
-                font-size: 30px;
-            }
-
-            .showcase {
-                &.one {
-                    width: 100%;
-                    height: 1rem;
-                    background: url("http://via.placeholder.com/350x150") 0% 80%/cover;
-                }
-                &.two {
-                    width: 100%;
-                    height: 1rem; //background: url('https: //s3.us-east-2.amazonaws.com/tech-uncensored-assets/code_tech_uncensored.jpg') 0% 80%/cover;
-                }
-                &.three {
-                    width: 100%;
-                    height: 1rem; //background: url('https: //s3.us-east-2.amazonaws.com/tech-uncensored-assets/code_tech_uncensored.jpg') 0% 80%/cover;
-                }
-                .title {
-                    color: white;
-                    background: rgba(23, 24, 28, 0.9);
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    padding: 5px 20px;
-                    font: {
-                        size: 18px;
-                        family: "Roboto";
-                        style: normal;
-                    }
-
-                }
-
-
-            }
-        }
-
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-        }
-
+        } // .header
         #banner-cta {
-            color: #C0B283;
+            background: transparent;
             font-family: 'Roboto Slab', sans-serif;
-            position: absolute;
             text-align: left;
-            text-transform: uppercase;
             top: 50%;
             margin-top: -40px;
             width: 100%;
             padding-left: 12%;
 
             .title {
-                font-size: 40px;
-                font-weight: bold;
-
-                span {
-                    display: block;
+                font: {
+                    size: 3.0rem;
                 }
             }
 
             .desc {
-                font-size: 22px;
-                margin-top: 20px;
+                font: {
+                    size: 1.0rem;
+                }
             }
 
-            .btn {
-                padding: 15px;
-                text-align: center;
-                background: coral;
-                color: white;
-                margin-top: 20px;
-                width: 400px;
+            .title,
+            .desc,
+                {
+                position: relative;
+                z-index: 1;
+                padding: 10px;
+
+            }
+            .btn-wrap {
+                display: flex;
+                justify-content: space-around;
+                .btn {
+                    position: relative;
+                    z-index: 1;
+                    padding: 10px;
+                    background: coral;
+                }
             }
         } // #banner-cta
-    }
+    } // header
 }

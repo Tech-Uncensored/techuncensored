@@ -5,7 +5,7 @@
 
         >div {
             display: flex;
-            align-items: center;
+            padding-top: 50px;
         }
 
         .bg1 {
@@ -24,17 +24,17 @@
 
         .service-box {
             padding: 0;
-            text-align: justify;
             font-size: 1.375rem;
             position: relative;
             z-index: 1;
             font-family: "Roboto";
             font-weight: lighter;
+            padding-bottom: 50px;
 
             .service-title {
                 display: flex;
                 justify-content: center;
-                font-size: 2.1rem;
+
                 font-weight: bold;
                 padding: 20px 0;
                 text-transform: uppercase;
@@ -44,21 +44,25 @@
             .service-description {
                 padding: 20px 0;
                 text-shadow: 3px 3px 10px grey;
+                text-align: justify;
+                h4 {
+                    font-weight: 400;
+                }
 
                 .service-btn {
                     display: block;
                     margin: 15px auto;
                     text-align: center;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
 
                     .btn {
                         border-radius: 10px;
                         background: #0C1117;
                         color: #FFF;
+                        font-size: 1.8rem;
                         text-align: center;
-
-                        a {
-                            font-size: 1.9rem;
-                        }
                     }
 
                     .btn.large {
@@ -66,34 +70,33 @@
                         padding: 5px 20px;
                     }
                 }
-            }
-
-            .service-btn a {
-                font: {
-                    size: 1.5rem;
-                }
-            }
-        }
-    }
+            } // .sevice-description
+        } // .service-box
+    } // .service-row
     .news-entry {
         .image {
-
             height: 150px;
-
         }
+
         .content {
+            padding: 5px;
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+            border-radius: 4px;
+
             .title {
-                font: {
-                    size: 1.2rem;
-                }
+                font-size: 1.5vh;
+                font-weight: bold;
+                color: navy;
             }
+
             .desc {
-                font: {
-                    size: 0.8rem;
-                }
+                color: grey;
+                font-size: 12px;
             }
         }
     }
+
     #newsletter {
 
         .cta {
@@ -105,7 +108,7 @@
         input {
             color: white;
             height: 50px;
-            font-size: 24px;
+            font-size: 1.5rem;
             padding: 0 5px;
             background: transparent;
             outline: none;

@@ -14,7 +14,7 @@ export default class Footer extends Component {
     }
 
     speak(el, num) {
-        let speaks = ["Project Management", "Programming", "Software Design", "Results", "Success", "Training", "Consulting", "Pair Programming", "Tutorials", "Internet of Things", "Frameworks", "Aliens", "SEO"];
+        let speaks = ["Project Mgmt", "Programming", "Software Design", "Results", "Success", "Training", "Consulting", "Tutorials", "IoT", "Frameworks", "Aliens", "SEO", "Security"];
         if (num >= speaks.length)
             this.count = 0;
         el.innerHTML = speaks[this.count];

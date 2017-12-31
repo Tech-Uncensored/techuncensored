@@ -26,6 +26,13 @@ body {
   box-sizing: inherit;
 }
 
+p {
+  font: {
+    family: 'Roboto';
+    weight: 400;
+  }
+}
+
 img {
   max-width: 100%;
   width: 100%;
@@ -49,7 +56,6 @@ img {
   color: #FFF;
   text-align: center;
   &.large {
-    width: 180px;
     padding: 5px 20px;
   }
 }
@@ -93,4 +99,8 @@ img {
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.60)
+}
+
+.callout {
+  background: url('http://thepatternlibrary.com/img/h.jpg') repeat;
 }

@@ -14,7 +14,6 @@
       background: url("https://images.designtrends.com/wp-content/uploads/2015/11/30150156/Plain-Sky-Blue-Background11.jpg"); }
     .service-row .service-box {
       padding: 0;
-      text-align: justify;
       font-size: 1.375rem;
       position: relative;
       z-index: 1;
@@ -30,7 +29,8 @@
         text-align: center; }
       .service-row .service-box .service-description {
         padding: 20px 0;
-        text-shadow: 3px 3px 10px grey; }
+        text-shadow: 3px 3px 10px grey;
+        text-align: justify; }
         .service-row .service-box .service-description .service-btn {
           display: block;
           margin: 15px auto;
@@ -70,24 +70,7 @@
     border-bottom: 2px solid white;
     text-align: center;
     width: 100%; } }
-@media (min-width: 700px) {
-  .service-row {
-    height: auto; }
-    .service-row .service-box {
-      padding: 0;
-      text-align: justify; }
-      .service-row .service-box .service-title {
-        text-align: left; }
-      .service-row .service-box .service-btn a {
-        font-size: 1.5rem; }
-
-  .news-entry .image {
-    height: 150px; }
-  .news-entry .content .title {
-    font-size: 1.2rem; }
-  .news-entry .content .desc {
-    font-size: 0.8rem; } }
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   .service-row {
     height: 450px; }
 

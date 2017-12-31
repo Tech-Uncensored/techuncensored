@@ -1,27 +1,19 @@
-@media (min-width: 900px) {
+@media (min-width: $desktop-width) {
     header {
         position: relative;
         overflow: hidden;
         background: url("/assets/banner-mockup.jpg") no-repeat center/cover;
+
         &.homepage {
             height: 800px;
 
         }
+
         &.subpage {
             height: 400px;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        h1 {
-            position: relative;
-            z-index: 1;
-            font: {
-                size: 50px;
-            }
-            ;
-            text-transform:uppercase;
-            z-index:1;
         }
 
         video {
@@ -59,14 +51,14 @@
         }
 
         nav {
-            display: block;
+            display: flex;
             position: absolute;
             right: calc(20%);
             top: calc(50% - 15px);
-            line-height: 30px;
+            line-height: 5.5rem;
             font-family: 'Roboto Slab', serif;
             font-weight: bold;
-            font-size: 30px;
+            font-size: 1.5rem;
 
             .item {
                 display: inline-block;
@@ -210,7 +202,6 @@
 
         #banner-cta {
             color: #C0B283;
-            font-family: 'Roboto Slab', sans-serif;
             position: absolute;
             text-align: left;
             text-transform: uppercase;
@@ -233,15 +224,19 @@
                 margin-top: 20px;
             }
 
+
             .btn {
                 padding: 15px;
                 text-align: center;
                 background: coral;
                 color: white;
                 margin-top: 20px;
-                width: 400px;
             }
-          
+
+            .overlay {
+                display: none;
+            }
+
         } // #banner-cta
     }
 }

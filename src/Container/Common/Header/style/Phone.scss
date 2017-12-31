@@ -9,14 +9,26 @@
     }
 
     header {
-
         background: linear-gradient(to bottom, #0c1117 0%, #0c1117 89%, #18191c 90%, #18191c 100%);
 
         #bgvid {
             display: none;
         }
-        .header {
 
+        h1 {
+            color: #FFF;
+            top: 15px;
+            left: 70px;
+            position: absolute;
+            font: {
+                family: 'Roboto';
+                weight: bold;
+                size: 1.3rem;
+            }
+            line-height: 40px;
+        }
+
+        .header {
             padding: 10px;
 
             #logo {
@@ -131,23 +143,18 @@
                 z-index: 1;
                 padding: 10px;
                 background: coral;
+                cursor: pointer;
+                margin: 0 5px;
+
+                a {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+
             }
-        }
-
-        h1 {
-
-            color: #FFF;
-            top: 15px;
-            left: 70px;
-            position: absolute;
-            font: {
-                family: 'Roboto';
-                weight: bold;
-                size: 1.3rem;
-            }
-            ;
-            line-height: 40px;
-        }
-
+        } // #banner-cta
     } // header
 }

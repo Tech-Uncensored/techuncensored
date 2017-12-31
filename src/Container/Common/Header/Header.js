@@ -153,12 +153,18 @@ export default class Header extends Component {
                                 <div id="banner-cta">
                                     <div className="title">Real Developers <span>No Bullshit</span></div>
                                     <div className="desc">All-in-one Solution for IoT Automation to ease your efforts. <br />Stop lettting other companies upsale bull$hit. Simplify your life.</div>
-                                    <div className="btn">I need some text here</div>
+                                   <div className="btn-wrap">
+                                        <div className="btn">
+                                            CALL: 215-515-8324
+                                            <a href="tel:+1215515832"></a>
+                                        </div>
+                                        <div className="btn" onClick={  () => { Tawk_API.maximize(); } }>CHAT NOW</div> 
+                                    </div>
                                     <div className="overlay"></div>
                                 </div>
                         )
                     }  /> 
-            { (window.location.pathname != '/') ? <h1>Tech_Uncensored</h1> : null }
+            { (window.location.pathname != '/') ? <h1>Tech_Uncensored</h1> : <h1>Tech_Uncensored</h1> }
             
         </header>
         )

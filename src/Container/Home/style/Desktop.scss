@@ -1,36 +1,9 @@
-@media (min-width: 900px) {
+@media (min-width: $desktop-width) {
 
     .service-row {
-        height: 450px;
+        min-height: 450px;
 
     } // .service-box
-    .callout {
-        background: url('http://thepatternlibrary.com/img/h.jpg') repeat;
-    }
-
-    .news-entry {
-        .image {
-            height: 150px;
-        }
-        .content {
-            padding: 5px;
-            background: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-            border-radius: 4px;
-
-            .title {
-                font-size: 1.5vh;
-                font-weight: bold;
-                color: navy;
-            }
-
-            .desc {
-                color: grey;
-                font-size: 12px;
-            }
-        }
-    }
-
     #newsletter {
 
         .cta {

@@ -19,7 +19,7 @@ export default class Home extends Component {
     componentDidMount() {
         const bucket = { slug: 'tech-uncensoredtech', read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd' };
         Cosmic.getObjects({ bucket }, ((err, res) => {
-            console.log(res.objects)
+
             this.setState({
                 posts: res.objects.type.posts
             });
@@ -122,29 +122,26 @@ export default class Home extends Component {
         
                     <div className="container-fluid">
                         <Row className="service-row">
-                            <Col md={6} className="bg1">
+                            <Col sm={12} lg={6} className="bg1">
                                 <div className="service-box">
-                                    <h3 className="service-title">
+                                    <h2 className="service-title">
                                         Automation saves money!
-                                    </h3>
+                                    </h2>
                                     <div className="service-description">
-                                        Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI. Computers are faster, cheaper, and more accurate than humans for these types 
-                                        of tasks. Identify inefficiencies, lower overhead, increase employee moral, and become more competitive. 
+                                       <h4>Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI.</h4>
                                         <div className="service-btn"><a className="btn text-center">Automate and Save Today!</a></div>
                                     </div>                        
                                 </div>
                                 <div className="overlay"></div>
                             </Col>
                             
-                            <Col md={6} className="bg2">
+                            <Col sm={12} lg={6} className="bg2">
                                 <div className="service-box">
-                                    <h3 className="service-title">
+                                    <h2 className="service-title">
                                         Custom Software Development
-                                    </h3>
+                                    </h2>
                                     <div className="service-description">
-                                        We are creatives and problem solvers at heart. We enjoy finding solutions to unique problems that business encounter along the way - from scalability problems to 
-                                        latency issues, data analysis to removing bottlencks, and all the ways founders are pushing the envelope with innovative and tranformative ideas. 
-                                        We love to help bring them to life!
+                                       <h4>Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI.</h4>
                                         <div className="service-btn"><a className="btn text-center">Let's Geek It On</a></div>
                                     </div>                        
                                 </div>
@@ -162,28 +159,25 @@ export default class Home extends Component {
                         
                        {/* <!-- Row --> */}
                         <Row className="service-row">
-                            <Col md={6} className="bg3">
+                            <Col sm={12} lg={6} className="bg3">
                                 <div className="service-box">
-                                    <div className="service-title">
+                                    <h2 className="service-title">
                                         Website Development
-                                    </div>
+                                    </h2>
                                     <div className="service-description">
-                                        Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI. Computers are faster, cheaper, and more accurate than humans for these types 
-                                        of tasks. Identify inefficiencies, lower overhead, increase employee moral, and become more competitive. 
+                                        <h4>Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI.</h4>
                                         <div className="service-btn"><a className="btn text-center">Automate and Save Today!</a></div>
                                     </div>                        
                                 </div>
                                 <div className="overlay"></div>
                             </Col>
-                            <Col md={6} className="bg4">
+                            <Col sm={12} lg={6} className="bg4">
                                 <div className="service-box">
-                                    <div className="service-title">
+                                    <h2 className="service-title">
                                         Digital Signage
-                                    </div>
+                                    </h2>
                                     <div className="service-description">
-                                        We are creatives and problem solvers at heart. We enjoy finding solutions to unique problems that business encounter along the way - from scalability problems to 
-                                        latency issues, data analysis to removing bottlencks, and all the ways founders are pushing the envelope with innovative and tranformative ideas. 
-                                        We love to help bring them to life!
+                                        <h4>Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI.</h4>
                                         <div className="service-btn"><a className="btn text-center">Let's Geek It On</a></div>
                                     </div>                        
                                 </div>
@@ -221,7 +215,7 @@ export default class Home extends Component {
                                 <Col md={6} sm={12} className="cta fwl ffr">
                                     Join our newsletter for awesome news and updates      
                                 </Col>
-                                <Col md={4} mdOffset={2} sm={12} className="">
+                                <Col md={5} lg={4} mdOffset={1} sm={12} className="offset-lg-2">
                                     <input id="newsletter_signup" type="text" placeholder="email@domain.com" onKeyUp={this.subscribe} />
                                 </Col> 
                             </Row>                

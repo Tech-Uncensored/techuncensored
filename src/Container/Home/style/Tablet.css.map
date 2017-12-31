@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,yBAA0B;EACtB,YAAa;IACT,MAAM,EAAE,IAAI;IACZ,yBAAa;MACT,OAAO,EAAE,CAAC;MACV,UAAU,EAAE,OAAO;MAGnB,wCAAe;QAEP,SAAI,EAAE,MAAM;;EAMxB,kBAAO;IACH,MAAM,EAAE,KAAK;EAGb,2BAAO;IAEC,SAAI,EAAE,MAAM;EAGpB,0BAAM;IAEE,SAAI,EAAE,MAAM",
+"sources": ["Tablet.scss"],
 "names": [],
 "file": "Tablet.css"
 }

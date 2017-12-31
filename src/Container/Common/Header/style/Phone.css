@@ -1,18 +1,16 @@
 /*
 Error: Undefined variable: "$phone-width".
-        on line 3 of /home/ubuntu/workspace/src/Container/Common/Header/style/Phone.scss
+        on line 1 of /home/ubuntu/workspace/src/Container/Common/Header/style/Phone.scss
 
-1: @import '../../../App/global.scss';
+1: @media (min-width: $phone-width) {
 2: 
-3: @media (min-width: $phone-width) {
-4: 
-5:     a {
-6:         color: inherit;
-7: 
-8:         &:hover {
+3:     a {
+4:         color: inherit;
+5: 
+6:         &:hover {
 
 Backtrace:
-/home/ubuntu/workspace/src/Container/Common/Header/style/Phone.scss:3
+/home/ubuntu/workspace/src/Container/Common/Header/style/Phone.scss:1
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:542:in `block in run_interp_no_strip'
@@ -55,4 +53,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$phone-width\".\A         on line 3 of /home/ubuntu/workspace/src/Container/Common/Header/style/Phone.scss\A \A 1: @import '../../../App/global.scss';\A 2: \A 3: @media (min-width: $phone-width) {\A 4: \A 5:     a {\A 6:         color: inherit;\A 7: \A 8:         &:hover {"; }
+  content: "Error: Undefined variable: \"$phone-width\".\A         on line 1 of /home/ubuntu/workspace/src/Container/Common/Header/style/Phone.scss\A \A 1: @media (min-width: $phone-width) {\A 2: \A 3:     a {\A 4:         color: inherit;\A 5: \A 6:         &:hover {"; }
