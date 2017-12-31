@@ -1,265 +1,256 @@
-$primary: #0C1117;
-$secondary: #777777;
-$background: #fffcea;
-
-#homepage-banner {
-  height: 600px;
-  position: relative;
-  overflow: hidden;
-  background:url('../../public/images/banner-mockup.jpg') no-repeat center/cover;
-  video {
-    width: 110%;
-  }
-  #banner-cta {
-    color: #C0B283;
-    font: {
-      size: 80px;
-      weight: bold;
-      family: 'Roboto Slab', sans-serif;
-    }
-    position:absolute;
-    text-align:center;
-    text-transform:uppercase;
-    top: 50%;
-    margin-top: -40px;
-    width:100%;
-  }
-}
-
-#main-content {
-  background:url('https://subtlepatterns.com/patterns/p2.png') repeat;
-  font: {
-    family: 'Roboto Slab', serif;
-    size: 30px;
-  }
-  padding:100px 50px;
-  text-align:center;
-  .btn {
-    font-size: 25px;
-    margin: 20px auto 0 auto;
-  }
-}
-
-.cards {
-  max-width: 100%;
-  height: 100%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  .card {
-    margin: 10px 2.5%;
-    padding: 20px 10px 10px 10px;
-    width: 28.33%;
-    float: left;
-    position: relative;
-    background-color: #FFF;
-    transition: box-shadow .25s;
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    .card-image {
-      position: relative;
-      cursor: default;
-      vertical-align: middle;
-      z-index: 1;
-      overflow: hidden;
-      will-change: opacity, transform;
-      transition: all .3s ease-out;
-    }
-    .card-content {
-      margin: 10px;
-      padding: 5px;
-      border-radius: 0 0 2px 2px;
-      box-sizing: inherit;
-      display: block;
-      max-height: 100px;
-      .card-title {
-      /*  line-height: 48px; */
-        font-size: 24px;
-        font-weight: lighter;
-        color: #212121;
-      }
-      p {
-        
-        padding: 13px;
-      }
-    }
-    .card-action {
-      position: relative;
-      background-color: inherit;
-      border-top: 1px solid rgba(160, 160, 160, 0.2);
-      padding: 20px;
-      a {
-        color: #FFAB40;
-        margin-right: 20px;
-        transition: color .3s ease;
-        text-transform: uppercase;
-        text-decoration: none;
-        -webkit-tap-highlight-color: transparent;
-        &:hover {
-          color: #2C3E50;
-        }
-      }
-      .postDate {
-        color: #FFAB40;
-        float: right;
-        font: {
-          weight: lighter;
-        }
-      }
-    }
-  }
-}
-
-.cards+.btn {
-  margin: 30px auto 30px auto;
-  font: {
-    family: 'Roboto Slab', serif;
-    size: 25px;
-  }
-}
-
-#highlights {
-  margin-top: 150px;
-  width: 100%;
-  .item {
-    display: inline-block;
-    height: 500px;
-    width: 50%;
-    font: {
-      family: 'Roboto Slab', serif;
-      size: 18px;
-      weight: lighter;
-    }
-    &.consulting {
-      background: url('../../public/images/software.jpg') center/cover;
-      h2 {
-        background: $primary;
-      }
-    }
-    &.education {
-      background: url('../../public/images/education.jpg') center/cover;
-      h2 {
-        background: $secondary;
-      }
-    }
-    h2 {
-      color: #FFF;
-      margin: -15px auto 0 auto;
-      text-align: center;
-      text-transform: uppercase;
-      padding: 10px 20px;
-      width: 50%;
-    }
-    .desc {
-      color: #FFF;
-      font-size: 26px;
-      padding: 50px 0;
-      text-align: center;
-      text-transform: uppercase;
-    }
-  }
-}
-@media screen and (max-width:800px){
-   #homepage-banner {
-    display: none;
-  }
-  #main-content {
-    font: {
-      size: 20px;
-      weight: normal;
-    }
-    padding: 20px;
-  }
-  .cards {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    .card {
-      margin: 0 2.5%;
-      width: 28.33%;
-      float: left;
-      position: relative;
-      background-color: #FFF;
-      transition: box-shadow .25s;
-      border-radius: 2px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-      .card-image {
-        position: relative;
-        cursor: default;
-        vertical-align: middle;
-        z-index: 1;
-        will-change: opacity, transform;
-        transition: all .3s ease-out;
-      }
-      .card-content {
-        padding: 2px;
-        border-radius: 0 0 2px 2px;
-        box-sizing: inherit;
-        display: block;
-        .card-title {
-          line-height: 75%;
-          font-size: 24px;
-          font-weight: lighter;
-          color: #212121;
-        }
-      }
-      .card-action {
-        cursor: pointer;
-        position: relative;
-        background-color: inherit;
-        border-top: 1px solid rgba(160, 160, 160, 0.2);
-        padding: 20px;
-        font {
-          size: 75%;
-        }
-        a {
-          color: #FFAB40;
-          margin-right: 20px;
-          transition: color .3s ease;
-          text-transform: uppercase;
-          text-decoration: none;
-          -webkit-tap-highlight-color: transparent;
-          &:hover {
-            color: #2C3E50;
-          }
-        }
-        .postDate {
-          color: #FFAB40;
-          float: right;
-          text-align: center;
-          font: {
-            weight: lighter;
-            size: 75%;
-          }
-        }
-      }
-    }
-  }
-  .btn {
-    cursor: pointer;
-  }
-  #highlights {
-    display: none;
-  }
-  .callout {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .cards .card {
-  float:none;
-  width:auto;
-  margin:5px;
-  
-  .card-title {
-    text-align:center;
-    display:block;
-    line-height: 30px;
-  }
-  .card-content {
-    padding: 5px 10px; 
-  }
-  
-  }
-}
+// $primary: #0C1117;
+// $secondary: #777777;
+// $background: #fffcea;
+// #homepage-banner {
+//   height: 600px;
+//   position: relative;
+//   overflow: hidden;
+//   background:url('../../public/images/banner-mockup.jpg') no-repeat center/cover;
+//   video {
+//     width: 110%;
+//   }
+//   #banner-cta {
+//     color: #C0B283;
+//     font: {
+//       size: 80px;
+//       weight: bold;
+//       family: 'Roboto Slab', sans-serif;
+//     }
+//     position:absolute;
+//     text-align:center;
+//     text-transform:uppercase;
+//     top: 50%;
+//     margin-top: -40px;
+//     width:100%;
+//   }
+// }
+// #main-content {
+//   background:url('https://subtlepatterns.com/patterns/p2.png') repeat;
+//   font: {
+//     family: 'Roboto Slab', serif;
+//     size: 30px;
+//   }
+//   padding:100px 50px;
+//   text-align:center;
+//   .btn {
+//     font-size: 25px;
+//     margin: 20px auto 0 auto;
+//   }
+// }
+// .cards {
+//   max-width: 100%;
+//   height: 100%;
+//   padding-top: 15px;
+//   padding-bottom: 15px;
+//   .card {
+//     margin: 10px 2.5%;
+//     padding: 20px 10px 10px 10px;
+//     width: 28.33%;
+//     float: left;
+//     position: relative;
+//     background-color: #FFF;
+//     transition: box-shadow .25s;
+//     border-radius: 2px;
+//     overflow: hidden;
+//     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+//     .card-image {
+//       position: relative;
+//       cursor: default;
+//       vertical-align: middle;
+//       z-index: 1;
+//       overflow: hidden;
+//       will-change: opacity, transform;
+//       transition: all .3s ease-out;
+//     }
+//     .card-content {
+//       margin: 10px;
+//       padding: 5px;
+//       border-radius: 0 0 2px 2px;
+//       box-sizing: inherit;
+//       display: block;
+//       max-height: 100px;
+//       .card-title {
+//       /*  line-height: 48px; */
+//         font-size: 24px;
+//         font-weight: lighter;
+//         color: #212121;
+//       }
+//       p {
+//         padding: 13px;
+//       }
+//     }
+//     .card-action {
+//       position: relative;
+//       background-color: inherit;
+//       border-top: 1px solid rgba(160, 160, 160, 0.2);
+//       padding: 20px;
+//       a {
+//         color: #FFAB40;
+//         margin-right: 20px;
+//         transition: color .3s ease;
+//         text-transform: uppercase;
+//         text-decoration: none;
+//         -webkit-tap-highlight-color: transparent;
+//         &:hover {
+//           color: #2C3E50;
+//         }
+//       }
+//       .postDate {
+//         color: #FFAB40;
+//         float: right;
+//         font: {
+//           weight: lighter;
+//         }
+//       }
+//     }
+//   }
+// }
+// .cards+.btn {
+//   margin: 30px auto 30px auto;
+//   font: {
+//     family: 'Roboto Slab', serif;
+//     size: 25px;
+//   }
+// }
+// #highlights {
+//   margin-top: 150px;
+//   width: 100%;
+//   .item {
+//     display: inline-block;
+//     height: 500px;
+//     width: 50%;
+//     font: {
+//       family: 'Roboto Slab', serif;
+//       size: 18px;
+//       weight: lighter;
+//     }
+//     &.consulting {
+//       background: url('../../public/images/software.jpg') center/cover;
+//       h2 {
+//         background: $primary;
+//       }
+//     }
+//     &.education {
+//       background: url('../../public/images/education.jpg') center/cover;
+//       h2 {
+//         background: $secondary;
+//       }
+//     }
+//     h2 {
+//       color: #FFF;
+//       margin: -15px auto 0 auto;
+//       text-align: center;
+//       text-transform: uppercase;
+//       padding: 10px 20px;
+//       width: 50%;
+//     }
+//     .desc {
+//       color: #FFF;
+//       font-size: 26px;
+//       padding: 50px 0;
+//       text-align: center;
+//       text-transform: uppercase;
+//     }
+//   }
+// }
+// @media screen and (max-width:800px){
+//   #homepage-banner {
+//     display: none;
+//   }
+//   #main-content {
+//     font: {
+//       size: 20px;
+//       weight: normal;
+//     }
+//     padding: 20px;
+//   }
+//   .cards {
+//     padding-top: 5px;
+//     padding-bottom: 5px;
+//     .card {
+//       margin: 0 2.5%;
+//       width: 28.33%;
+//       float: left;
+//       position: relative;
+//       background-color: #FFF;
+//       transition: box-shadow .25s;
+//       border-radius: 2px;
+//       overflow: hidden;
+//       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+//       .card-image {
+//         position: relative;
+//         cursor: default;
+//         vertical-align: middle;
+//         z-index: 1;
+//         will-change: opacity, transform;
+//         transition: all .3s ease-out;
+//       }
+//       .card-content {
+//         padding: 2px;
+//         border-radius: 0 0 2px 2px;
+//         box-sizing: inherit;
+//         display: block;
+//         .card-title {
+//           line-height: 75%;
+//           font-size: 24px;
+//           font-weight: lighter;
+//           color: #212121;
+//         }
+//       }
+//       .card-action {
+//         cursor: pointer;
+//         position: relative;
+//         background-color: inherit;
+//         border-top: 1px solid rgba(160, 160, 160, 0.2);
+//         padding: 20px;
+//         font {
+//           size: 75%;
+//         }
+//         a {
+//           color: #FFAB40;
+//           margin-right: 20px;
+//           transition: color .3s ease;
+//           text-transform: uppercase;
+//           text-decoration: none;
+//           -webkit-tap-highlight-color: transparent;
+//           &:hover {
+//             color: #2C3E50;
+//           }
+//         }
+//         .postDate {
+//           color: #FFAB40;
+//           float: right;
+//           text-align: center;
+//           font: {
+//             weight: lighter;
+//             size: 75%;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   .btn {
+//     cursor: pointer;
+//   }
+//   #highlights {
+//     display: none;
+//   }
+//   .callout {
+//     display: none;
+//   }
+// }
+// @media screen and (max-width: 600px) {
+//   .cards .card {
+//   float:none;
+//   width:auto;
+//   margin:5px;
+//   .card-title {
+//     text-align:center;
+//     display:block;
+//     line-height: 30px;
+//   }
+//   .card-content {
+//     padding: 5px 10px; 
+//   }
+//   }
+// }

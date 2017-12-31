@@ -63,8 +63,4 @@
         #splash-wrapper header .navigation #social-nav li a .fa-snapchat {
           color: #DBD0C0; }
 
-@media screen and (max-width: 800px) {
-  header #logo {
-    margin: 30px; } }
-
 /*# sourceMappingURL=HomeSplashHeader.css.map */

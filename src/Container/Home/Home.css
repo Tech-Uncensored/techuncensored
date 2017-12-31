@@ -1,111 +1,126 @@
-.ptb50 {
-  padding: 50px 0; }
-
-.ptb30 {
-  padding: 30px 0; }
-
-.ptb20 {
-  padding: 20px 0; }
-
-.p30 {
-  padding: 30px; }
-
-.fwl {
-  font-weight: lighter; }
-
-.fwb {
-  font-weight: bold; }
-
-.fs30 {
-  font-size: 30px; }
-
-.ffr {
-  font-family: "Roboto"; }
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6); }
-
-.service-row {
-  height: 450px; }
-  .service-row > div {
-    display: flex;
-    align-items: center; }
-  .service-row .bg1 {
-    background: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg") center/cover; }
-  .service-row .bg2 {
-    background: url("https://wallpaperscraft.com/image/glare_light_light_background_36832_2560x1600.jpg"); }
-  .service-row .bg3 {
-    background: url("http://wlpapers.com/images/light-blue-background-1.jpg"); }
-  .service-row .bg4 {
-    background: url("https://images.designtrends.com/wp-content/uploads/2015/11/30150156/Plain-Sky-Blue-Background11.jpg"); }
-  .service-row .service-box {
-    padding: 0 40px;
-    text-align: justify;
-    font-size: 22px;
-    position: relative;
-    z-index: 1;
-    font-family: "Roboto";
-    font-weight: lighter; }
-    .service-row .service-box .service-title {
+@media (min-width: 100px) {
+  .service-row {
+    height: auto; }
+    .service-row > div {
       display: flex;
-      justify-content: center;
-      font-size: 36px;
-      font-weight: bold;
-      padding: 20px 0;
-      text-transform: uppercase; }
-    .service-row .service-box .service-description {
-      padding: 20px 0;
-      text-shadow: 3px 3px 10px grey; }
-      .service-row .service-box .service-description .service-btn {
-        display: block;
-        margin: 15px auto;
+      align-items: center; }
+    .service-row .bg1 {
+      background: url("https://image.freepik.com/free-photo/defocused-blue-lights-abstract-background-natural-photo-bokeh_1421-480.jpg") center/cover; }
+    .service-row .bg2 {
+      background: url("https://wallpaperscraft.com/image/glare_light_light_background_36832_2560x1600.jpg"); }
+    .service-row .bg3 {
+      background: url("http://wlpapers.com/images/light-blue-background-1.jpg"); }
+    .service-row .bg4 {
+      background: url("https://images.designtrends.com/wp-content/uploads/2015/11/30150156/Plain-Sky-Blue-Background11.jpg"); }
+    .service-row .service-box {
+      padding: 0;
+      text-align: justify;
+      font-size: 1.375rem;
+      position: relative;
+      z-index: 1;
+      font-family: "Roboto";
+      font-weight: lighter; }
+      .service-row .service-box .service-title {
+        display: flex;
+        justify-content: center;
+        font-size: 2.1rem;
+        font-weight: bold;
+        padding: 20px 0;
+        text-transform: uppercase;
         text-align: center; }
-        .service-row .service-box .service-description .service-btn .btn {
-          border-radius: 10px;
-          background: #0C1117;
-          color: #FFF;
+      .service-row .service-box .service-description {
+        padding: 20px 0;
+        text-shadow: 3px 3px 10px grey; }
+        .service-row .service-box .service-description .service-btn {
+          display: block;
+          margin: 15px auto;
           text-align: center; }
-          .service-row .service-box .service-description .service-btn .btn a {
-            font-size: 30px; }
-        .service-row .service-box .service-description .service-btn .btn.large {
-          width: 180px;
-          padding: 5px 20px; }
+          .service-row .service-box .service-description .service-btn .btn {
+            border-radius: 10px;
+            background: #0C1117;
+            color: #FFF;
+            text-align: center; }
+            .service-row .service-box .service-description .service-btn .btn a {
+              font-size: 1.9rem; }
+          .service-row .service-box .service-description .service-btn .btn.large {
+            width: 180px;
+            padding: 5px 20px; }
+      .service-row .service-box .service-btn a {
+        font-size: 1.5rem; }
 
-.callout {
-  background: url("http://thepatternlibrary.com/img/h.jpg") repeat; }
-
-.news-entry .image {
-  height: 150px; }
-.news-entry .content {
-  padding: 5px;
-  background: white;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  border-radius: 4px; }
+  .news-entry .image {
+    height: 150px; }
   .news-entry .content .title {
-    font-size: 1.5vh;
-    font-weight: bold;
-    color: navy; }
+    font-size: 1.2rem; }
   .news-entry .content .desc {
-    color: grey;
-    font-size: 12px; }
+    font-size: 0.8rem; }
 
-#newsletter .cta {
-  line-height: 50px;
-  font-size: 1.5em; }
-#newsletter input {
-  color: white;
-  height: 50px;
-  font-size: 24px;
-  padding: 0 5px;
-  background: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 2px solid white;
-  text-align: center; }
+  #newsletter .cta {
+    line-height: 50px;
+    font-size: 1.5em;
+    text-align: center; }
+  #newsletter input {
+    color: white;
+    height: 50px;
+    font-size: 24px;
+    padding: 0 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    text-align: center;
+    width: 100%; } }
+@media (min-width: 700px) {
+  .service-row {
+    height: auto; }
+    .service-row .service-box {
+      padding: 0;
+      text-align: justify; }
+      .service-row .service-box .service-title {
+        text-align: left; }
+      .service-row .service-box .service-btn a {
+        font-size: 1.5rem; }
+
+  .news-entry .image {
+    height: 150px; }
+  .news-entry .content .title {
+    font-size: 1.2rem; }
+  .news-entry .content .desc {
+    font-size: 0.8rem; } }
+@media (min-width: 900px) {
+  .service-row {
+    height: 450px; }
+
+  .callout {
+    background: url("http://thepatternlibrary.com/img/h.jpg") repeat; }
+
+  .news-entry .image {
+    height: 150px; }
+  .news-entry .content {
+    padding: 5px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; }
+    .news-entry .content .title {
+      font-size: 1.5vh;
+      font-weight: bold;
+      color: navy; }
+    .news-entry .content .desc {
+      color: grey;
+      font-size: 12px; }
+
+  #newsletter .cta {
+    line-height: 50px;
+    font-size: 1.5em; }
+  #newsletter input {
+    color: white;
+    height: 50px;
+    font-size: 24px;
+    padding: 0 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    text-align: center; } }
 
 /*# sourceMappingURL=Home.css.map */

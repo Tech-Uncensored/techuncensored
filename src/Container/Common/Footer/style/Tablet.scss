@@ -1,0 +1,38 @@
+@media (min-width: 601px) {
+    #homesplash-footer {
+        position: relative;
+
+        background: #0C1117;
+        margin-top: 50px;
+        .footerContent {
+
+            .navigation {
+                width: 100%;
+                padding: 1rem;
+                ul {
+                    text-decoration: none;
+                    list-style: none;
+                    &.li {
+                        font-size: .9rem;
+                    }
+
+                }
+
+            }
+
+            .greybar {
+                width: 100%;
+                height: 2px;
+                background: #777777;
+                opacity: 0.1;
+            }
+
+            .ctaFooter {
+                text-align: left;
+                padding: 2rem;
+                color: #DBD0C0;
+            }
+        }
+    }
+
+}

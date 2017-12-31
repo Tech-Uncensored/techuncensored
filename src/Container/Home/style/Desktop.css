@@ -1,0 +1,37 @@
+@media (min-width: 900px) {
+  .service-row {
+    height: 450px; }
+
+  .callout {
+    background: url("http://thepatternlibrary.com/img/h.jpg") repeat; }
+
+  .news-entry .image {
+    height: 150px; }
+  .news-entry .content {
+    padding: 5px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; }
+    .news-entry .content .title {
+      font-size: 1.5vh;
+      font-weight: bold;
+      color: navy; }
+    .news-entry .content .desc {
+      color: grey;
+      font-size: 12px; }
+
+  #newsletter .cta {
+    line-height: 50px;
+    font-size: 1.5em; }
+  #newsletter input {
+    color: white;
+    height: 50px;
+    font-size: 24px;
+    padding: 0 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    text-align: center; } }
+
+/*# sourceMappingURL=Desktop.css.map */

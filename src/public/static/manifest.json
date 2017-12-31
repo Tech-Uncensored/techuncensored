@@ -1,0 +1,13 @@
+{
+    "short_name": "Tech Uncensored",
+    "name": "Tech Uncensored Website",
+    "icons": [{
+        "src": "/assets/tech_uncensored_logo_bg.png",
+        "type": "image/png",
+        "sizes": "48x48"
+    }],
+    "start_url": "/?utm_source=homepage",
+    "background_color": "#0c1117",
+    "display": "standalone",
+    "theme_color": "#0C1117"
+}

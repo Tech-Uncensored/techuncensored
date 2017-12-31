@@ -1,0 +1,247 @@
+@media (min-width: 900px) {
+    header {
+        position: relative;
+        overflow: hidden;
+        background: url("/assets/banner-mockup.jpg") no-repeat center/cover;
+        &.homepage {
+            height: 800px;
+
+        }
+        &.subpage {
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            position: relative;
+            z-index: 1;
+            font: {
+                size: 50px;
+            }
+            ;
+            text-transform:uppercase;
+            z-index:1;
+        }
+
+        video {
+            width: 100%;
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        #logo {
+            display: inline-block;
+            text-transform: uppercase;
+            padding: 15px 50px;
+            float: left;
+            color: #DCD0C0 !important;
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 30px;
+
+            &:before {
+                background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+                content: " ";
+                display: inline-block;
+                height: 50px;
+                position: relative;
+                vertical-align: text-bottom;
+                width: 50px;
+            }
+        }
+
+        nav {
+            display: block;
+            position: absolute;
+            right: calc(20%);
+            top: calc(50% - 15px);
+            line-height: 30px;
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
+            font-size: 30px;
+
+            .item {
+                display: inline-block;
+                padding: 0 20px;
+                font-style: italic;
+                position: relative;
+                cursor: pointer;
+
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                }
+
+                .children {
+                    background: linear-gradient(to bottom, rgba(12, 17, 23, 0.6) 0%, rgba(12, 17, 23, 0.6) 36%, rgba(24, 25, 28, 0.6) 74%, rgba(24, 25, 28, 0.6) 100%);
+                    padding: 20px;
+                    position: absolute;
+                    top: 50px;
+                    left: -600px;
+                    width: 1300px;
+                    box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+                }
+
+                &:hover {
+                    border-top: 2px solid lightgrey;
+                    margin-top: -2px;
+                }
+            }
+
+            .children {
+                display: none;
+            }
+
+            .nav-section-title {
+                padding: 10px;
+                text-transform: uppercase;
+                text-align: center;
+                background: navy;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                font-style: normal;
+                font-family: 'Roboto';
+            }
+
+            .nav-section-list {
+                font-size: 12px;
+                list-style: none;
+                padding: 5px 0;
+            }
+            .nav-section-list li {
+                border-bottom: 1px solid lightgrey;
+                font: {
+                    weight: 400;
+                    family: 'Roboto';
+                    style: normal;
+                }
+                a {
+                    color: #FFF;
+                    line-height: 30px;
+                    font-size: 16px;
+                    padding: 5px;
+                    display: block;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                }
+
+                &:hover {
+                    background: white;
+
+                    a {
+                        color: navy;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .service-box {
+                padding: 0 40px;
+                text-align: justify;
+                font-size: 22px;
+                position: relative;
+                z-index: 1;
+                font-family: "Roboto";
+                font-weight: lighter;
+            }
+
+            .service-btn {
+                display: block;
+                margin: 15px auto;
+                text-align: center;
+            }
+            .service-btn a {
+                font-size: 30px;
+            }
+
+            .showcase {
+                &.one {
+                    width: 100%;
+                    height: 1rem;
+                    background: url("http://via.placeholder.com/350x150") 0% 80%/cover;
+                }
+                &.two {
+                    width: 100%;
+                    height: 1rem; //background: url('https: //s3.us-east-2.amazonaws.com/tech-uncensored-assets/code_tech_uncensored.jpg') 0% 80%/cover;
+                }
+                &.three {
+                    width: 100%;
+                    height: 1rem; //background: url('https: //s3.us-east-2.amazonaws.com/tech-uncensored-assets/code_tech_uncensored.jpg') 0% 80%/cover;
+                }
+                .title {
+                    color: white;
+                    background: rgba(23, 24, 28, 0.9);
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 5px 20px;
+                    font: {
+                        size: 18px;
+                        family: "Roboto";
+                        style: normal;
+                    }
+
+                }
+
+
+            }
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+
+        #banner-cta {
+            color: #C0B283;
+            font-family: 'Roboto Slab', sans-serif;
+            position: absolute;
+            text-align: left;
+            text-transform: uppercase;
+            top: 50%;
+            margin-top: -40px;
+            width: 100%;
+            padding-left: 12%;
+
+            .title {
+                font-size: 40px;
+                font-weight: bold;
+
+                span {
+                    display: block;
+                }
+            }
+
+            .desc {
+                font-size: 22px;
+                margin-top: 20px;
+            }
+
+            .btn {
+                padding: 15px;
+                text-align: center;
+                background: coral;
+                color: white;
+                margin-top: 20px;
+                width: 400px;
+            }
+          
+        } // #banner-cta
+    }
+}

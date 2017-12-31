@@ -1,308 +1,449 @@
-header {
-  height: 800px;
-  position: relative;
-  overflow: hidden;
-  background: url("/assets/banner-mockup.jpg") no-repeat center/cover; }
-  header h1 {
+@media (min-width: 100px) {
+  a {
+    color: inherit; }
+    a:hover {
+      text-decoration: none; }
+
+  header {
+    background: linear-gradient(to bottom, #0c1117 0%, #0c1117 89%, #18191c 90%, #18191c 100%); }
+    header #bgvid {
+      display: none; }
+    header .header {
+      padding: 10px; }
+      header .header #logo {
+        display: block;
+        width: 50px;
+        height: 50px; }
+        header .header #logo:before {
+          background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+          content: " ";
+          display: inline-block;
+          height: 50px;
+          position: relative;
+          vertical-align: text-bottom;
+          width: 50px; }
+      header .header nav {
+        display: flex;
+        justify-content: space-between; }
+        header .header nav .item {
+          color: #FFF;
+          padding: 5px 10px; }
+          header .header nav .item .parent span {
+            display: none; }
+          header .header nav .item .parent i {
+            font-size: 2rem; }
+          header .header nav .item .children {
+            position: absolute;
+            margin-top: 1.8rem;
+            padding-top: .5rem;
+            z-index: 2;
+            background: #182e44; }
+            header .header nav .item .children ul.nav-section-list {
+              display: flex; }
+              header .header nav .item .children ul.nav-section-list li {
+                margin: .2rem;
+                text-decration: none;
+                list-style-type: none; }
+            header .header nav .item .children .showcase {
+              width: 30%;
+              display: block;
+              justify-content: space-evenly;
+              font-size: .9rem; }
+              header .header nav .item .children .showcase.one {
+                background: blue;
+                margin: .1rem; }
+              header .header nav .item .children .showcase.two {
+                background: blue;
+                margin: .1rem; }
+              header .header nav .item .children .showcase.three {
+                background: blue;
+                margin: .1rem; }
+    header #banner-cta {
+      background: url("../../../public/images/icon.jpg") center center/cover no-repeat;
+      color: #C0B283;
+      font-family: 'Roboto Slab', sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 10px; }
+      header #banner-cta .title {
+        font-size: 3.0rem; }
+      header #banner-cta .desc {
+        font-size: 1.0rem; }
+      header #banner-cta .title,
+      header #banner-cta .desc {
+        position: relative;
+        z-index: 1;
+        padding: 10px; }
+      header #banner-cta .btn {
+        position: relative;
+        z-index: 1;
+        padding: 10px;
+        background: coral; }
+    header h1 {
+      color: #FFF;
+      top: 15px;
+      left: 70px;
+      position: absolute;
+      font-family: 'Roboto';
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 40px; } }
+@media (min-width: 700px) {
+  header {
     position: relative;
-    z-index: 1;
-    font-size: 50px;
-    text-transform: uppercase;
-    z-index: 1; }
-  header video {
-    width: 100%; }
-  header .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99; }
-  header #logo {
-    display: inline-block;
-    text-transform: uppercase;
-    padding: 15px 50px;
-    float: left;
-    color: #DCD0C0 !important;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 30px; }
-    header #logo:before {
-      background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
-      content: " ";
-      display: inline-block;
-      height: 50px;
-      position: relative;
-      vertical-align: text-bottom;
-      width: 50px; }
-  header nav {
-    display: block;
-    position: absolute;
-    right: calc(20%);
-    top: calc(50% - 15px);
-    line-height: 30px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 30px; }
-    header nav .item {
-      display: inline-block;
-      padding: 0 20px;
-      font-style: italic;
-      position: relative;
-      cursor: pointer; }
-      header nav .item a {
-        color: inherit;
-        text-decoration: none; }
-      header nav .item .children {
-        background: linear-gradient(to bottom, rgba(12, 17, 23, 0.6) 0%, rgba(12, 17, 23, 0.6) 36%, rgba(24, 25, 28, 0.6) 74%, rgba(24, 25, 28, 0.6) 100%);
-        padding: 20px;
-        position: absolute;
-        top: 50px;
-        left: -600px;
-        width: 1300px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
-      header nav .item:hover {
-        border-top: 2px solid lightgrey;
-        margin-top: -2px; }
-    header nav .children {
-      display: none; }
-    header nav .nav-section-title {
-      padding: 10px;
-      text-transform: uppercase;
-      text-align: center;
-      background: navy;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      font-style: normal;
-      font-family: 'Roboto'; }
-    header nav .nav-section-list {
-      font-size: 12px;
-      list-style: none;
-      padding: 5px 0; }
-    header nav .nav-section-list li {
-      border-bottom: 1px solid lightgrey;
-      font-weight: 400;
-      font-family: 'Roboto';
-      font-style: normal; }
-      header nav .nav-section-list li a {
-        color: #FFF;
-        line-height: 30px;
-        font-size: 16px;
-        padding: 5px;
-        display: block;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0; }
-      header nav .nav-section-list li:hover {
-        background: white; }
-        header nav .nav-section-list li:hover a {
-          color: navy;
-          text-decoration: none; }
-    header nav .service-box {
-      padding: 0 40px;
-      text-align: justify;
-      font-size: 22px;
+    overflow: hidden;
+    background: url("/assets/banner-mockup.jpg") no-repeat center/cover; }
+    header.homepage {
+      height: 800px; }
+    header.subpage {
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    header h1 {
       position: relative;
       z-index: 1;
-      font-family: "Roboto";
-      font-weight: lighter; }
-    header nav .service-btn {
-      display: block;
-      margin: 15px auto;
-      text-align: center; }
-    header nav .service-btn a {
-      font-size: 30px; }
-    header nav .showcase .title {
-      color: white;
-      background: rgba(23, 24, 28, 0.9);
+      font-size: 50px;
+      text-transform: uppercase;
+      z-index: 1; }
+    header video {
+      width: 100%; }
+    header #logo {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 15px 50px;
+      float: left;
+      color: #DCD0C0 !important;
+      font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px; }
+      header #logo:before {
+        background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+        content: " ";
+        display: inline-block;
+        height: 50px;
+        position: relative;
+        vertical-align: text-bottom;
+        width: 50px; }
+    header .header {
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
       width: 100%;
-      padding: 5px 20px;
-      font-size: 18px;
-      font-family: "Roboto";
-      font-style: normal; }
-  header .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0; }
-  header #banner-cta {
-    color: #C0B283;
-    font-family: 'Roboto Slab', sans-serif;
-    position: absolute;
-    text-align: left;
-    text-transform: uppercase;
-    top: 50%;
-    margin-top: -40px;
-    width: 100%;
-    padding-left: 12%; }
-    header #banner-cta .title {
-      font-size: 40px;
-      font-weight: bold; }
-      header #banner-cta .title span {
-        display: block; }
-    header #banner-cta .desc {
-      font-size: 22px;
-      margin-top: 20px; }
-    header #banner-cta .btn {
-      padding: 15px;
-      text-align: center;
-      background: coral;
-      color: white;
-      margin-top: 20px;
-      width: 400px; }
-
-@media screen and (max-width: 930px) {
-  video {
-    width: 100%; }
-
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99; }
-
-  a#logo {
-    display: none; }
-    a#logo:before {
-      background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
-      content: " ";
-      display: inline-block;
-      height: 50px;
-      position: relative;
-      vertical-align: text-bottom;
-      width: 50px; }
-
-  nav {
-    display: block;
-    position: absolute;
-    right: calc(20%);
-    top: calc(50% - 15px);
-    line-height: 30px;
-    font-family: 'Roboto Slab', serif;
-    font-weight: bold;
-    font-size: 30px; }
-    nav .item {
-      display: inline-block;
-      padding: 0 20px;
-      font-style: italic;
-      position: relative;
-      cursor: pointer; }
-      nav .item a {
-        color: inherit;
-        text-decoration: none; }
-      nav .item .children {
-        background: linear-gradient(to bottom, rgba(12, 17, 23, 0.6) 0%, rgba(12, 17, 23, 0.6) 36%, rgba(24, 25, 28, 0.6) 74%, rgba(24, 25, 28, 0.6) 100%);
-        padding: 20px;
-        position: absolute;
-        top: 50px;
-        left: -600px;
-        width: 1300px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
-      nav .item:hover {
-        border-top: 2px solid lightgrey;
-        margin-top: -2px; }
-    nav .children {
-      display: none; }
-    nav .nav-section-title {
-      padding: 10px;
-      text-transform: uppercase;
-      text-align: center;
-      background: navy;
-      color: white;
-      font-weight: bold;
-      font-size: 20px;
-      font-style: normal;
-      font-family: 'Roboto'; }
-    nav .nav-section-list {
-      font-size: 12px;
-      list-style: none;
-      padding: 5px 0; }
-    nav .nav-section-list li {
-      border-bottom: 1px solid lightgrey;
-      font-weight: 400;
-      font-family: 'Roboto';
-      font-style: normal; }
-      nav .nav-section-list li a {
-        color: #FFF;
-        line-height: 30px;
-        font-size: 16px;
-        padding: 5px;
+      z-index: 99; }
+      header .header nav {
         display: block;
-        top: 0;
+        position: absolute;
+        right: calc(20%);
+        top: calc(50% - 15px);
+        line-height: 30px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: bold;
+        font-size: 30px; }
+        header .header nav .item {
+          display: inline-block;
+          padding: 0 20px;
+          font-style: italic;
+          position: relative;
+          cursor: pointer; }
+          header .header nav .item .parent span {
+            display: flex; }
+          header .header nav .item .parent i {
+            display: none; }
+          header .header nav .item a {
+            color: inherit;
+            text-decoration: none; }
+          header .header nav .item .children {
+            background: linear-gradient(to bottom, rgba(12, 17, 23, 0.6) 0%, rgba(12, 17, 23, 0.6) 36%, rgba(24, 25, 28, 0.6) 74%, rgba(24, 25, 28, 0.6) 100%);
+            padding: 20px;
+            position: absolute;
+            top: 50px;
+            left: -600px;
+            width: 1300px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+          header .header nav .item:hover {
+            border-top: 2px solid lightgrey;
+            margin-top: -2px; }
+        header .header nav .children {
+          display: none; }
+        header .header nav .nav-section-title {
+          padding: 10px;
+          text-transform: uppercase;
+          text-align: center;
+          background: navy;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          font-style: normal;
+          font-family: 'Roboto'; }
+        header .header nav .nav-section-list {
+          font-size: 12px;
+          list-style: none;
+          padding: 5px 0; }
+        header .header nav .nav-section-list li {
+          border-bottom: 1px solid lightgrey;
+          font-weight: 400;
+          font-family: 'Roboto';
+          font-style: normal; }
+          header .header nav .nav-section-list li a {
+            color: #FFF;
+            line-height: 30px;
+            font-size: 16px;
+            padding: 5px;
+            display: block;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0; }
+          header .header nav .nav-section-list li:hover {
+            background: white; }
+            header .header nav .nav-section-list li:hover a {
+              color: navy;
+              text-decoration: none; }
+      header .header .service-box {
+        padding: 0 40px;
+        text-align: justify;
+        font-size: 22px;
+        position: relative;
+        z-index: 1;
+        font-family: "Roboto";
+        font-weight: lighter; }
+      header .header .service-btn {
+        display: block;
+        margin: 15px auto;
+        text-align: center; }
+      header .header .service-btn a {
+        font-size: 30px; }
+      header .header .showcase.one {
+        width: 100%;
+        height: 1rem;
+        background: url("http://via.placeholder.com/350x150") 0% 80%/cover; }
+      header .header .showcase.two {
+        width: 100%;
+        height: 1rem; }
+      header .header .showcase.three {
+        width: 100%;
+        height: 1rem; }
+      header .header .showcase .title {
+        color: white;
+        background: rgba(23, 24, 28, 0.9);
+        position: absolute;
         bottom: 0;
-        right: 0;
-        left: 0; }
-      nav .nav-section-list li:hover {
-        background: white; }
-        nav .nav-section-list li:hover a {
-          color: navy;
-          text-decoration: none; }
-    nav .service-box {
-      padding: 0 40px;
-      text-align: justify;
-      font-size: 22px;
+        left: 0;
+        width: 100%;
+        padding: 5px 20px;
+        font-size: 18px;
+        font-family: "Roboto";
+        font-style: normal; }
+    header .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; }
+    header #banner-cta {
+      color: #C0B283;
+      font-family: 'Roboto Slab', sans-serif;
+      position: absolute;
+      text-align: left;
+      text-transform: uppercase;
+      top: 50%;
+      margin-top: -40px;
+      width: 100%;
+      padding-left: 12%; }
+      header #banner-cta .title {
+        font-size: 40px;
+        font-weight: bold; }
+        header #banner-cta .title span {
+          display: block; }
+      header #banner-cta .desc {
+        font-size: 22px;
+        margin-top: 20px; }
+      header #banner-cta .btn {
+        padding: 15px;
+        text-align: center;
+        background: coral;
+        color: white;
+        margin-top: 20px;
+        width: 400px; } }
+@media (min-width: 900px) {
+  header {
+    position: relative;
+    overflow: hidden;
+    background: url("/assets/banner-mockup.jpg") no-repeat center/cover; }
+    header.homepage {
+      height: 800px; }
+    header.subpage {
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    header h1 {
       position: relative;
       z-index: 1;
-      font-family: "Roboto";
-      font-weight: lighter; }
-    nav .service-btn {
-      display: block;
-      margin: 15px auto;
-      text-align: center; }
-    nav .service-btn a {
-      font-size: 30px; }
-    nav .showcase .title {
-      color: white;
-      background: rgba(23, 24, 28, 0.9);
+      font-size: 50px;
+      text-transform: uppercase;
+      z-index: 1; }
+    header video {
+      width: 100%; }
+    header .header {
       position: absolute;
-      bottom: 0;
+      top: 0;
       left: 0;
       width: 100%;
-      padding: 5px 20px;
-      font-size: 18px;
-      font-family: "Roboto";
-      font-style: normal; }
-
-  .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0; }
-
-  #banner-cta {
-    color: #C0B283;
-    font-family: 'Roboto Slab', sans-serif;
-    position: absolute;
-    text-align: left;
-    text-transform: uppercase;
-    top: 50%;
-    margin-top: -40px;
-    width: 100%;
-    padding-left: 12%; }
-    #banner-cta .title {
-      font-size: 40px;
-      font-weight: bold; }
-      #banner-cta .title span {
-        display: block; }
-    #banner-cta .desc {
-      font-size: 22px;
-      margin-top: 20px; }
-    #banner-cta .btn {
-      padding: 15px;
-      text-align: center;
-      background: coral;
-      color: white;
-      margin-top: 20px;
-      width: 400px; } }
+      z-index: 99; }
+    header #logo {
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 15px 50px;
+      float: left;
+      color: #DCD0C0 !important;
+      font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 30px; }
+      header #logo:before {
+        background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+        content: " ";
+        display: inline-block;
+        height: 50px;
+        position: relative;
+        vertical-align: text-bottom;
+        width: 50px; }
+    header nav {
+      display: block;
+      position: absolute;
+      right: calc(20%);
+      top: calc(50% - 15px);
+      line-height: 30px;
+      font-family: 'Roboto Slab', serif;
+      font-weight: bold;
+      font-size: 30px; }
+      header nav .item {
+        display: inline-block;
+        padding: 0 20px;
+        font-style: italic;
+        position: relative;
+        cursor: pointer; }
+        header nav .item a {
+          color: inherit;
+          text-decoration: none; }
+        header nav .item .children {
+          background: linear-gradient(to bottom, rgba(12, 17, 23, 0.6) 0%, rgba(12, 17, 23, 0.6) 36%, rgba(24, 25, 28, 0.6) 74%, rgba(24, 25, 28, 0.6) 100%);
+          padding: 20px;
+          position: absolute;
+          top: 50px;
+          left: -600px;
+          width: 1300px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); }
+        header nav .item:hover {
+          border-top: 2px solid lightgrey;
+          margin-top: -2px; }
+      header nav .children {
+        display: none; }
+      header nav .nav-section-title {
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        background: navy;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        font-style: normal;
+        font-family: 'Roboto'; }
+      header nav .nav-section-list {
+        font-size: 12px;
+        list-style: none;
+        padding: 5px 0; }
+      header nav .nav-section-list li {
+        border-bottom: 1px solid lightgrey;
+        font-weight: 400;
+        font-family: 'Roboto';
+        font-style: normal; }
+        header nav .nav-section-list li a {
+          color: #FFF;
+          line-height: 30px;
+          font-size: 16px;
+          padding: 5px;
+          display: block;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0; }
+        header nav .nav-section-list li:hover {
+          background: white; }
+          header nav .nav-section-list li:hover a {
+            color: navy;
+            text-decoration: none; }
+      header nav .service-box {
+        padding: 0 40px;
+        text-align: justify;
+        font-size: 22px;
+        position: relative;
+        z-index: 1;
+        font-family: "Roboto";
+        font-weight: lighter; }
+      header nav .service-btn {
+        display: block;
+        margin: 15px auto;
+        text-align: center; }
+      header nav .service-btn a {
+        font-size: 30px; }
+      header nav .showcase.one {
+        width: 100%;
+        height: 1rem;
+        background: url("http://via.placeholder.com/350x150") 0% 80%/cover; }
+      header nav .showcase.two {
+        width: 100%;
+        height: 1rem; }
+      header nav .showcase.three {
+        width: 100%;
+        height: 1rem; }
+      header nav .showcase .title {
+        color: white;
+        background: rgba(23, 24, 28, 0.9);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 5px 20px;
+        font-size: 18px;
+        font-family: "Roboto";
+        font-style: normal; }
+    header .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; }
+    header #banner-cta {
+      color: #C0B283;
+      font-family: 'Roboto Slab', sans-serif;
+      position: absolute;
+      text-align: left;
+      text-transform: uppercase;
+      top: 50%;
+      margin-top: -40px;
+      width: 100%;
+      padding-left: 12%; }
+      header #banner-cta .title {
+        font-size: 40px;
+        font-weight: bold; }
+        header #banner-cta .title span {
+          display: block; }
+      header #banner-cta .desc {
+        font-size: 22px;
+        margin-top: 20px; }
+      header #banner-cta .btn {
+        padding: 15px;
+        text-align: center;
+        background: coral;
+        color: white;
+        margin-top: 20px;
+        width: 400px; } }
 
 /*# sourceMappingURL=Header.css.map */

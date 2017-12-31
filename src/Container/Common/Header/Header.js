@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import './Header.scss'
 import { Row, Col } from 'react-bootstrap'
-import { NavLink, Link } from 'react-router-dom'
+import { Nav, NavItem, NavLink, Link, Image } from 'react-router-dom'
 import Cosmic from 'cosmicjs'
 import { Route } from 'react-router-dom'
+import './Header.scss'
 
 export default class Header extends Component {
 
@@ -30,7 +30,7 @@ export default class Header extends Component {
     toggleMenu(e) {
         let event = e || window.event;
 
-        let children = event.target.parentNode.getElementsByClassName('children')[0];
+        let children = event.target.parentNode.parentNode.getElementsByClassName('children')[0];
 
         children.style.display = (children.style.display == 'none') ? 'flex' : 'none';
 
@@ -48,48 +48,49 @@ export default class Header extends Component {
 
     }
 
+    toggleSubMenu(e) {
+        let event = e || window.event;
+        let title = event.target.parentNode.getElementsByClassName('nav-section-list')[0];
+        title.style.display = (title.style.display == 'none') ? 'block' : 'none';
+    }
+
     render() {
 
-        let headerStyle = {
-            'height': (window.location.pathname.substr(1) == '') ? '800px' : '400px',
-            'display': (window.location.pathname.substr(1) == '') ? '' : 'flex',
-            'justifyContent': (window.location.pathname.substr(1) == '') ? '' : 'center',
-            'alignItems': (window.location.pathname.substr(1) == '') ? '' : 'center'
-        };
-
         return (
-            <header style={headerStyle}>
-            
+            <header className={(window.location.pathname.substr(1) == '') ? 'homepage' : 'subpage'}>
+                       
                     <Route exact path='/' render={ props => (            
                         <video playsInline autoPlay muted loop poster="" id="bgvid">
                              { /* <source src="/techuncensored.webm" type="video/webm" /> */ }
                         </video>
                     ) } />
-                    
+                               
                     <Route children = { props => (
                         <div className='header'>
                             <Link to='/'><div id="logo"></div></Link>
                             <nav className="nav">
                                 <div className="item">
-                                    <div className="parent" onClick={this.toggleMenu}>What We Do</div>
+                                    <div className="parent" onClick={this.toggleMenu}>
+                                        <i className="fa fa-bars"></i><span>What We Do</span>
+                                    </div>
                                     
                                     <Row className="children" style={{ 'display':'none' }}>
-                                        <Col md={3}>
-                                            <div className="nav-section-title">Services</div>
-                                                <ul className="nav-section-list">
-                                                    {
-                                                        this.state.pages.filter(function(page) {
-                                                            return (page.metadata.menu == 'Services'); 
-                                                        }).map(function(page,i) {
-                                                            return <li key={i}><Link to={page.slug}>{page.title}</Link></li>
-                                                        })
-                                                    }
+                                        <Col sm={6} md={3}>
+                                            <div className="nav-section-title" onClick={this.toggleSubMenu}>Services</div>
+                                                <ul className="nav-section-list" style={{ 'display':'none' }}>
+                                                {
+                                                    this.state.pages.filter(function(page) {
+                                                        return (page.metadata.menu == 'Services'); 
+                                                    }).map(function(page,i) {
+                                                        return <li key={i}><Link to={page.slug}>{page.title}</Link></li>
+                                                    })
+                                                }
                                                 </ul>
                                         </Col>
                                         
-                                        <Col md={3}>
-                                            <div className="nav-section-title">Highlighted Skills</div>
-                                                <ul className="nav-section-list">
+                                        <Col sm={6} md={3}>
+                                            <div className="nav-section-title" onClick={this.toggleSubMenu}>Highlighted Skills</div>
+                                                <ul className="nav-section-list" style={{ 'display':'none' }}>
                                                     {
                                                         this.state.pages.filter(function(page) {
                                                             return (page.metadata.menu == 'Skills'); 
@@ -100,16 +101,17 @@ export default class Header extends Component {
                                                 </ul>
                                         </Col>
                                         
-                                        <Col md={6}>
+                                        <Col sm={12} md={6}>
                                             <div className="row">
-                                                <div className="col-md-12 showcase" style={{ height:'150px', background:"url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/iot_raspberrypi_tech_uncensored.jpg') 0% 80%/cover" }}>
+                                                <div className="col-md-12 showcase one">
+                                                
                                                     <div className="title">IOT Automation</div>
                                                 </div>
-                                                <div style={ {'padding':'20px 0', 'width':'100%' } }></div>
-                                                <div className="col-md-5 showcase" style={{ height:'150px', background:"url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/code_tech_uncensored.jpg') 0% 80%/cover" }}>
+                                               
+                                                <div className="col-md-5 showcase two">
                                                     <div className="title">stuff</div>
                                                 </div>
-                                                <div className="col-md-5 offset-md-2 showcase" style={{ height:'150px', background:"url('https: //s3.us-east-2.amazonaws.com/tech-uncensored-assets/code_tech_uncensored.jpg') 0% 80%/cover') 0% 80%/cover" }}>
+                                                <div className="col-md-5 offset-md-2 showcase three">
                                                     <div className="title">all the things</div>
                                                 </div>
                                             </div>
@@ -119,17 +121,23 @@ export default class Header extends Component {
                                 </div>
                                 <div className="item">
                                     <div className="parent">
-                                        <Link to="/work">Our Work</Link>
+                                        <Link className="work" to="/work">
+                                        <i className="fa fa-briefcase"></i><span>Our Work</span>
+                                        </Link>
                                     </div>
                                 </div>
-                               <div className="item">
+                               <div className="item ">
                                     <div className="parent">
-                                        <Link to="/about">About Us</Link>
+                                        <Link className="work" to="/about">
+                                        <i className="fa fa-info-circle"></i><span>About Us</span>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="item">
                                     <div className="parent">
-                                        <Link to="/blog">Our Blog</Link>
+                                        <Link className="work" to="/blog">
+                                        <i className="fa fa-code"></i><span>Our Blog</span>
+                                        </Link>
                                     </div>
                                 </div>
                                 
@@ -146,10 +154,12 @@ export default class Header extends Component {
                                     <div className="title">Real Developers <span>No Bullshit</span></div>
                                     <div className="desc">All-in-one Solution for IoT Automation to ease your efforts. <br />Stop lettting other companies upsale bull$hit. Simplify your life.</div>
                                     <div className="btn">I need some text here</div>
+                                    <div className="overlay"></div>
                                 </div>
                         )
                     }  /> 
             { (window.location.pathname != '/') ? <h1>Tech_Uncensored</h1> : null }
+            
         </header>
         )
     }

@@ -1,0 +1,34 @@
+@media (min-width: 700px) {
+        .service-row {
+            height: auto;
+            .service-box {
+                padding: 0;
+                text-align: justify;
+                .service-title {
+                    text-align: left;
+                }
+                .service-btn a {
+                    font: {
+                        size: 1.5rem;
+                    }
+                }
+            }
+        }
+        .news-entry {
+            .image {
+                height: 150px;
+            }
+            .content {
+                .title {
+                    font: {
+                        size: 1.2rem;
+                    }
+                }
+                .desc {
+                    font: {
+                        size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }

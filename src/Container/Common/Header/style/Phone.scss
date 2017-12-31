@@ -1,0 +1,153 @@
+@media (min-width: $phone-width) {
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    header {
+
+        background: linear-gradient(to bottom, #0c1117 0%, #0c1117 89%, #18191c 90%, #18191c 100%);
+
+        #bgvid {
+            display: none;
+        }
+        .header {
+
+            padding: 10px;
+
+            #logo {
+                display: block;
+                width: 50px;
+                height: 50px;
+
+                &:before {
+                    background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+                    content: " ";
+                    display: inline-block;
+                    height: 50px;
+                    position: relative;
+                    vertical-align: text-bottom;
+                    width: 50px;
+                }
+            }
+
+            nav {
+                display: flex;
+                justify-content: space-between;
+                .item {
+                    color: #FFF;
+                    padding: 5px 10px;
+                    .parent {
+
+                        span {
+                            display: none;
+                        }
+
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+
+                    .children {
+                        position: absolute;
+                        margin-top: 1.8rem;
+                        padding-top: .5rem;
+                        z-index: 2;
+                        background: #182e44;
+                        .nav-section-title {}
+                        ul.nav-section-list {
+                            display: flex;
+
+                            li {
+
+                                margin: .2rem;
+                                text-decration: none;
+                                list-style-type: none;
+                                &.a {}
+                            }
+
+                        } //list
+                        .showcase {
+                            width: 30%;
+                            display: block;
+                            justify-content: space-evenly;
+                            font-size: .9rem;
+
+                            &.one {
+                                background: blue;
+                                margin: .1rem;
+                            }
+                            &.two {
+                                background: blue;
+                                margin: .1rem;
+                            }
+                            &.three {
+                                background: blue;
+                                margin: .1rem;
+                            }
+
+                        }
+
+                    } //children
+                } //item
+            } // nav
+        } // .header
+        #banner-cta {
+            background: url('../../../public/images/icon.jpg') center center /cover no-repeat;
+
+            color: #C0B283;
+            font-family: 'Roboto Slab', sans-serif;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 10px;
+
+            .title {
+                font: {
+                    size: 3.0rem;
+                }
+            }
+
+            .desc {
+                font: {
+                    size: 1.0rem;
+                }
+            }
+
+            .title,
+            .desc,
+                {
+                position: relative;
+                z-index: 1;
+                padding: 10px;
+
+            }
+            .btn {
+                position: relative;
+                z-index: 1;
+                padding: 10px;
+                background: coral;
+            }
+        }
+
+        h1 {
+
+            color: #FFF;
+            top: 15px;
+            left: 70px;
+            position: absolute;
+            font: {
+                family: 'Roboto';
+                weight: bold;
+                size: 1.3rem;
+            }
+            ;
+            line-height: 40px;
+        }
+
+    } // header
+}

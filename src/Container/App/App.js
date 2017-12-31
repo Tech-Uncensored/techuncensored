@@ -17,7 +17,8 @@ import Home from '../Home/Home'
 import AboutUs from '../AboutUs/AboutUs'
 import OurWork from '../OurWork/OurWork'
 import Header from '../Common/Header/Header'
-import Footer from '../HomeSplash/HomeSplashFooter/HomeSplashFooter'
+import Footer from '../Common/Footer/Footer'
+//import Footer from '../HomeSplash/HomeSplashFooter/HomeSplashFooter'
 //import Error from '../Error/Error'
 
 import './App.scss'
@@ -28,6 +29,7 @@ const App = () => (
         <Header />
         <Route exact path='/' component={Home} />
             <Switch>
+                <Route path='/header' component={Header} />
                 <Route path='/splash' component={Splash} />
                 <Route path='/blog/:permalink' component={Article} />
                 <Route path='/about' component={AboutUs} />
