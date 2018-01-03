@@ -27,7 +27,7 @@ export default class Blog extends Component {
 
     componentWillMount() {
         const bucket = { slug: 'tech-uncensoredtech', read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd' };
-        Cosmic.getObjects({ bucket }, (function(err, res) {
+        Cosmic.getObjects({ bucket }, ((err, res) => {
 
             this.setState({
                 entries: res.objects.type.posts
@@ -48,32 +48,32 @@ export default class Blog extends Component {
     render() {
 
         let articleGroup = this.splitEntriesIntoArray(this.state.entries);
-        let articles = articleGroup.map(function(collection) {
-            return collection.map(function(collections, index) {
+        let articles = articleGroup.map((collection) => {
+            return collection.map((collections, index) => {
                 let date = new Date(collections.created_at);
 
-                return <div className="article" key={index}>
-                                        <div className="image"><img src={collections.metadata.hero.url} /></div>
-                                            <div className="content">
-                                             <div className="title"><a href={"/blog/"+collections.slug}>{collections.title}</a></div>
-                                            <div className="createdat">Published: {date.toLocaleString("en-us", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
-                                          <div className="excerpt" dangerouslySetInnerHTML={{__html: collections.metadata.teaser }} />
+                return <div key={index} className="article" >
+                                            <div className="image"><img src={collections.metadata.hero.url} /></div>
+                                                <div className="content">
+                                                <div className="title"><a href={"/blog/"+collections.slug}>{collections.title}</a></div>
+                                                <div className="createdat">Published: {date.toLocaleString("en-us", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+                                                <div className="excerpt" dangerouslySetInnerHTML={{__html: collections.metadata.teaser }} />
                                             </div>
                                         </div>
+
+
 
             })
         })
 
         return (
-            <div>
-               <Row>
-                 <Col sm={12} md={6}>
-                    <div id="articles">
+            <Row>
+                <Col sm={12} md={12}>             
+                    <div className="articles">
                         {articles}
                     </div>
-               </Col>
+                </Col>
              </Row>
-        </div>
         )
     }
 }
