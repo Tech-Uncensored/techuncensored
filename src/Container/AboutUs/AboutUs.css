@@ -1,16 +1,17 @@
-.image-paul {
-  min-width: 350px;
-  min-height: 350px;
-  margin-top: 10px;
-  background: url("../../public/images/paulshot.png") center center/contain no-repeat; }
+@media (min-width: 100px) {
+  .image-paul {
+    min-width: 350px;
+    min-height: 350px;
+    margin-top: 10px;
+    background: url("../../public/images/paulshot.png") center center/contain no-repeat; }
 
-.whitespace {
-  margin: 10rem; }
+  .whitespace {
+    margin: 10rem; }
 
-.image-nick {
-  min-width: 350px;
-  min-height: 350px;
-  margin-top: 10px;
-  background: url("../../public/images/nickshot.png") center center/contain no-repeat; }
+  .image-nick {
+    min-width: 350px;
+    min-height: 350px;
+    margin-top: 10px;
+    background: url("../../public/images/nickshot.png") center center/contain no-repeat; } }
 
 /*# sourceMappingURL=AboutUs.css.map */

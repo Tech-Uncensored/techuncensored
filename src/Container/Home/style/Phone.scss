@@ -61,7 +61,7 @@
                         border-radius: 10px;
                         background: #0C1117;
                         color: #FFF;
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                         text-align: center;
                     }
 
@@ -85,7 +85,6 @@
             border-radius: 4px;
 
             .title {
-                font-size: 1.5vh;
                 font-weight: bold;
                 color: navy;
             }
@@ -97,25 +96,5 @@
         }
     }
 
-    #newsletter {
 
-        .cta {
-            line-height: 50px;
-            font-size: 1.5em;
-            text-align: center;
-        }
-
-        input {
-            color: white;
-            height: 50px;
-            font-size: 1.5rem;
-            padding: 0 5px;
-            background: transparent;
-            outline: none;
-            border: none;
-            border-bottom: 2px solid white;
-            text-align: center;
-            width: 100%;
-        }
-    }
 }

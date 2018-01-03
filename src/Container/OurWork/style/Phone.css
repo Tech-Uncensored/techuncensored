@@ -1,5 +1,5 @@
 h1.text-center {
-  margin-top: 1.7rem; }
+  margin-top: 3rem; }
 
 p.work {
   font-size: 1.2rem; }
@@ -7,11 +7,11 @@ p.work {
 .img-one {
   min-width: 350px;
   min-height: 350px;
-  margin-top: 10px;
+  margin-top: 2rem;
   background: url("../../public/images/att.jpg") center center/contain no-repeat; }
 
 .whitespace {
-  margin: 10rem; }
+  margin: 5rem; }
 
 .soon p {
   font-size: 1.2rem; }
@@ -19,7 +19,7 @@ p.work {
 .img-two {
   min-width: 350px;
   min-height: 350px;
-  margin-top: 10px;
+  margin-top: 2rem;
   background: url("../../public/images/att.jpg") center center/contain no-repeat; }
 
-/*# sourceMappingURL=OurWork.css.map */
+/*# sourceMappingURL=Phone.css.map */

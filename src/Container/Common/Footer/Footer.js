@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NewsLetter from '../../NewsLetter/NewsLetter'
 import './Footer.scss'
 
 export default class Footer extends Component {
@@ -28,7 +29,10 @@ export default class Footer extends Component {
 
 
     render() {
+
         return (
+
+
             <footer>
                 <div className="wespeak">
                     <div className="label">WE SPEAK <span>Project Management</span></div>
@@ -47,6 +51,7 @@ export default class Footer extends Component {
                     </div>
                 </div>
             </footer>
+
         );
     }
 

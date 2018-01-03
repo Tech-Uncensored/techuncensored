@@ -29,84 +29,101 @@
         }
 
         .header {
-            padding: 10px;
+            padding: .5rem .8rem;
 
             #logo {
                 display: block;
-                width: 50px;
-                height: 50px;
+                width: 3.0rem;
+                height: 3.0rem;
 
                 &:before {
                     background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
                     content: " ";
                     display: inline-block;
-                    height: 50px;
+                    height: 3.0rem;
                     position: relative;
                     vertical-align: text-bottom;
-                    width: 50px;
+                    width: 3.0rem;
                 }
             }
 
             nav {
-                display: flex;
-                justify-content: space-between;
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: -75%;
+                width: 75%;
+                min-height: 100%;
+                background: #FFF;
+                z-index: 100;
+                transition: left 500ms;
+
+                /*flex-direction: column;*/
+                overflow: auto;
+
+                &.active {
+                    left: 0;
+                }
+
                 .item {
-                    color: #FFF;
-                    padding: 5px 10px;
-                    .parent {
-
-                        span {
-                            display: none;
-                        }
-
-                        i {
-                            font-size: 2rem;
-                        }
+                    border-bottom: 2px solid #DDD;
+                    color: #222;
+                    display: block;
+                    padding: 10px 0;
+                    font: {
+                        size: 1.5rem;
+                        family: 'Roboto';
+                        weight: lighter;
                     }
+                    text-indent: 30px;
 
+                    .parent {
+                        margin: auto;
+                    }
                     .children {
-                        position: absolute;
-                        margin-top: 1.8rem;
-                        padding-top: .5rem;
-                        z-index: 2;
-                        background: #182e44;
-                        .nav-section-title {}
-                        ul.nav-section-list {
-                            display: flex;
+
+                        .nav-section-title {
+                            padding: 20px 0;
+                            background: #F0EFED;
+                            font-size: 1.2rem;
+                        }
+
+                        .nav-section-list {
+                            margin: 0;
+                            padding: 0;
+
+                            &.hide {
+                                display: none;
+                            }
 
                             li {
-
-                                margin: .2rem;
-                                text-decration: none;
+                                padding: 20px 0;
+                                text-decoration: none;
                                 list-style-type: none;
-                                &.a {}
+                                font-size: 1.0rem;
                             }
-
-                        } //list
-                        .showcase {
-                            width: 30%;
-                            display: block;
-                            justify-content: space-evenly;
-                            font-size: .9rem;
-
-                            &.one {
-                                background: blue;
-                                margin: .1rem;
-                            }
-                            &.two {
-                                background: blue;
-                                margin: .1rem;
-                            }
-                            &.three {
-                                background: blue;
-                                margin: .1rem;
-                            }
-
                         }
+                        #showcase {
+                            display: none;
+                        }
+                    }
+                }
 
-                    } //children
-                } //item
+
             } // nav
+            .mobile-menu {
+                text-align: center;
+                font: {
+                    family: 'Roboto';
+                    size: 1.2rem;
+                }
+                padding: 10px;
+                border:1px solid #FFF;
+                width: 25%;
+                margin: 0 0 10px 75%;
+            }
+
         } // .header
         #banner-cta {
             background: url('../../../public/images/icon.jpg') center center /cover no-repeat;

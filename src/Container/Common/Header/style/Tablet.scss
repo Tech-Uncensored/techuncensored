@@ -55,32 +55,50 @@
                 }
             } // #logo
             nav {
+                background: transparent;
                 display: flex;
-                justify-content: space-around;
-                right: calc(20%);
-                top: calc(50% - 15px);
-                line-height: 5.5rem;
+                flex-direction: inherit;
                 font-family: 'Roboto Slab', serif;
                 font-weight: bold;
                 font-size: 1.5rem;
+                justify-content: space-around;
+                left: initial;
+                line-height: 5.5rem;
+                margin-left: 0;
+                margin-top: 0;
+                overflow: initial;
+                position: inherit;
+                right: calc(10%);
+                top: calc(50% - 15px);
+                width: auto;
+                z-index: 99;
 
                 .item {
-                    display: inline-block;
-                    padding: 0 20px;
-                    font-style: italic;
-                    position: relative;
+                    background: transparent;
+                    border: none;
+                    color: #FFF;
                     cursor: pointer;
-                    .parent {
+                    display: inline-block;
+                    font-style: italic;
+                    padding: 0 20px;
+                    position: relative;
+                    width: auto;
+                    text-indent: 0;
 
+                    &:nth-of-type(even) {
+                        background: transparent;
+                    }
+
+                    .parent {
                         span {
                             display: flex;
-
                         }
 
                         i {
                             display: none;
                         }
                     }
+
                     a {
                         color: inherit;
                         text-decoration: none;
@@ -88,69 +106,92 @@
 
                     .children {
                         background: linear-gradient(to bottom, rgba(12, 17, 23, 0.6) 0%, rgba(12, 17, 23, 0.6) 36%, rgba(24, 25, 28, 0.6) 74%, rgba(24, 25, 28, 0.6) 100%);
-                        padding: 20px;
+                        padding: 1.3rem;
                         position: absolute;
-                        top: 50px;
-                        left: -600px;
-                        width: 1300px;
+                        top: 3.7rem;
+                        left: -4rem;
+                        width: 800px;
                         box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-                    }
+                        display: none;
 
+                        .nav-section-title {
+                            background: transparent;
+                            line-height: 1rem;
+                            text-transform: uppercase;
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: 1rem;
+                            font-style: normal;
+                            font-family: 'Roboto';
+                        } // .nav-section-title
+                        .nav-section-list {
+                            font-size: .9rem;
+                            list-style: none;
+
+
+
+                            &.hide {
+                                display: block;
+                            }
+
+                            li {
+                                border-bottom: 1px solid lightgrey;
+                                padding: 0;
+                                font: {
+                                    weight: 400;
+                                    family: 'Roboto';
+                                    style: normal;
+                                }
+
+                                &:hover {
+                                    background: white;
+
+                                    a {
+                                        color: navy;
+                                        text-decoration: none;
+                                    }
+                                }
+
+                                a {
+                                    color: #FFF;
+                                    line-height: 30px;
+                                    font-size: 16px;
+                                    padding: 5px;
+                                    display: block;
+                                    top: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    left: 0;
+                                }
+                            }
+                        } // .nav-section-list    
+                    } // .children
                     &:hover {
                         border-top: 2px solid lightgrey;
                         margin-top: -2px;
                     }
-                }
 
-                .children {
-                    display: none;
-                }
-
-                .nav-section-title {
-                    padding: 10px;
-                    text-transform: uppercase;
-                    text-align: center;
-                    background: navy;
-                    color: white;
-                    font-weight: bold;
-                    font-size: 20px;
-                    font-style: normal;
-                    font-family: 'Roboto';
-                }
-
-                .nav-section-list {
-                    font-size: 12px;
-                    list-style: none;
-                    padding: 5px 0;
-                }
-                .nav-section-list li {
-                    border-bottom: 1px solid lightgrey;
-                    font: {
-                        weight: 400;
-                        family: 'Roboto';
-                        style: normal;
+                } // .item
+                .showcase {
+                    &.one {
+                        width: 100%;
+                        height: 4rem;
+                        background: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/iot_raspberrypi_tech_uncensored.jpg') 0% 80%/cover;
                     }
-                    a {
-                        color: #FFF;
-                        line-height: 30px;
-                        font-size: 16px;
-                        padding: 5px;
-                        display: block;
-                        top: 0;
-                        bottom: 0;
-                        right: 0;
-                        left: 0;
+                    &.two {
+                        width: 100%;
+                        height: 4rem;
+                        background: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/code_tech_uncensored.jpg') center/cover;
                     }
-
-                    &:hover {
-                        background: white;
-
-                        a {
-                            color: navy;
-                            text-decoration: none;
-                        }
+                    &.three {
+                        width: 100%;
+                        height: 4rem;
+                        background: url('https://cdn.pixabay.com/photo/2017/02/28/21/30/wolf-2106894_960_720.jpg') center/cover;
                     }
                 }
+            } // nav
+            .mobile-menu {
+                display: none;
             }
 
         } // .header
@@ -185,12 +226,15 @@
             }
             .btn-wrap {
                 display: flex;
-                justify-content: space-around;
                 .btn {
                     position: relative;
                     z-index: 1;
                     padding: 10px;
                     background: coral;
+
+                    &:nth-child(2) {
+                        margin-left: 40px;
+                    }
                 }
             }
         } // #banner-cta

@@ -16,6 +16,7 @@ import Skills from '../Skills/Skills'
 import Home from '../Home/Home'
 import AboutUs from '../AboutUs/AboutUs'
 import OurWork from '../OurWork/OurWork'
+import NewsLetter from '../NewsLetter/NewsLetter'
 import Header from '../Common/Header/Header'
 import Footer from '../Common/Footer/Footer'
 //import Footer from '../HomeSplash/HomeSplashFooter/HomeSplashFooter'
@@ -37,6 +38,7 @@ const App = () => (
                 <Route path='/blog' component={Blog} />
                 <Route path='/:permalink' component={Sample} />
             </Switch>
+            <NewsLetter/>
         <Footer />
     </div>
 )

@@ -4,10 +4,10 @@ Error: Undefined variable: "$bridge-width".
 
 1: @media (min-width: $bridge-width) {
 2: 
-3: 
-4:     .btn-wrap {
-5:         .btn {
-6:             font-size: 1.2rem;
+3:     .btn-wrap {
+4:         .btn {
+5:             font-size: 1.2rem;
+6:             margin: 1.5rem;
 
 Backtrace:
 /home/ubuntu/workspace/src/Container/Common/Header/style/Bridge.scss:1
@@ -53,4 +53,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$bridge-width\".\A         on line 1 of /home/ubuntu/workspace/src/Container/Common/Header/style/Bridge.scss\A \A 1: @media (min-width: $bridge-width) {\A 2: \A 3: \A 4:     .btn-wrap {\A 5:         .btn {\A 6:             font-size: 1.2rem;"; }
+  content: "Error: Undefined variable: \"$bridge-width\".\A         on line 1 of /home/ubuntu/workspace/src/Container/Common/Header/style/Bridge.scss\A \A 1: @media (min-width: $bridge-width) {\A 2: \A 3:     .btn-wrap {\A 4:         .btn {\A 5:             font-size: 1.2rem;\A 6:             margin: 1.5rem;"; }

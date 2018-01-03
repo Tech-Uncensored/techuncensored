@@ -61,7 +61,7 @@ img {
 }
 
 .ptb50 {
-  padding: 50px 0;
+  padding: 3.125rem 0;
 }
 
 .ptb30 {
@@ -90,6 +90,10 @@ img {
 
 .ffr {
   font-family: "Roboto";
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .overlay {

@@ -1,16 +1,16 @@
 /*
-Error: Undefined variable: "$desktop-width".
-        on line 1 of /home/ubuntu/workspace/src/Container/Common/Header/style/Desktop.scss
+Error: Undefined variable: "$phone-width".
+        on line 1 of /home/ubuntu/workspace/src/Container/AboutUs/style/Phone.scss
 
-1: @media (min-width: $desktop-width) {
-2:     header {
-3: 
-4:         position: relative;
-5:         overflow: hidden;
-6:         background: url("/assets/banner-mockup.jpg") no-repeat center/cover;
+1: @media (min-width: $phone-width) {
+2:     .about-title {
+3:         text-align: center;
+4:         margin-top: 1.5rem;
+5:     }
+6:     .about-p {
 
 Backtrace:
-/home/ubuntu/workspace/src/Container/Common/Header/style/Desktop.scss:1
+/home/ubuntu/workspace/src/Container/AboutUs/style/Phone.scss:1
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /nix/store/zmisxnl63ica4zaviifixamr3xg27kzp-ruby-2.3.1-p0/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:542:in `block in run_interp_no_strip'
@@ -53,4 +53,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$desktop-width\".\A         on line 1 of /home/ubuntu/workspace/src/Container/Common/Header/style/Desktop.scss\A \A 1: @media (min-width: $desktop-width) {\A 2:     header {\A 3: \A 4:         position: relative;\A 5:         overflow: hidden;\A 6:         background: url(\"/assets/banner-mockup.jpg\") no-repeat center/cover;"; }
+  content: "Error: Undefined variable: \"$phone-width\".\A         on line 1 of /home/ubuntu/workspace/src/Container/AboutUs/style/Phone.scss\A \A 1: @media (min-width: $phone-width) {\A 2:     .about-title {\A 3:         text-align: center;\A 4:         margin-top: 1.5rem;\A 5:     }\A 6:     .about-p {"; }

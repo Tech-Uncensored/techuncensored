@@ -1,1 +1,9 @@
-@media (min-width: $tablet-width) {}
+@media (min-width: $tablet-width) {
+
+    .service-btn {
+        .btn {
+            font-size: 1.8rem;
+        }
+    }
+
+}

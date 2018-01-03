@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACR,MAAM,EAAE,MAAM",
+"sources": ["Tablet.scss"],
+"names": [],
+"file": "Tablet.css"
+}

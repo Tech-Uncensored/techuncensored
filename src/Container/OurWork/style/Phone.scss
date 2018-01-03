@@ -1,0 +1,42 @@
+h1 {
+    &.text-center {
+        margin-top: 3rem;
+    }
+}
+
+p.work {
+    font: {
+        size: 1.2rem;
+    }
+
+}
+
+.img-one {
+    min-width: 350px;
+    min-height: 350px;
+    margin-top: 2rem;
+    background: url('../../public/images/att.jpg') center center /contain no-repeat;
+}
+
+
+
+.whitespace {
+    margin: 5rem;
+}
+
+.soon {
+
+    p {
+        font: {
+            size: 1.2rem;
+        }
+    }
+}
+
+.img-two {
+    min-width: 350px;
+    min-height: 350px;
+    margin-top: 2rem;
+    background: url('../../public/images/att.jpg') center center /contain no-repeat;
+
+}

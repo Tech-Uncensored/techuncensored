@@ -48,10 +48,43 @@ export default class Header extends Component {
 
     }
 
+    toggleMobileMenu(e) {
+        let event = e || window.event;
+        let body = document.getElementsByTagName('body')[0];
+        let nav = document.getElementById("nav");
+
+        if (nav.classList.contains("active"))
+            return;
+
+        nav.classList.toggle("active");
+        body.classList.toggle("no-scroll");
+
+        let myevent = function(e) {
+            let isClickInside = nav.contains(e.target);
+
+            if (!isClickInside && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                body.classList.remove('no-scroll');
+
+                this.removeEventListener('click', myevent);
+            }
+        };
+        document.addEventListener('click', myevent);
+    }
+
     toggleSubMenu(e) {
         let event = e || window.event;
         let title = event.target.parentNode.getElementsByClassName('nav-section-list')[0];
-        title.style.display = (title.style.display == 'none') ? 'block' : 'none';
+        title.classList.contains('hide') ? title.classList.remove('hide') : title.classList.add('hide');
+        //title.style.display = (title.style.display == 'none') ? 'block' : 'none';
+    }
+
+
+    componentDidUpdate() {
+        if (document.getElementById("nav").classList.contains('active')) {
+            let e = new Event('click')
+            document.dispatchEvent(e);
+        }
     }
 
     render() {
@@ -68,16 +101,16 @@ export default class Header extends Component {
                     <Route children = { props => (
                         <div className='header'>
                             <Link to='/'><div id="logo"></div></Link>
-                            <nav className="nav">
+                            <nav className="nav container-fluid" id="nav">
                                 <div className="item">
                                     <div className="parent" onClick={this.toggleMenu}>
-                                        <i className="fa fa-bars"></i><span>What We Do</span>
+                                        <span>What We Do</span>
                                     </div>
                                     
-                                    <Row className="children" style={{ 'display':'none' }}>
-                                        <Col sm={6} md={3}>
+                                    <Row className="children" style={ {'display':'none'} }>
+                                        <Col sm={12} md={6} lg={3}>
                                             <div className="nav-section-title" onClick={this.toggleSubMenu}>Services</div>
-                                                <ul className="nav-section-list" style={{ 'display':'none' }}>
+                                                <ul className="nav-section-list hide">
                                                 {
                                                     this.state.pages.filter(function(page) {
                                                         return (page.metadata.menu == 'Services'); 
@@ -88,9 +121,9 @@ export default class Header extends Component {
                                                 </ul>
                                         </Col>
                                         
-                                        <Col sm={6} md={3}>
+                                        <Col sm={12} md={6} lg={3}>
                                             <div className="nav-section-title" onClick={this.toggleSubMenu}>Highlighted Skills</div>
-                                                <ul className="nav-section-list" style={{ 'display':'none' }}>
+                                                <ul className="nav-section-list hide">
                                                     {
                                                         this.state.pages.filter(function(page) {
                                                             return (page.metadata.menu == 'Skills'); 
@@ -101,12 +134,13 @@ export default class Header extends Component {
                                                 </ul>
                                         </Col>
                                         
-                                        <Col sm={12} md={6}>
+                                        <Col sm={12} lg={6} id="showcase">
                                             <div className="row">
                                                 <div className="col-md-12 showcase one">
-                                                
                                                     <div className="title">IOT Automation</div>
                                                 </div>
+                                                
+                                                <div style={ { padding:'40px 0', width:'100%' } }></div>
                                                
                                                 <div className="col-md-5 showcase two">
                                                     <div className="title">stuff</div>
@@ -122,26 +156,28 @@ export default class Header extends Component {
                                 <div className="item">
                                     <div className="parent">
                                         <Link className="work" to="/work">
-                                        <i className="fa fa-briefcase"></i><span>Our Work</span>
+                                        <span>Our Work</span>
                                         </Link>
                                     </div>
                                 </div>
                                <div className="item ">
                                     <div className="parent">
                                         <Link className="work" to="/about">
-                                        <i className="fa fa-info-circle"></i><span>About Us</span>
+                                        <span>About Us</span>
                                         </Link>
                                     </div>
                                 </div>
                                 <div className="item">
                                     <div className="parent">
                                         <Link className="work" to="/blog">
-                                        <i className="fa fa-code"></i><span>Our Blog</span>
+                                        <span>Our Blog</span>
                                         </Link>
                                     </div>
                                 </div>
                                 
                             </nav>
+                            
+                            <div className="mobile-menu" onClick={this.toggleMobileMenu}>Menu</div>
                             
                         </div>
                         )
@@ -156,7 +192,7 @@ export default class Header extends Component {
                                    <div className="btn-wrap">
                                         <div className="btn">
                                             CALL: 215-515-8324
-                                            <a href="tel:+1215515832"></a>
+                                            <a href="tel:+12155158324"></a>
                                         </div>
                                         <div className="btn" onClick={  () => { Tawk_API.maximize(); } }>CHAT NOW</div> 
                                     </div>

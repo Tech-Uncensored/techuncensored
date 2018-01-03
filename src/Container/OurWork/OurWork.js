@@ -9,7 +9,7 @@ export default class OurWork extends Component {
         return (
             <div className="container-fluid">
                 <Row>
-                    <Col sm={12} md={6}>
+                    <Col className="order-2" sm={12} md={6}>
                     
                         <h1 className="text-center">Current Projects</h1>
                              <p className="work">

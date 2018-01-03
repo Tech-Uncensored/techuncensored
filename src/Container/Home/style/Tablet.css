@@ -2,7 +2,12 @@
 Error: Undefined variable: "$tablet-width".
         on line 1 of /home/ubuntu/workspace/src/Container/Home/style/Tablet.scss
 
-1: @media (min-width: $tablet-width) {}
+1: @media (min-width: $tablet-width) {
+2: 
+3:     .service-btn {
+4:         .btn {
+5:             font-size: 1.8rem;
+6:         }
 
 Backtrace:
 /home/ubuntu/workspace/src/Container/Home/style/Tablet.scss:1
@@ -48,4 +53,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$tablet-width\".\A         on line 1 of /home/ubuntu/workspace/src/Container/Home/style/Tablet.scss\A \A 1: @media (min-width: $tablet-width) {}"; }
+  content: "Error: Undefined variable: \"$tablet-width\".\A         on line 1 of /home/ubuntu/workspace/src/Container/Home/style/Tablet.scss\A \A 1: @media (min-width: $tablet-width) {\A 2: \A 3:     .service-btn {\A 4:         .btn {\A 5:             font-size: 1.8rem;\A 6:         }"; }

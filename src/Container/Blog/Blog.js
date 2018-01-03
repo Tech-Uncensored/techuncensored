@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Row, Col } from 'react-bootstrap'
 import Cosmic from 'cosmicjs'
 
 import Footer from '../HomeSplash/HomeSplashFooter/HomeSplashFooter'
@@ -52,22 +53,27 @@ export default class Blog extends Component {
                 let date = new Date(collections.created_at);
 
                 return <div className="article" key={index}>
-                            <div className="image"><img src={collections.metadata.hero.url} /></div>
-                            <div className="content">
-                                <div className="title"><a href={"/blog/"+collections.slug}>{collections.title}</a></div>
-                                <div className="createdat">Published: {date.toLocaleString("en-us", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
-                                <div className="excerpt" dangerouslySetInnerHTML={{__html: collections.metadata.teaser }} />
-                            </div>
-                        </div>
+                                        <div className="image"><img src={collections.metadata.hero.url} /></div>
+                                            <div className="content">
+                                             <div className="title"><a href={"/blog/"+collections.slug}>{collections.title}</a></div>
+                                            <div className="createdat">Published: {date.toLocaleString("en-us", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+                                          <div className="excerpt" dangerouslySetInnerHTML={{__html: collections.metadata.teaser }} />
+                                            </div>
+                                        </div>
+
             })
         })
 
         return (
             <div>
-                <div id="articles">
-                    {articles}
-                </div>
-            </div>
+               <Row>
+                 <Col sm={12} md={6}>
+                    <div id="articles">
+                        {articles}
+                    </div>
+               </Col>
+             </Row>
+        </div>
         )
     }
 }
