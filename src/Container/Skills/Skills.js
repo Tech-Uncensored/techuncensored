@@ -4,32 +4,52 @@ import { Button, Col, Row, PageHeader, Jumbotron } from 'react-bootstrap'
 import Footer from '../HomeSplash/HomeSplashFooter/HomeSplashFooter'
 import './Skills.scss'
 
-export default class Sample extends React.Component {
+export default class Skills extends React.Component {
+    constructor(props, state, next) {
+        super(props, state, next);
+        this.state = {
 
+        }
+    }
     render() {
+
         return (
-            <div id="skills">
+            <div id="skills" className="container-fluid">
                 <div className="skills-detail">
-                    <Row>
-                        <Col sm={12}>
-                            <h1>Responsive Design</h1>
-                            <p>
-                               High performing, mobile-ready web applications. High performing, mobile-ready web applications.               High performing, mobile-ready High performing, mobile-ready web applications. High performing, mobile-ready web applications.
-                            </p>
-                             <p>
-                               High performing, mobile-ready web applications. High performing, mobile-ready web applications.               High performing, mobile-ready High performing, mobile-ready web applications. High performing, mobile-ready web applications.
-                            </p>
-                            <p>
-                               High performing, mobile-ready web applications. High performing, mobile-ready web applications.               High performing, mobile-ready High performing, mobile-ready web applications. High performing, mobile-ready web applications.
-                            </p>
-                            <h3>Subsection</h3>
-                            <ul>
-                                <li>Reason one</li>
-                                <li>Reason two</li>
-                            </ul>
-                            <div className="btn">Call to action</div>
-                        </Col>
+                <h1>{this.props.page.title}</h1>
+                 {
+                    this.props.page.metafields.filter((metaimg) => {
+                        return metaimg.key.includes("skill_block_");
+                    }).map((headerimg, i) => (
+                    <Row key={i}>
+                   
+                    <img src={headerimg.url} style={{'width': '100%', 'height': '100%', 'margin':'1rem'}} />
+                   
                     </Row>
+                    ))
+                }
+                 <p className="open-text" dangerouslySetInnerHTML={{__html: this.props.page.content}}></p>
+                 {
+                    this.props.page.metafields.filter((met) => {
+                        return met.key.includes("skill_block_");
+                    }).slice(0,1).map((bloke, i) => (
+                                 <Row key={i}>
+                                    <Col sm={12} md={12}>
+                                    <h1></h1>
+                                   { /*  {
+                                         this.props.page.metafields.filter((met) => {
+                                             return met.key.includes("skill_image_header");
+                                         }).map((images, i) => console.log(images) || (
+                                               
+                                       ))
+                                     } */ }
+                               
+                                    </Col>
+                                </Row>
+                    ))
+                }
+                   
+                  
                 </div>
 
                 <Row>
@@ -47,14 +67,16 @@ export default class Sample extends React.Component {
                                  <Row key={i} style={{ 'padding':'20px 0', 'alignItems':'center' }}>
                                     <Col md={6} className={(i % 2 === 1) ? "order-2" : "" }>
                                        <h1>{blok.title}</h1>
-                                        <p dangerouslySetInnerHTML={{__html: blok.value}}></p>
+                                        <p className="skills-text" dangerouslySetInnerHTML={{__html: blok.value}}></p>
                                     </Col>
                                     <Col md={6}>
-                                            <img src="http://placehold.it/600x250" style={{ 'maxHeight':'inherit' }}  />
+                                            <img src={blok.url} style={{ 'maxHeight':'inherit' }}  />
                                     </Col> 
                                 </Row>
+                               
                     ))
                 }
+               
                 </div>
             </div>
         )

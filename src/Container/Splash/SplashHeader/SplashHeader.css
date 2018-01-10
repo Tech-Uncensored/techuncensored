@@ -15,7 +15,7 @@ header {
     font-size: 1em;
     line-height: 30px; }
     header #logo:before {
-      background: url("../../../public/images/tech_uncensored_logo_bg.png") bottom/cover;
+      background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tech_uncensored_logo_bg.png") bottom/cover;
       content: " ";
       display: inline-block;
       height: 50px;
@@ -63,7 +63,7 @@ header {
         header .navigation #social-nav li a .fa-snapchat {
           color: #DBD0C0; }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
   header #logo {
     margin: 30px; } }
 

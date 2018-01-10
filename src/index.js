@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 
 render(
     <Router>
-             <App />
-        </Router>,
+        <App />
+    </Router>,
     document.getElementById('root')
 )

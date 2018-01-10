@@ -1,20 +1,19 @@
 @media (min-width: $desktop-width) {
     header {
 
-        position: relative;
-        overflow: hidden;
-        background: url("/assets/banner-mockup.jpg") no-repeat center/cover;
-
+        // position: relative;
+        // overflow: hidden;
+        // background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/banner-mockup.jpg") no-repeat center/cover;
         &.homepage {
             height: 800px;
 
         }
 
         &.subpage {
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            // height: 400px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
         }
 
         video {
@@ -57,13 +56,11 @@
             line-height: 30px;
 
             &:before {
-                background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
-                content: " ";
-                display: inline-block;
-                height: 50px;
+                // background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+                // content: " ";
+                display: inline-block; // height: 50px;
                 position: relative;
-                vertical-align: text-bottom;
-                width: 50px;
+                vertical-align: text-bottom; // width: 50px;
             }
         }
 

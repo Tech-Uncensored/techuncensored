@@ -40,19 +40,19 @@
                     background-position: 50% 50%;
 
                     &.facebook {
-                        background-image: url('../../../public/images/fb.png');
+                        background-image: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/fb.png');
                     }
                     &.twitter {
-                        background-image: url('../../../public/images/tw.png');
+                        background-image: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tw.png');
                     }
                     &.youtube {
-                        background-image: url('../../../public/images/yt.png');
+                        background-image: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/yt.png');
                     }
                     &.github {
-                        background-image: url('../../../public/images/gh.png');
+                        background-image: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/gh.png');
                     }
                     &.email {
-                        background-image: url('../../../public/images/email.png');
+                        background-image: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/email.png');
                     }
                 }
             }

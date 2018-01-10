@@ -1,0 +1,12 @@
+@media (min-width: 100px) {
+  #subpage h1 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem; }
+  #subpage .service-img {
+    display: block;
+    width: 65%;
+    min-height: 350px;
+    margin: auto; } }
+
+/*# sourceMappingURL=SubPage.css.map */

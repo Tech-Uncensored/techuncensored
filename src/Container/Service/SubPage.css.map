@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yBAA0B;EAElB,WAAG;IACC,SAAS,EAAE,IAAI;IACf,UAAU,EAAE,MAAM;IAClB,OAAO,EAAE,IAAI;EAEjB,qBAAa;IACT,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,GAAG;IACV,UAAU,EAAE,KAAK;IACjB,MAAM,EAAE,IAAI",
+"sources": ["SubPage.scss"],
+"names": [],
+"file": "SubPage.css"
+}

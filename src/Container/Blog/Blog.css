@@ -1,7 +1,11 @@
 @media (min-width: 300px) {
   .articles .article {
     display: block;
-    width: 100%; } }
+    width: 100%;
+    font-size: 1rem; }
+
+  img {
+    padding: .5rem; } }
 @media (min-width: 601px) {
   .articles {
     width: 50%;

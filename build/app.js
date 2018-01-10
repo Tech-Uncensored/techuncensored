@@ -6327,7 +6327,7 @@ var Header = function (_Component) {
                                                     _react2.default.createElement(
                                                         'div',
                                                         { className: 'title' },
-                                                        'stuff'
+                                                        'A/V Reality'
                                                     )
                                                 ),
                                                 _react2.default.createElement(
@@ -22085,19 +22085,19 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SubPage = function (_Component) {
-    _inherits(SubPage, _Component);
+var Service = function (_Component) {
+    _inherits(Service, _Component);
 
-    function SubPage() {
-        _classCallCheck(this, SubPage);
+    function Service() {
+        _classCallCheck(this, Service);
 
-        var _this = _possibleConstructorReturn(this, (SubPage.__proto__ || Object.getPrototypeOf(SubPage)).call(this));
+        var _this = _possibleConstructorReturn(this, (Service.__proto__ || Object.getPrototypeOf(Service)).call(this));
 
         _this.state = {};
         return _this;
     }
 
-    _createClass(SubPage, [{
+    _createClass(Service, [{
         key: 'render',
         value: function render() {
 
@@ -22111,26 +22111,13 @@ var SubPage = function (_Component) {
                         _reactBootstrap.Row,
                         null,
                         _react2.default.createElement(
-                            _reactBootstrap.Col,
-                            { md: 6 },
-                            _react2.default.createElement(
-                                'h1',
-                                null,
-                                this.props.page.title
-                            ),
-                            _react2.default.createElement('p', { className: 'open-text', dangerouslySetInnerHTML: { __html: this.props.page.content } })
+                            'h1',
+                            null,
+                            this.props.page.title
                         ),
-                        _react2.default.createElement(
-                            _reactBootstrap.Col,
-                            { md: 6 },
-                            _react2.default.createElement('div', { className: 'img-side' })
-                        )
+                        _react2.default.createElement('p', { className: 'open-text', dangerouslySetInnerHTML: { __html: this.props.page.content } })
                     ),
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'whitespace' },
-                        ' '
-                    ),
+                    _react2.default.createElement('br', null),
                     this.props.page.metafields.filter(function (meta) {
                         // filter for only service blocks
                         return meta.key.includes("service_block_");
@@ -22143,7 +22130,11 @@ var SubPage = function (_Component) {
                                 _react2.default.createElement(
                                     _reactBootstrap.Col,
                                     { md: 6, className: i % 2 === 1 ? "order-2" : "" },
-                                    _react2.default.createElement('div', { className: 'mid-image' })
+                                    _react2.default.createElement(
+                                        'div',
+                                        { className: 'mid-image' },
+                                        block.imgix_url
+                                    )
                                 ),
                                 _react2.default.createElement(
                                     _reactBootstrap.Col,
@@ -22163,10 +22154,10 @@ var SubPage = function (_Component) {
         }
     }]);
 
-    return SubPage;
+    return Service;
 }(_react.Component);
 
-exports.default = SubPage;
+exports.default = Service;
 
 /***/ }),
 /* 258 */
@@ -22203,16 +22194,19 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Sample = function (_React$Component) {
-    _inherits(Sample, _React$Component);
+var Skills = function (_React$Component) {
+    _inherits(Skills, _React$Component);
 
-    function Sample() {
-        _classCallCheck(this, Sample);
+    function Skills(props) {
+        _classCallCheck(this, Skills);
 
-        return _possibleConstructorReturn(this, (Sample.__proto__ || Object.getPrototypeOf(Sample)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Skills.__proto__ || Object.getPrototypeOf(Skills)).call(this, props));
+
+        _this.state = {};
+        return _this;
     }
 
-    _createClass(Sample, [{
+    _createClass(Skills, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
@@ -22232,21 +22226,7 @@ var Sample = function (_React$Component) {
                                 null,
                                 'Responsive Design'
                             ),
-                            _react2.default.createElement(
-                                'p',
-                                null,
-                                'High performing, mobile-ready web applications. High performing, mobile-ready web applications.               High performing, mobile-ready High performing, mobile-ready web applications. High performing, mobile-ready web applications.'
-                            ),
-                            _react2.default.createElement(
-                                'p',
-                                null,
-                                'High performing, mobile-ready web applications. High performing, mobile-ready web applications.               High performing, mobile-ready High performing, mobile-ready web applications. High performing, mobile-ready web applications.'
-                            ),
-                            _react2.default.createElement(
-                                'p',
-                                null,
-                                'High performing, mobile-ready web applications. High performing, mobile-ready web applications.               High performing, mobile-ready High performing, mobile-ready web applications. High performing, mobile-ready web applications.'
-                            ),
+                            _react2.default.createElement('p', null),
                             _react2.default.createElement(
                                 'h3',
                                 null,
@@ -22310,7 +22290,7 @@ var Sample = function (_React$Component) {
                             _react2.default.createElement(
                                 _reactBootstrap.Col,
                                 { md: 6 },
-                                _react2.default.createElement('img', { src: 'http://placehold.it/600x250', style: { 'maxHeight': 'inherit' } })
+                                _react2.default.createElement('img', { src: 'https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/crspltfrm.png', style: { 'maxHeight': 'inherit' } })
                             )
                         );
                     })
@@ -22319,10 +22299,10 @@ var Sample = function (_React$Component) {
         }
     }]);
 
-    return Sample;
+    return Skills;
 }(_react2.default.Component);
 
-exports.default = Sample;
+exports.default = Skills;
 
 /***/ }),
 /* 259 */
@@ -42723,9 +42703,9 @@ var _Sample = __webpack_require__(577);
 
 var _Sample2 = _interopRequireDefault(_Sample);
 
-var _SubPage = __webpack_require__(257);
+var _Service = __webpack_require__(257);
 
-var _SubPage2 = _interopRequireDefault(_SubPage);
+var _Service2 = _interopRequireDefault(_Service);
 
 var _Skills = __webpack_require__(258);
 
@@ -88505,10 +88485,12 @@ var Blog = function (_Component) {
     _createClass(Blog, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
+            var _this2 = this;
+
             var bucket = { slug: 'tech-uncensoredtech', read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd' };
             _cosmicjs2.default.getObjects({ bucket: bucket }, function (err, res) {
 
-                this.setState({
+                _this2.setState({
                     entries: res.objects.type.posts
                 });
             }.bind(this));
@@ -88533,7 +88515,7 @@ var Blog = function (_Component) {
 
                     return _react2.default.createElement(
                         'div',
-                        { className: 'article', key: index },
+                        { key: index, className: 'article' },
                         _react2.default.createElement(
                             'div',
                             { className: 'image' },
@@ -88564,19 +88546,15 @@ var Blog = function (_Component) {
             });
 
             return _react2.default.createElement(
-                'div',
+                _reactBootstrap.Row,
                 null,
                 _react2.default.createElement(
-                    _reactBootstrap.Row,
-                    null,
+                    _reactBootstrap.Col,
+                    { sm: 12, md: 12 },
                     _react2.default.createElement(
-                        _reactBootstrap.Col,
-                        { sm: 12, md: 6 },
-                        _react2.default.createElement(
-                            'div',
-                            { id: 'articles' },
-                            articles
-                        )
+                        'div',
+                        { className: 'articles' },
+                        articles
                     )
                 )
             );
@@ -89072,9 +89050,9 @@ var _cosmicjs = __webpack_require__(59);
 
 var _cosmicjs2 = _interopRequireDefault(_cosmicjs);
 
-var _SubPage = __webpack_require__(257);
+var _Service = __webpack_require__(257);
 
-var _SubPage2 = _interopRequireDefault(_SubPage);
+var _Service2 = _interopRequireDefault(_Service);
 
 var _Skills = __webpack_require__(258);
 
@@ -89142,7 +89120,7 @@ var Sample = function (_Component) {
 
             if (Object.keys(this.state.article).length === 0) return null;
 
-            return this.state.article.metadata.menu == "Services" ? _react2.default.createElement(_SubPage2.default, _extends({}, this.props, { page: this.state.article })) : _react2.default.createElement(_Skills2.default, _extends({}, this.props, { page: this.state.article }));
+            return this.state.article.metadata.menu == "Services" ? _react2.default.createElement(_Service2.default, _extends({}, this.props, { page: this.state.article })) : _react2.default.createElement(_Skills2.default, _extends({}, this.props, { page: this.state.article }));
         }
     }]);
 
@@ -89851,7 +89829,7 @@ var OurWork = function (_Component) {
                     _react2.default.createElement(
                         _reactBootstrap.Col,
                         { sm: 12, md: 6 },
-                        _react2.default.createElement('div', { className: 'img-one' })
+                        _react2.default.createElement('div', { className: 'img-two' })
                     )
                 )
             );

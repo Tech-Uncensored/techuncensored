@@ -39,15 +39,15 @@
         background-repeat: no-repeat;
         background-position: 50% 50%; }
         footer #social-wrapper .social div.facebook {
-          background-image: url(/assets/fb.png); }
+          background-image: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/fb.png"); }
         footer #social-wrapper .social div.twitter {
-          background-image: url(/assets/tw.png); }
+          background-image: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tw.png"); }
         footer #social-wrapper .social div.youtube {
-          background-image: url(/assets/yt.png); }
+          background-image: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/yt.png"); }
         footer #social-wrapper .social div.github {
-          background-image: url(/assets/gh.png); }
+          background-image: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/gh.png"); }
         footer #social-wrapper .social div.email {
-          background-image: url(/assets/email.png); }
+          background-image: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/email.png"); }
     footer #social-wrapper .desc {
       text-align: center;
       padding: 20px;
@@ -129,7 +129,7 @@
         width: 3.0rem;
         height: 3.0rem; }
         header .header #logo:before {
-          background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+          background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tech_uncensored_logo_bg.png") bottom/cover;
           content: " ";
           display: inline-block;
           height: 3.0rem;
@@ -187,7 +187,7 @@
         width: 25%;
         margin: 0 0 10px 75%; }
     header #banner-cta {
-      background: url(/assets/icon.jpg) center center/cover no-repeat;
+      background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/icon.jpg") center center/cover no-repeat;
       color: #C0B283;
       font-family: 'Roboto Slab', sans-serif;
       text-align: center;
@@ -227,7 +227,7 @@
   header {
     position: relative;
     overflow: hidden;
-    background: url("/assets/banner-mockup.jpg") no-repeat center/cover; }
+    background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/banner-mockup.jpg") no-repeat center/cover; }
     header.homepage {
       height: 600px; }
     header.subpage {
@@ -255,7 +255,7 @@
         font-size: 3rem;
         line-height: 3rem; }
         header .header #logo:before {
-          background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+          background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tech_uncensored_logo_bg.png") bottom/cover;
           content: " ";
           width: 4rem;
           height: 4rem;
@@ -357,7 +357,7 @@
         header .header nav .showcase.three {
           width: 100%;
           height: 4rem;
-          background: url("https://cdn.pixabay.com/photo/2017/02/28/21/30/wolf-2106894_960_720.jpg") center/cover; }
+          background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/wifimodule.jpg") center/cover; }
       header .header .mobile-menu {
         display: none; }
     header #banner-cta {
@@ -388,76 +388,63 @@
             margin-left: 40px; } }
 
 @media (min-width: 1010px) {
-  header {
-    position: relative;
-    overflow: hidden;
-    background: url("/assets/banner-mockup.jpg") no-repeat center/cover; }
-    header.homepage {
-      height: 800px; }
-    header.subpage {
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    header video {
-      width: 100%; }
-    header .header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 99; }
-      header .header nav {
-        right: calc(10%); }
-        header .header nav .item .children {
-          top: 70px;
-          left: -360px;
-          width: 1000px; }
-          header .header nav .item .children #showcase {
-            display: block; }
-    header #logo {
-      display: inline-block;
-      text-transform: uppercase;
-      padding: 15px 50px;
-      float: left;
-      color: #DCD0C0 !important;
-      font-family: 'Roboto Slab', serif;
-      font-weight: bold;
-      font-size: 30px;
-      line-height: 30px; }
-      header #logo:before {
-        background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
-        content: " ";
-        display: inline-block;
-        height: 50px;
-        position: relative;
-        vertical-align: text-bottom;
-        width: 50px; }
-    header #banner-cta {
-      color: #C0B283;
-      position: absolute;
-      text-align: left;
-      text-transform: uppercase;
-      top: 50%;
-      margin-top: -40px;
-      width: 100%;
-      padding-left: 12%; }
-      header #banner-cta .title {
-        font-size: 40px;
-        font-weight: bold; }
-        header #banner-cta .title span {
+  header.homepage {
+    height: 800px; }
+  header video {
+    width: 100%; }
+  header .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99; }
+    header .header nav {
+      right: calc(10%); }
+      header .header nav .item .children {
+        top: 70px;
+        left: -360px;
+        width: 1000px; }
+        header .header nav .item .children #showcase {
           display: block; }
-      header #banner-cta .desc {
-        font-size: 22px;
-        margin-top: 20px; }
-      header #banner-cta .btn {
-        padding: 15px;
-        text-align: center;
-        background: coral;
-        color: white;
-        margin-top: 20px; }
-      header #banner-cta .overlay {
-        display: none; }
+  header #logo {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    float: left;
+    color: #DCD0C0 !important;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px; }
+    header #logo:before {
+      display: inline-block;
+      position: relative;
+      vertical-align: text-bottom; }
+  header #banner-cta {
+    color: #C0B283;
+    position: absolute;
+    text-align: left;
+    text-transform: uppercase;
+    top: 50%;
+    margin-top: -40px;
+    width: 100%;
+    padding-left: 12%; }
+    header #banner-cta .title {
+      font-size: 40px;
+      font-weight: bold; }
+      header #banner-cta .title span {
+        display: block; }
+    header #banner-cta .desc {
+      font-size: 22px;
+      margin-top: 20px; }
+    header #banner-cta .btn {
+      padding: 15px;
+      text-align: center;
+      background: coral;
+      color: white;
+      margin-top: 20px; }
+    header #banner-cta .overlay {
+      display: none; }
   /*
         nav {
             display: flex;
@@ -856,37 +843,40 @@
   #splash-wrapper .centerContent {
     display: block;
     text-align: center; } }
-@media (min-width: 601px) {
-  #articles {
-    padding: 20px 0;
-    width: 1200px;
-    margin: 0 auto; }
-    #articles .article {
-      margin: 20px 0;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      #articles .article .content {
-        padding: 0 20px;
-        width: 70%; }
-        #articles .article .content .title {
-          font-weight: bold;
-          font-size: 3.0rem; }
-          #articles .article .content .title a {
-            color: white; }
-        #articles .article .content .createdat {
-          color: rgba(255, 255, 255, 0.6); }
-        #articles .article .content .excerpt {
-          font-size: 1.6rem; }
-      #articles .article .image {
-        display: flex;
-        width: 30%; }
-        #articles .article .image img {
-          max-height: 200px; } }
-
 @media (min-width: 300px) {
-  #articles .article {
-    display: block; } }
+  .articles .article {
+    display: block;
+    width: 100%;
+    font-size: 1rem; }
+  img {
+    padding: .5rem; } }
+
+@media (min-width: 601px) {
+  .articles {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    text-align: left; }
+    .articles .article {
+      width: 100%;
+      padding: 1rem;
+      border-bottom: ipx solid white; }
+      .articles .article .content {
+        padding: 1.2rem;
+        font-size: 1.5rem; }
+        .articles .article .content .title {
+          font-weight: bold;
+          font-size: 2.2rem; }
+          .articles .article .content .title a {
+            color: white; }
+        .articles .article .content .createdat {
+          color: rgba(255, 255, 255, 0.6); }
+        .articles .article .content .excerpt {
+          font-size: 1.6rem; }
+      .articles .article .image img {
+        margin: 0 auto;
+        max-width: 80%;
+        max-height: 250px; } }
 #article {
   padding: 20px 0;
   width: 1000px;
@@ -1097,19 +1087,16 @@
       font-family: "Roboto";
       text-align: left; }
     #subpage .img-side {
-      min-height: 350px;
-      background: url(/assets/wire.jpg) center/contain no-repeat; }
+      min-height: 350px; }
     #subpage .mid-image {
-      min-height: 350px;
-      background: url(/assets/wire.jpg) center/contain no-repeat; }
+      min-height: 350px; }
     #subpage .mid-text {
       width: 100%;
       line-height: 2.5rem;
       font-size: 1.5rem;
       font-family: "Roboto"; }
     #subpage .rd-img {
-      min-height: 350px;
-      background: url(/assets/wire.jpg) center/contain no-repeat; }
+      min-height: 350px; }
     #subpage .rd-text {
       font-size: 1.5rem;
       line-height: 2.5rem; } }
@@ -1259,7 +1246,7 @@ p.work {
   min-width: 350px;
   min-height: 350px;
   margin-top: 2rem;
-  background: url(/assets/att.jpg) center center/contain no-repeat; }
+  background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/att.jpg") center center/contain no-repeat; }
 
 .whitespace {
   margin: 5rem; }
@@ -1271,7 +1258,7 @@ p.work {
   min-width: 350px;
   min-height: 350px;
   margin-top: 2rem;
-  background: url(/assets/att.jpg) center center/contain no-repeat; }
+  background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/techlab.jpg") center center/contain no-repeat; }
 html,
 body {
   margin: 0;

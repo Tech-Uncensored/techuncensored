@@ -9,14 +9,14 @@ header {
   display: block;
   height: 80px;
   position: relative;
-  
+
   #logo {
     display: flex;
     text-transform: uppercase;
     padding: 15px 50px;
     float: left;
     color: #DCD0C0 !important;
-    
+
     font: {
       family: 'Ubuntu', serif;
       weight: bold;
@@ -24,35 +24,36 @@ header {
     }
     line-height: 30px;
     &:before {
-      background: url('../../../public/images/tech_uncensored_logo_bg.png') bottom/cover;
+      background: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tech_uncensored_logo_bg.png') bottom/cover;
       content: " ";
       display: inline-block;
       height: 50px;
       position: relative;
       vertical-align: text-bottom;
       width: 50px;
-      
+
     }
-ul>li {
-  font: {
-    size:1.5rem;
-  };
-  display: inline-block;
-  margin: {
-    top:0;
-    right:30px;
-    bottom:0;
-    left:2px;
+    ul>li {
+      font: {
+        size: 1.5rem;
+      }
+      ;
+      display: inline-block;
+      margin: {
+        top: 0;
+        right: 30px;
+        bottom: 0;
+        left: 2px;
+      }
+      line-height:50px;
+    }
+    a {
+      color: #FFF;
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
-  line-height:50px;
-}
-a {
-  color: #FFF;
-  text-decoration:none;
-  cursor: pointer;
-}
-  }
-  
+
 
   .phone {
     color: #DCD0C0;
@@ -68,43 +69,45 @@ a {
       weight: bold;
       size: 1.6em;
     }
-  #social-nav {
-    display: flex;
-     list-style-type:none;
-     margin-right:15px;
-    li a {
-      cursor: pointer;
-      .fa-instagram {
-        color: #DBD0C0;
-      }
-        .fa-facebook {
-        color: #DBD0C0;
-      }
-        .fa-snapchat {
-        color: #DBD0C0;
-      }
-      font: {
-        size: .8em;
-      };
-      margin: {
-    top:0;
-    right:5px;
-    bottom:0;
-    left:5px;
+    #social-nav {
+      display: flex;
+      list-style-type: none;
+      margin-right: 15px;
+      li a {
+        cursor: pointer;
+        .fa-instagram {
+          color: #DBD0C0;
         }
-      
+        .fa-facebook {
+          color: #DBD0C0;
+        }
+        .fa-snapchat {
+          color: #DBD0C0;
+        }
+        font: {
+          size: .8em;
+        }
+        ;
+        margin: {
+          top: 0;
+          right: 5px;
+          bottom: 0;
+          left: 5px;
+        }
+
       }
-     
-      
+
+
     }
   }
 }
+
 @media screen and (max-width:750px) {
   header {
-   #logo {
-     margin:30px;
-   }
-      }
-    
-  
+    #logo {
+      margin: 30px;
+    }
+  }
+
+
 }

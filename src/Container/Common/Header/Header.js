@@ -143,7 +143,7 @@ export default class Header extends Component {
                                                 <div style={ { padding:'40px 0', width:'100%' } }></div>
                                                
                                                 <div className="col-md-5 showcase two">
-                                                    <div className="title">stuff</div>
+                                                    <div className="title">A/V Reality</div>
                                                 </div>
                                                 <div className="col-md-5 offset-md-2 showcase three">
                                                     <div className="title">all the things</div>

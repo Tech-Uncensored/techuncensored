@@ -33,7 +33,7 @@ export default class OurWork extends Component {
                              
                     </Col>
                     <Col sm={12} md={6}>
-                         <div className="img-one"></div>
+                         <div className="img-two"></div>
                     </Col>
                 </Row>  
             </div>

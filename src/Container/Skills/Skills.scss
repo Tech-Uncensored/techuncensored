@@ -1,26 +1,55 @@
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 100px) {
     #skills {
         font-size: 100%;
-        opacity: 2;
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-        }
 
-        .header-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 400px;
-            background: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/web_development_tech_uncensored.jpg') center/cover;
-            z-index: 1;
+        .skills-detail {
+            width: 100%;
 
             h1 {
+                text-align: center;
+            }
+            img {
+                margin: auto;
+            }
+            p {
+                line-height: 1.5em;
+            }
+            h3 {
+                text-align: center;
+            }
+            ul {
+                li {
+                    text-decoration: none;
+                }
+            }
+            .btn {}
+        }
+        .skills-text {}
+    }
+}
+
+@media screen and (min-width: 950px) {
+    #skills {
+
+
+
+        // .overlay {
+        //     background: rgba(0, 0, 0, 0.5);
+        //     position: absolute;
+        //     top: 0;
+        //     bottom: 0;
+        //     right: 0;
+        //     left: 0;
+        // }
+        // .header-image {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     height: 400px;
+        //     background: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/web_development_tech_uncensored.jpg') center/cover;
+        //     z-index: 1;
+        /* h1 {
                 position: relative;
                 z-index: 1;
                 font: {
@@ -28,14 +57,14 @@
                 }
                 ;
                 text-transform:uppercase;
-            }
-        }
-
-        .skills-detail {
-            background: white;
-            padding: 100px 250px;
-            color: navy;
-        }
+            }*/
+        //} header-image
+        // .skills-detail {
+        //     background: white;
+        //     opacity: .2;
+        //     padding: 100px 250px;
+        //     color: navy;
+        // }
 
     }
 }

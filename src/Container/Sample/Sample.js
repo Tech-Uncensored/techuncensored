@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Button, Col, Row, PageHeader, Jumbotron } from 'react-bootstrap'
 import Cosmic from 'cosmicjs'
-import Subpage from '../SubPage/SubPage'
+import Service from '../Service/Service'
 import Skills from '../Skills/Skills'
 import ErrorPage from '../Error/Error'
 import './Sample.scss'
@@ -46,7 +46,7 @@ export default class Sample extends Component {
         if (Object.keys(this.state.article).length === 0)
             return null
 
-        return (this.state.article.metadata.menu == "Services") ? <Subpage {...this.props} page={this.state.article} /> : <Skills {...this.props} page={this.state.article} />
+        return (this.state.article.metadata.menu == "Services") ? <Service {...this.props} page={this.state.article} /> : <Skills {...this.props} page={this.state.article} />
 
     }
 }

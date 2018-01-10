@@ -37,7 +37,7 @@
                 height: 3.0rem;
 
                 &:before {
-                    background: url("/assets/tech_uncensored_logo_bg.png") bottom/cover;
+                    background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tech_uncensored_logo_bg.png") bottom/cover;
                     content: " ";
                     display: inline-block;
                     height: 3.0rem;
@@ -126,7 +126,7 @@
 
         } // .header
         #banner-cta {
-            background: url('../../../public/images/icon.jpg') center center /cover no-repeat;
+            background: url('https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/icon.jpg') center center /cover no-repeat;
 
             color: #C0B283;
             font-family: 'Roboto Slab', sans-serif;
