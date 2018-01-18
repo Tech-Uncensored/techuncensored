@@ -177,7 +177,7 @@ export default class Header extends Component {
                                 
                             </nav>
                             
-                            <div className="mobile-menu" onClick={this.toggleMobileMenu}>Menu</div>
+                            <div className="mobile-menu" onClick={this.toggleMobileMenu}></div>
                             
                         </div>
                         )

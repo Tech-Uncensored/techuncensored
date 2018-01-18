@@ -1,12 +1,24 @@
 @media (min-width: 100px) {
-  #subpage h1 {
+  #subpage .row-wrapper h1 {
     font-size: 3rem;
     text-align: center;
     padding: 2rem; }
-  #subpage .service-img {
+  #subpage .row-wrapper .service-img {
     display: block;
     width: 65%;
-    min-height: 350px;
-    margin: auto; } }
+    max-height: 350px;
+    margin: auto; }
+  #subpage .row-wrapper .open-text {
+    font-size: 2rem;
+    padding: 1rem; }
+  #subpage .row-wrapper img {
+    width: 90%;
+    max-height: 300px;
+    margin: 0 auto;
+    padding-bottom: 2rem; }
+  #subpage .row-wrapper .mid-text {
+    width: 90%;
+    font-size: 1.8rem;
+    font-family: "Roboto"; } }
 
 /*# sourceMappingURL=SubPage.css.map */

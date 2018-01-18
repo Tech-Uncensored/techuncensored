@@ -1,18 +1,27 @@
 @media screen and (min-width: 100px) {
   #skills {
     font-size: 100%; }
-    #skills .skills-detail {
-      width: 100%; }
-      #skills .skills-detail h1 {
-        text-align: center; }
-      #skills .skills-detail img {
-        margin: auto; }
-      #skills .skills-detail p {
-        line-height: 1.5em; }
-      #skills .skills-detail h3 {
-        text-align: center; }
-      #skills .skills-detail ul li {
-        text-decoration: none; } }
+    #skills .row-wrapper h1 {
+      font-size: 3rem;
+      text-align: center;
+      padding: 2rem; }
+    #skills .row-wrapper .skill-img {
+      display: block;
+      width: 65%;
+      max-height: 350px;
+      margin: auto; }
+    #skills .row-wrapper .open-text {
+      font-size: 2rem;
+      padding: 1rem; }
+    #skills .row-wrapper img {
+      width: 90%;
+      max-height: 300px;
+      margin: 0 auto;
+      padding-bottom: 2rem; }
+    #skills .row-wrapper .mid-text {
+      width: 90%;
+      font-size: 1.8rem;
+      font-family: "Roboto"; } }
 @media screen and (min-width: 950px) {
   #skills {
     /* h1 {
