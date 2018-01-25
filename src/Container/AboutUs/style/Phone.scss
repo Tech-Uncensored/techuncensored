@@ -1,10 +1,15 @@
 @media (min-width: $phone-width) {
+    
     .about-title {
         text-align: center;
         margin-top: 1.5rem;
     }
     .about-p {
+        font-family:1.3rem;
         margin: 1rem;
+        .pop {
+            font-weight: bold;
+        }
     }
     .image-paul {
         min-width: 350px;

@@ -15,6 +15,7 @@ export default class OurWork extends Component {
                              <p className="work">
                              At T_U, a wide variety of concepts are being worked on day and night. Some of these projects will be listed here. As time progresses, more applications and working designs will be posted.
                              </p>
+                    
                     </Col> 
                     <Col sm={12} md={6}>
                     <div className="img-one"></div>
