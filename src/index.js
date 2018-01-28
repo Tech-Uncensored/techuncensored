@@ -1,6 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import Landing from './Container/Landing/Landing'
 import App from './Container/App/App'
 
 if ('serviceWorker' in navigator) {
@@ -14,8 +15,8 @@ if ('serviceWorker' in navigator) {
 }
 
 render(
-    <Router>
-        <App />
-    </Router>,
-    document.getElementById('root')
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("root")
 )
