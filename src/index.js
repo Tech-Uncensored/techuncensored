@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Landing from './Container/Landing/Landing'
+import withTracker from './withTracker'
 import App from './Container/App/App'
 
 if ('serviceWorker' in navigator) {
@@ -16,7 +17,11 @@ if ('serviceWorker' in navigator) {
 
 render(
   <Router>
-    <App />
+    <Route
+      component={withTracker(App, {
+        /* additional attributes */
+      })}
+    />
   </Router>,
   document.getElementById("root")
 )

@@ -1,0 +1,1 @@
+export default settings = () => (console.log(log))

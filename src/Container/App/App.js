@@ -1,4 +1,5 @@
 import React from 'react'
+import createHistory from "history/createBrowserHistory"
 import { Route, Switch } from 'react-router-dom'
 import Homepage from '../Homepage/Homepage'
 import Splash from '../Splash/Splash'
@@ -25,20 +26,23 @@ import './App.scss'
 
 const App = () => (
   <div>
-    <Route path="landing" location={Landing} />
+    
     <Header />
     <Route exact path="/" component={Home} />
-    
+
     <Switch>
-      <Route path="/splash" component={Splash} />  
+      <Route path="/splash" component={Splash} />
       <Route path="/blog/:permalink" component={Article} />
       <Route path="/about" component={AboutUs} />
       <Route path="/work" component={OurWork} />
       <Route path="/blog" component={Blog} />
-      {/* <Route path="/land" component={Landing} /> */}
+      <Landing path="/landing" />
+      {/* <Route path="/landing" render={() => <Landing />} /> */}
     </Switch>
     <NewsLetter />
     <Footer />
+
+    {/* <Route path="/land" component={Landing} /> */}
   </div>
 )
 

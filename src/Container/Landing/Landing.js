@@ -19,7 +19,7 @@ export default class Landing extends Component {
             </div>
             <div className="split right">
               <h1>Software</h1>
-              <Link to="/blog" className="button">
+              <Link to="/home" className="button">
                 Read More
               </Link>
             </div>
