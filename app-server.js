@@ -6,7 +6,7 @@ const fs = require('fs');
 // Start Express
 const app = express();
 const staging = express();
-
+const PORT = 8080 || process.env.port;
 
 /* ************************************
             STAGING SETTINGS
@@ -72,6 +72,6 @@ app.use(function(req, res) {
 });
 
 // Start Server
-app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("Started listening on port", process.env.PORT);
+app.listen(PORT, function() {
+    console.log("Started listening on port", PORT);
 });

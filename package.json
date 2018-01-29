@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack --config webpack.config.js",
     "build-dev":
       "NODE_ENV=development webpack --config webpack.config.dev.js",
-      "build-home": "webpack --config webpack.config.dev.js",
+      "build-home": "webpack --config webpack.config.js",
     "dev":
       "webpack-dev-server --config webpack.config.dev.js --hot --inline --host $IP --port $PORT --public $C9_HOSTNAME",
     "pwa":
