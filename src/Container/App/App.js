@@ -38,6 +38,7 @@ const App = () => (
       <Route path="/blog" component={Blog} />
       <Landing path="/landing" />
       {/* <Route path="/landing" render={() => <Landing />} /> */}
+      
     </Switch>
     <NewsLetter />
     <Footer />

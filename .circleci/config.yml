@@ -34,7 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn test
+    #  - run: yarn test
         # machine:
         #   node:
         #     version: 9.3.0
@@ -44,3 +44,5 @@ jobs:
         ##  post:
          ##   - npm install -g ##codeclimate-test-reporter
           ##  - ##codeclimate-test-reporter ##< coverage/lcov.info
+
+          
