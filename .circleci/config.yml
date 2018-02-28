@@ -65,7 +65,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
                 echo "Staging not setup"
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                ls ~/repo/ && pwd && rsync -az --force --delete --progress --exclude="node_modules" -e "ssh -p22 -o StrictHostKeyChecking=no" ~/repo/ techuncensored@uncensored.tech:/home/techuncensored
+                ls ~/repo/ && pwd && rsync -az --force --delete --progress --exclude="node_modules" -e "ssh -p22 -o StrictHostKeyChecking=no" ~/repo/dist techuncensored@uncensored.tech:/home/techuncensored/dist
             else
                 echo "What are you doing?"
             fi
@@ -80,5 +80,5 @@ workflows:
             - build
           filters:
             branches:
-              only: production
+              only: master
           
