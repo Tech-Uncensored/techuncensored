@@ -60,7 +60,7 @@ jobs:
           at: ./
 
       - run:
-          name: webpack
+          command: webpack
 
       - run:
           name: Deploy to server
