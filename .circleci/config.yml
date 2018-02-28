@@ -60,7 +60,7 @@ jobs:
           at: ./
 
       - run:
-          command: webpack
+          command: PATH=~/repo/node_modules/.bin:$PATH && webpack
 
       - run:
           name: Deploy to server
