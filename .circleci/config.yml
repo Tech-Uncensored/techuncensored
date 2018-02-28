@@ -32,7 +32,10 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+        deployment:
+  staging:
+    branch: master
+ 
       # run tests!
     #  - run: yarn test
         # machine:
