@@ -1,4 +1,4 @@
-# Javascript Node CircleCI 2.0 configuration file
+ Javascript Node CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
@@ -8,7 +8,7 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/node:9.3.0
-      
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -19,6 +19,10 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Show current branch
+          command: echo ${CIRCLE_BRANCH}
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -26,26 +30,55 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+      # install project dependencies
       - run: npm install
 
-        - save_cache:
+      # persist workspace so that it is accessible to downstream jobs
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - ./
+
+      - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        deployment:
-    staging:
-      branch: master
- 
-      # run tests!
-    #  - run: yarn test
-        # machine:
-        #   node:
-        #     version: 9.3.0
-        # test:
-        #   override:
-        #     - npm test -- --coverage
-        ##  post:
-         ##   - npm install -g ##codeclimate-test-reporter
-          ##  - ##codeclimate-test-reporter ##< coverage/lcov.info
 
+      # run tests!
+      - run: npm test
+
+  deployit:
+    docker:
+      - image: circleci/node:9.3.0
+    working_directory: ~/repo
+    steps:
+      - run:
+          name: Install rsync
+          command: sudo apt-get install -y rsync
+
+      - attach_workspace:
+          at: ./
+
+      - run:
+          name: Deploy to server
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+                echo "Staging not setup"
+            elif [ "${CIRCLE_BRANCH}" == "master" ]; then
+                ls ~/repo/ && pwd && rsync -az --force --delete --progress --exclude="node_modules" -e "ssh -p22 -o StrictHostKeyChecking=no" ~/repo/ techuncensored@uncensored.tech:/home/techuncensored
+            else
+                echo "What are you doing?"
+            fi
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deployit:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
           
