@@ -159,7 +159,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: PATHS.app + "/public/static", to: PATHS.dist }, // Copy everything from src/public/static to dist folder
-      { from: require.resolve("workbox-sw"), to: "workbox-sw.prod.js" }
+     // { from: require.resolve("workbox-sw"), to: "workbox-sw.prod.js" }
     ]),
     // new WorkboxPlugin({
     //   globDirectory: "./dist/",

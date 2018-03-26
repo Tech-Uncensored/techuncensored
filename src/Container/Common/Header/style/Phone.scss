@@ -34,6 +34,8 @@
                 display: block;
                 width: 3.5rem;
                 height: 3.5rem;
+                border: none;
+                outline: none;
 
                 &:before {
                     background: url("https://s3.us-east-2.amazonaws.com/tech-uncensored-assets/tech_uncensored_logo_bg.png") bottom/cover;
@@ -45,6 +47,9 @@
                     width: 3.5rem;
                     margin: 35% -10%;
 
+                }
+                &:focus {
+                    outline: none;
                 }
             }
 
