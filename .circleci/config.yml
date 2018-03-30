@@ -73,6 +73,12 @@ jobs:
                 echo "What are you doing?"
             fi
 
+  restartit: 
+    steps:
+      - run:
+            name: Restart Server
+            command: pm2 restart techuncensored
+          
       
           
 
