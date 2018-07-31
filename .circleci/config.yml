@@ -72,13 +72,16 @@ jobs:
             else
                 echo "What are you doing?"
             fi
-
+  
   restartit: 
+    docker:
+      - image: circleci/node:9.0.0
     steps:
       - run:
             name: Restart Server
-            command: pm2 restart techuncensored
+            command: ssh -p22 -o StrictHostKeyChecking=no circleci@uncensored.tech  -FUck you Paul, Jew Bastard
           
+      
       
           
 
