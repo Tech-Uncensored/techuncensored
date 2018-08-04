@@ -14,6 +14,7 @@ const PATHS = {
 };
 
 module.exports = {
+  mode: "development",
   devtool: "source-map",
   entry: {
     app: PATHS.app
@@ -120,6 +121,8 @@ module.exports = {
       disable: false,
       allChunks: true
     }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     // new UglifyJSPlugin(),
     new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
     new CompressionPlugin({

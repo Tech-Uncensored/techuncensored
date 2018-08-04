@@ -1,8 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Cosmic from 'cosmicjs'
-import config from '../Config/Config.js'
+// import config from '../Config/Config.js'
+const CosmicFetch = () => (
+    const api = Cosmic()
+    const bucket = api.bucket({
+        slug: 'tech-uncensoredtech',
+        read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd'
+    })
+)
 
-export default class CosmicFetch extends Component {
+export default CosmicFetch
+
+componentDidMount = () => {
+    const api = Cosmic()
+    const bucket = api.bucket({
+        slug: 'tech-uncensoredtech',
+        read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd'
+    })
+}
+
+/*export default class CosmicFetch extends Component {
     constructor() {
         super()
         this.state = {
@@ -29,3 +46,4 @@ export default class CosmicFetch extends Component {
         )
     }
 }
+*/

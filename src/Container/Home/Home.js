@@ -121,7 +121,7 @@ export default class Home extends Component {
                                         Custom Software Development
                                     </h2>
                                     <div className="service-description">
-                                       <h4>Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI.</h4>
+                                       <h4>Tech_Uncensored creates applications customized to your business. Updated performance and security comes standard.</h4>
                                         <div className="service-btn"><a className="btn text-center">Let's Geek It On</a></div>
                                     </div>                        
                                 </div>
@@ -145,8 +145,8 @@ export default class Home extends Component {
                                         Website Development
                                     </h2>
                                     <div className="service-description">
-                                        <h4>Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI.</h4>
-                                        <div className="service-btn"><a className="btn text-center">Automate and Save Today!</a></div>
+                                        <h4>Web Development standards are changing regularly, and Tech_Uncensored commits to keeping your application current with Responsive and Progressive implemtations.</h4>
+                                        <div className="service-btn"><a className="btn text-center">Find Out How!</a></div>
                                     </div>                        
                                 </div>
                                 <div className="overlay"></div>
@@ -157,8 +157,8 @@ export default class Home extends Component {
                                         Digital Signage
                                     </h2>
                                     <div className="service-description">
-                                        <h4>Invest in automating repetitive, manual tasks in your workplace and see an incredible long-term ROI.</h4>
-                                        <div className="service-btn"><a className="btn text-center">Let's Geek It On</a></div>
+                                        <h4>IoT is cost-effective and efficient. Plug-and-play solutions for Digital Signage and other IoT enhancements can help enhance your business and Tech_Uncensored can help!</h4>
+                                        <div className="service-btn"><a className="btn text-center">Ask About IoT Automation!</a></div>
                                     </div>                        
                                 </div>
                                 <div className="overlay"></div>

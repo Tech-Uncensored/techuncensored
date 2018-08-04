@@ -16,14 +16,23 @@ export default class Header extends Component {
 
         this.headerStyle = {};
     }
+/*
+const Cosmic = require('cosmicjs')
+const api = Cosmic()
+const bucket = api.bucket({
+  slug: 'tech-uncensoredtech',
+  read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd'
+})
+const objects = (await bucket.getObjects()).objects
 
+*/
     componentDidMount() {
         const bucket = { slug: 'tech-uncensoredtech', read_key: 'i2ZrFQ3ZtEnFY6wkYgggntoxtSliOav9Wny6s3b0u5bp2S5rTd' };
         Cosmic.getObjects({ bucket }, (function(err, res) {
             this.setState({
                 pages: res.objects.type.pages
             });
-
+            console.log(bucket)
         }).bind(this));
     }
 
